@@ -2,23 +2,31 @@
     Private Sub Cerrar_SesionToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles Cerrar_SesionToolStripMenuItem.Click
         'Dim a As Integer = MsgBox("¿Seguro que desea salir?", MsgBoxStyle.YesNo)
         'If a = MsgBoxResult.Yes Then
-        '    End
+        End
         'End If
     End Sub
 
     Private Sub FormMain_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        'se carga por defecto al iniciarse el form el primer grupo de botones.
         FLPcasa.Visible = True
         FLPClasic.Visible = False
         FLPespecials.Visible = False
         FLPdulces.Visible = False
         FLPSuper.Visible = False
         FLPDrinks.Visible = False
+        FLPpicar.Visible = False
     End Sub
 
     'métodos que controlan lo que hacen los botones de cada grupo
+    'se crea un objeto de la clase Button y se iguala al objeto sender:
+    '   esto se hace para saber cuál de los botones dentro del grupo se ha presionado
+    'sabiendo eso ya se puede diferenciar, y no hay que programar 100+ métodos. xd
+
+    ' ESTOS BOTONES SOLO INTRODUCEN LOS DATOS DE LOS PRODUCTOS QUE REPRESENTAN EN EL TEXBOX DE ABAJO
     Private Sub BtnCasa_Click(sender As Object, e As EventArgs) Handles m18.Click, m17.Click, m16.Click, m15.Click, m14.Click, m13.Click, m12.Click, m11.Click, m10.Click, m09.Click, m08.Click, m07.Click, m06.Click, m05.Click, m04.Click, m03.Click, m02.Click, m01.Click
         Dim botonActual As Button
         botonActual = sender
+        'a partir de aquí ya se ha diferenciado.
         TxBDatos.Text = botonActual.Text
     End Sub
     Private Sub BtnsClasics_Click(sender As Object, e As EventArgs) Handles m59.Click, m58.Click, m57.Click, m56.Click, m55.Click, m54.Click, m53.Click, m52.Click, m51.Click, m50.Click, m49.Click, m48.Click, m47.Click, m46.Click, m45.Click, m44.Click, m43.Click, m42.Click, m41.Click, m40.Click, m39.Click, m38.Click, m37.Click, m36.Click, m35.Click, m34.Click, m33.Click, m32.Click, m31.Click, m30.Click, m29.Click, m28.Click, m27.Click, m26.Click, m25.Click, m24.Click, m23.Click, m22.Click, m21.Click, m20.Click, m19.Click
@@ -37,10 +45,6 @@
         TxBDatos.Text = botonActual.Text
     End Sub
     Private Sub BtnsSuper_Click(sender As Object, e As EventArgs) Handles m99.Click, m98.Click, m97.Click, m96.Click, m95.Click, m100.Click
-        'Dim name As String = m99.Name
-        'If name = m99.Name Then
-        '    MsgBox("boton 99")
-        'End If
         Dim botonActual As Button
         botonActual = sender
         TxBDatos.Text = botonActual.Text
@@ -50,8 +54,21 @@
         botonActual = sender
         TxBDatos.Text = botonActual.Text
     End Sub
+    Private Sub BtnsPicar_Click(sender As Object, e As EventArgs) Handles Button58.Click, Button57.Click, Button56.Click, Button55.Click, Button54.Click, Button53.Click, Button52.Click, Button51.Click, Button50.Click, Button49.Click, Button48.Click
+        Dim botonActual As Button
+        botonActual = sender
+        TxBDatos.Text = botonActual.Text
+    End Sub
 
-    'métodos de los botones que controlan que grupo de botones aparece en pantalla
+    Private Sub BtnsPicar_DoubleClick(sender As Object, e As EventArgs) Handles Button58.DoubleClick, Button57.DoubleClick, Button56.DoubleClick, Button55.DoubleClick, Button54.DoubleClick, Button53.DoubleClick, Button52.DoubleClick, Button51.DoubleClick, Button50.DoubleClick, Button49.DoubleClick, Button48.DoubleClick
+        Dim botonActual As Button
+        botonActual = sender
+        LBTiquet.Items.Add(botonActual.Name)
+    End Sub
+
+
+    'métodos de los botones de las categorías de productos
+    '   que controlan que grupo de botones aparece en pantalla.
     Private Sub BtnMenuCasa_Click(sender As Object, e As EventArgs) Handles BtnMenuCasa.Click
         FLPcasa.Visible = True
         FLPClasic.Visible = False
@@ -59,6 +76,7 @@
         FLPdulces.Visible = False
         FLPSuper.Visible = False
         FLPDrinks.Visible = False
+        FLPpicar.Visible = False
     End Sub
     Private Sub BtnMenuClasicos_Click(sender As Object, e As EventArgs) Handles BtnMenuClasicos.Click
         FLPcasa.Visible = False
@@ -67,6 +85,7 @@
         FLPdulces.Visible = False
         FLPSuper.Visible = False
         FLPDrinks.Visible = False
+        FLPpicar.Visible = False
     End Sub
     Private Sub BtnMenuEspeciales_Click(sender As Object, e As EventArgs) Handles BtnMenuEspeciales.Click
         FLPcasa.Visible = False
@@ -75,6 +94,7 @@
         FLPdulces.Visible = False
         FLPSuper.Visible = False
         FLPDrinks.Visible = False
+        FLPpicar.Visible = False
     End Sub
     Private Sub BtnMenuDulces_Click(sender As Object, e As EventArgs) Handles BtnMenuDulces.Click
         FLPcasa.Visible = False
@@ -83,6 +103,7 @@
         FLPdulces.Visible = True
         FLPSuper.Visible = False
         FLPDrinks.Visible = False
+        FLPpicar.Visible = False
     End Sub
     Private Sub BtnMenuSuper_Click(sender As Object, e As EventArgs) Handles BtnMenuSuper.Click
         FLPcasa.Visible = False
@@ -91,6 +112,7 @@
         FLPdulces.Visible = False
         FLPSuper.Visible = True
         FLPDrinks.Visible = False
+        FLPpicar.Visible = False
     End Sub
     Private Sub BtnMenuDrinks_Click(sender As Object, e As EventArgs) Handles BtnMenuDrinks.Click
         FLPcasa.Visible = False
@@ -99,7 +121,23 @@
         FLPdulces.Visible = False
         FLPSuper.Visible = False
         FLPDrinks.Visible = True
+        FLPpicar.Visible = False
+    End Sub
+    Private Sub BtnMenuPicar_Click(sender As Object, e As EventArgs) Handles BtnMenuPicar.Click
+        FLPcasa.Visible = False
+        FLPClasic.Visible = False
+        FLPespecials.Visible = False
+        FLPdulces.Visible = False
+        FLPSuper.Visible = False
+        FLPDrinks.Visible = False
+        FLPpicar.Visible = True
     End Sub
 
+    Private Sub NuevoUToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles NuevoUToolStripMenuItem.Click
+        GestionUsuarios.Show()
+    End Sub
 
+    Private Sub TimerMain_Tick(sender As Object, e As EventArgs) Handles TimerMain.Tick
+        LbFechaHora.Text = Now
+    End Sub
 End Class

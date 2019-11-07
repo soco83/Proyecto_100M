@@ -22,6 +22,7 @@ Partial Class FormMain
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Me.FLPcasa = New System.Windows.Forms.FlowLayoutPanel()
         Me.m01 = New System.Windows.Forms.Button()
         Me.m02 = New System.Windows.Forms.Button()
@@ -154,10 +155,14 @@ Partial Class FormMain
         Me.NuevoUToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.EditarUToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.BorrarUToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ToolStripSeparator1 = New System.Windows.Forms.ToolStripSeparator()
+        Me.VerListaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ProductosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.NuevoPToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
         Me.EditarPToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
         Me.BorrarPToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ToolStripSeparator2 = New System.Windows.Forms.ToolStripSeparator()
+        Me.VerListaToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
         Me.AjustesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.Cerrar_SesionToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.BtnMenuCasa = New System.Windows.Forms.Button()
@@ -167,10 +172,25 @@ Partial Class FormMain
         Me.BtnMenuSuper = New System.Windows.Forms.Button()
         Me.BtnMenuDrinks = New System.Windows.Forms.Button()
         Me.BtnMenuPicar = New System.Windows.Forms.Button()
-        Me.ToolStripSeparator1 = New System.Windows.Forms.ToolStripSeparator()
-        Me.VerListaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ToolStripSeparator2 = New System.Windows.Forms.ToolStripSeparator()
-        Me.VerListaToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.FLPpicar = New System.Windows.Forms.FlowLayoutPanel()
+        Me.Button48 = New System.Windows.Forms.Button()
+        Me.Button49 = New System.Windows.Forms.Button()
+        Me.Button50 = New System.Windows.Forms.Button()
+        Me.Button51 = New System.Windows.Forms.Button()
+        Me.Button52 = New System.Windows.Forms.Button()
+        Me.Button53 = New System.Windows.Forms.Button()
+        Me.Button54 = New System.Windows.Forms.Button()
+        Me.Button55 = New System.Windows.Forms.Button()
+        Me.Button56 = New System.Windows.Forms.Button()
+        Me.Button57 = New System.Windows.Forms.Button()
+        Me.Button58 = New System.Windows.Forms.Button()
+        Me.TxBUsuarioConectado = New System.Windows.Forms.TextBox()
+        Me.LbFechaHora = New System.Windows.Forms.Label()
+        Me.TimerMain = New System.Windows.Forms.Timer(Me.components)
+        Me.LBTiquet = New System.Windows.Forms.ListBox()
+        Me.LBTotal = New System.Windows.Forms.Label()
+        Me.BtnImprimir = New System.Windows.Forms.Button()
+        Me.Button60 = New System.Windows.Forms.Button()
         Me.FLPcasa.SuspendLayout()
         Me.FLPClasic.SuspendLayout()
         Me.FLPespecials.SuspendLayout()
@@ -178,6 +198,7 @@ Partial Class FormMain
         Me.FLPSuper.SuspendLayout()
         Me.FLPDrinks.SuspendLayout()
         Me.MSMain.SuspendLayout()
+        Me.FLPpicar.SuspendLayout()
         Me.SuspendLayout()
         '
         'FLPcasa
@@ -201,7 +222,7 @@ Partial Class FormMain
         Me.FLPcasa.Controls.Add(Me.m16)
         Me.FLPcasa.Controls.Add(Me.m17)
         Me.FLPcasa.Controls.Add(Me.m18)
-        Me.FLPcasa.Location = New System.Drawing.Point(12, 118)
+        Me.FLPcasa.Location = New System.Drawing.Point(626, 118)
         Me.FLPcasa.Name = "FLPcasa"
         Me.FLPcasa.Size = New System.Drawing.Size(667, 404)
         Me.FLPcasa.TabIndex = 2
@@ -370,7 +391,7 @@ Partial Class FormMain
         '
         'TxBDatos
         '
-        Me.TxBDatos.Location = New System.Drawing.Point(12, 528)
+        Me.TxBDatos.Location = New System.Drawing.Point(734, 528)
         Me.TxBDatos.Multiline = True
         Me.TxBDatos.Name = "TxBDatos"
         Me.TxBDatos.Size = New System.Drawing.Size(461, 189)
@@ -421,7 +442,7 @@ Partial Class FormMain
         Me.FLPClasic.Controls.Add(Me.m57)
         Me.FLPClasic.Controls.Add(Me.m58)
         Me.FLPClasic.Controls.Add(Me.m59)
-        Me.FLPClasic.Location = New System.Drawing.Point(12, 118)
+        Me.FLPClasic.Location = New System.Drawing.Point(626, 118)
         Me.FLPClasic.Name = "FLPClasic"
         Me.FLPClasic.Size = New System.Drawing.Size(667, 404)
         Me.FLPClasic.TabIndex = 10
@@ -828,7 +849,7 @@ Partial Class FormMain
         Me.FLPespecials.Controls.Add(Me.Button28)
         Me.FLPespecials.Controls.Add(Me.Button29)
         Me.FLPespecials.Controls.Add(Me.Button30)
-        Me.FLPespecials.Location = New System.Drawing.Point(12, 118)
+        Me.FLPespecials.Location = New System.Drawing.Point(626, 118)
         Me.FLPespecials.Name = "FLPespecials"
         Me.FLPespecials.Size = New System.Drawing.Size(667, 404)
         Me.FLPespecials.TabIndex = 11
@@ -1111,7 +1132,7 @@ Partial Class FormMain
         Me.FLPdulces.Controls.Add(Me.m92)
         Me.FLPdulces.Controls.Add(Me.m93)
         Me.FLPdulces.Controls.Add(Me.m94)
-        Me.FLPdulces.Location = New System.Drawing.Point(12, 118)
+        Me.FLPdulces.Location = New System.Drawing.Point(626, 118)
         Me.FLPdulces.Name = "FLPdulces"
         Me.FLPdulces.Size = New System.Drawing.Size(667, 404)
         Me.FLPdulces.TabIndex = 12
@@ -1170,7 +1191,7 @@ Partial Class FormMain
         Me.FLPSuper.Controls.Add(Me.m98)
         Me.FLPSuper.Controls.Add(Me.m99)
         Me.FLPSuper.Controls.Add(Me.m100)
-        Me.FLPSuper.Location = New System.Drawing.Point(12, 118)
+        Me.FLPSuper.Location = New System.Drawing.Point(626, 118)
         Me.FLPSuper.Name = "FLPSuper"
         Me.FLPSuper.Size = New System.Drawing.Size(667, 404)
         Me.FLPSuper.TabIndex = 13
@@ -1249,7 +1270,7 @@ Partial Class FormMain
         Me.FLPDrinks.Controls.Add(Me.Button45)
         Me.FLPDrinks.Controls.Add(Me.Button46)
         Me.FLPDrinks.Controls.Add(Me.Button47)
-        Me.FLPDrinks.Location = New System.Drawing.Point(12, 118)
+        Me.FLPDrinks.Location = New System.Drawing.Point(626, 118)
         Me.FLPDrinks.Name = "FLPDrinks"
         Me.FLPDrinks.Size = New System.Drawing.Size(667, 404)
         Me.FLPDrinks.TabIndex = 14
@@ -1414,7 +1435,7 @@ Partial Class FormMain
         Me.MSMain.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.CajaToolStripMenuItem, Me.UsuariosToolStripMenuItem, Me.ProductosToolStripMenuItem, Me.AjustesToolStripMenuItem, Me.Cerrar_SesionToolStripMenuItem})
         Me.MSMain.Location = New System.Drawing.Point(0, 0)
         Me.MSMain.Name = "MSMain"
-        Me.MSMain.Size = New System.Drawing.Size(1350, 38)
+        Me.MSMain.Size = New System.Drawing.Size(1301, 38)
         Me.MSMain.TabIndex = 16
         Me.MSMain.Text = "MenuStrip1"
         '
@@ -1447,20 +1468,31 @@ Partial Class FormMain
         'NuevoUToolStripMenuItem
         '
         Me.NuevoUToolStripMenuItem.Name = "NuevoUToolStripMenuItem"
-        Me.NuevoUToolStripMenuItem.Size = New System.Drawing.Size(150, 34)
+        Me.NuevoUToolStripMenuItem.Size = New System.Drawing.Size(162, 34)
         Me.NuevoUToolStripMenuItem.Text = "Nuevo"
         '
         'EditarUToolStripMenuItem
         '
         Me.EditarUToolStripMenuItem.Name = "EditarUToolStripMenuItem"
-        Me.EditarUToolStripMenuItem.Size = New System.Drawing.Size(150, 34)
+        Me.EditarUToolStripMenuItem.Size = New System.Drawing.Size(162, 34)
         Me.EditarUToolStripMenuItem.Text = "Editar"
         '
         'BorrarUToolStripMenuItem
         '
         Me.BorrarUToolStripMenuItem.Name = "BorrarUToolStripMenuItem"
-        Me.BorrarUToolStripMenuItem.Size = New System.Drawing.Size(150, 34)
+        Me.BorrarUToolStripMenuItem.Size = New System.Drawing.Size(162, 34)
         Me.BorrarUToolStripMenuItem.Text = "Borrar"
+        '
+        'ToolStripSeparator1
+        '
+        Me.ToolStripSeparator1.Name = "ToolStripSeparator1"
+        Me.ToolStripSeparator1.Size = New System.Drawing.Size(159, 6)
+        '
+        'VerListaToolStripMenuItem
+        '
+        Me.VerListaToolStripMenuItem.Name = "VerListaToolStripMenuItem"
+        Me.VerListaToolStripMenuItem.Size = New System.Drawing.Size(162, 34)
+        Me.VerListaToolStripMenuItem.Text = "Ver lista"
         '
         'ProductosToolStripMenuItem
         '
@@ -1472,20 +1504,31 @@ Partial Class FormMain
         'NuevoPToolStripMenuItem1
         '
         Me.NuevoPToolStripMenuItem1.Name = "NuevoPToolStripMenuItem1"
-        Me.NuevoPToolStripMenuItem1.Size = New System.Drawing.Size(150, 34)
+        Me.NuevoPToolStripMenuItem1.Size = New System.Drawing.Size(162, 34)
         Me.NuevoPToolStripMenuItem1.Text = "Nuevo"
         '
         'EditarPToolStripMenuItem1
         '
         Me.EditarPToolStripMenuItem1.Name = "EditarPToolStripMenuItem1"
-        Me.EditarPToolStripMenuItem1.Size = New System.Drawing.Size(150, 34)
+        Me.EditarPToolStripMenuItem1.Size = New System.Drawing.Size(162, 34)
         Me.EditarPToolStripMenuItem1.Text = "Editar"
         '
         'BorrarPToolStripMenuItem1
         '
         Me.BorrarPToolStripMenuItem1.Name = "BorrarPToolStripMenuItem1"
-        Me.BorrarPToolStripMenuItem1.Size = New System.Drawing.Size(150, 34)
+        Me.BorrarPToolStripMenuItem1.Size = New System.Drawing.Size(162, 34)
         Me.BorrarPToolStripMenuItem1.Text = "Borrar"
+        '
+        'ToolStripSeparator2
+        '
+        Me.ToolStripSeparator2.Name = "ToolStripSeparator2"
+        Me.ToolStripSeparator2.Size = New System.Drawing.Size(159, 6)
+        '
+        'VerListaToolStripMenuItem1
+        '
+        Me.VerListaToolStripMenuItem1.Name = "VerListaToolStripMenuItem1"
+        Me.VerListaToolStripMenuItem1.Size = New System.Drawing.Size(162, 34)
+        Me.VerListaToolStripMenuItem1.Text = "Ver lista"
         '
         'AjustesToolStripMenuItem
         '
@@ -1496,12 +1539,12 @@ Partial Class FormMain
         'Cerrar_SesionToolStripMenuItem
         '
         Me.Cerrar_SesionToolStripMenuItem.Name = "Cerrar_SesionToolStripMenuItem"
-        Me.Cerrar_SesionToolStripMenuItem.Size = New System.Drawing.Size(155, 34)
-        Me.Cerrar_SesionToolStripMenuItem.Text = "Cerrar Sesión"
+        Me.Cerrar_SesionToolStripMenuItem.Size = New System.Drawing.Size(152, 34)
+        Me.Cerrar_SesionToolStripMenuItem.Text = "Cerrar sesión"
         '
         'BtnMenuCasa
         '
-        Me.BtnMenuCasa.Location = New System.Drawing.Point(12, 41)
+        Me.BtnMenuCasa.Location = New System.Drawing.Point(613, 41)
         Me.BtnMenuCasa.Name = "BtnMenuCasa"
         Me.BtnMenuCasa.Size = New System.Drawing.Size(92, 71)
         Me.BtnMenuCasa.TabIndex = 17
@@ -1510,7 +1553,7 @@ Partial Class FormMain
         '
         'BtnMenuClasicos
         '
-        Me.BtnMenuClasicos.Location = New System.Drawing.Point(110, 41)
+        Me.BtnMenuClasicos.Location = New System.Drawing.Point(711, 41)
         Me.BtnMenuClasicos.Name = "BtnMenuClasicos"
         Me.BtnMenuClasicos.Size = New System.Drawing.Size(92, 71)
         Me.BtnMenuClasicos.TabIndex = 18
@@ -1519,7 +1562,7 @@ Partial Class FormMain
         '
         'BtnMenuEspeciales
         '
-        Me.BtnMenuEspeciales.Location = New System.Drawing.Point(208, 41)
+        Me.BtnMenuEspeciales.Location = New System.Drawing.Point(809, 41)
         Me.BtnMenuEspeciales.Name = "BtnMenuEspeciales"
         Me.BtnMenuEspeciales.Size = New System.Drawing.Size(92, 71)
         Me.BtnMenuEspeciales.TabIndex = 19
@@ -1528,7 +1571,7 @@ Partial Class FormMain
         '
         'BtnMenuDulces
         '
-        Me.BtnMenuDulces.Location = New System.Drawing.Point(306, 41)
+        Me.BtnMenuDulces.Location = New System.Drawing.Point(907, 41)
         Me.BtnMenuDulces.Name = "BtnMenuDulces"
         Me.BtnMenuDulces.Size = New System.Drawing.Size(92, 71)
         Me.BtnMenuDulces.TabIndex = 20
@@ -1537,7 +1580,7 @@ Partial Class FormMain
         '
         'BtnMenuSuper
         '
-        Me.BtnMenuSuper.Location = New System.Drawing.Point(404, 41)
+        Me.BtnMenuSuper.Location = New System.Drawing.Point(1005, 41)
         Me.BtnMenuSuper.Name = "BtnMenuSuper"
         Me.BtnMenuSuper.Size = New System.Drawing.Size(92, 71)
         Me.BtnMenuSuper.TabIndex = 21
@@ -1546,49 +1589,211 @@ Partial Class FormMain
         '
         'BtnMenuDrinks
         '
-        Me.BtnMenuDrinks.Location = New System.Drawing.Point(502, 41)
+        Me.BtnMenuDrinks.Location = New System.Drawing.Point(1103, 41)
         Me.BtnMenuDrinks.Name = "BtnMenuDrinks"
         Me.BtnMenuDrinks.Size = New System.Drawing.Size(92, 71)
         Me.BtnMenuDrinks.TabIndex = 22
-        Me.BtnMenuDrinks.Text = "Bibidas"
+        Me.BtnMenuDrinks.Text = "Bebida"
         Me.BtnMenuDrinks.UseVisualStyleBackColor = True
         '
         'BtnMenuPicar
         '
-        Me.BtnMenuPicar.Location = New System.Drawing.Point(600, 41)
+        Me.BtnMenuPicar.Location = New System.Drawing.Point(1201, 41)
         Me.BtnMenuPicar.Name = "BtnMenuPicar"
         Me.BtnMenuPicar.Size = New System.Drawing.Size(92, 71)
         Me.BtnMenuPicar.TabIndex = 23
         Me.BtnMenuPicar.Text = "Para picar"
         Me.BtnMenuPicar.UseVisualStyleBackColor = True
         '
-        'ToolStripSeparator1
+        'FLPpicar
         '
-        Me.ToolStripSeparator1.Name = "ToolStripSeparator1"
-        Me.ToolStripSeparator1.Size = New System.Drawing.Size(177, 6)
+        Me.FLPpicar.BackColor = System.Drawing.SystemColors.ControlDark
+        Me.FLPpicar.Controls.Add(Me.Button48)
+        Me.FLPpicar.Controls.Add(Me.Button49)
+        Me.FLPpicar.Controls.Add(Me.Button50)
+        Me.FLPpicar.Controls.Add(Me.Button51)
+        Me.FLPpicar.Controls.Add(Me.Button52)
+        Me.FLPpicar.Controls.Add(Me.Button53)
+        Me.FLPpicar.Controls.Add(Me.Button54)
+        Me.FLPpicar.Controls.Add(Me.Button55)
+        Me.FLPpicar.Controls.Add(Me.Button56)
+        Me.FLPpicar.Controls.Add(Me.Button57)
+        Me.FLPpicar.Controls.Add(Me.Button58)
+        Me.FLPpicar.Location = New System.Drawing.Point(626, 118)
+        Me.FLPpicar.Name = "FLPpicar"
+        Me.FLPpicar.Size = New System.Drawing.Size(667, 404)
+        Me.FLPpicar.TabIndex = 24
         '
-        'VerListaToolStripMenuItem
+        'Button48
         '
-        Me.VerListaToolStripMenuItem.Name = "VerListaToolStripMenuItem"
-        Me.VerListaToolStripMenuItem.Size = New System.Drawing.Size(180, 34)
-        Me.VerListaToolStripMenuItem.Text = "Ver lista"
+        Me.Button48.Location = New System.Drawing.Point(3, 3)
+        Me.Button48.Name = "Button48"
+        Me.Button48.Size = New System.Drawing.Size(139, 65)
+        Me.Button48.TabIndex = 0
+        Me.Button48.Text = "Aceitunas"
+        Me.Button48.UseVisualStyleBackColor = True
         '
-        'ToolStripSeparator2
+        'Button49
         '
-        Me.ToolStripSeparator2.Name = "ToolStripSeparator2"
-        Me.ToolStripSeparator2.Size = New System.Drawing.Size(177, 6)
+        Me.Button49.Location = New System.Drawing.Point(148, 3)
+        Me.Button49.Name = "Button49"
+        Me.Button49.Size = New System.Drawing.Size(139, 65)
+        Me.Button49.TabIndex = 1
+        Me.Button49.Text = "Chips"
+        Me.Button49.UseVisualStyleBackColor = True
         '
-        'VerListaToolStripMenuItem1
+        'Button50
         '
-        Me.VerListaToolStripMenuItem1.Name = "VerListaToolStripMenuItem1"
-        Me.VerListaToolStripMenuItem1.Size = New System.Drawing.Size(180, 34)
-        Me.VerListaToolStripMenuItem1.Text = "Ver lista"
+        Me.Button50.Location = New System.Drawing.Point(293, 3)
+        Me.Button50.Name = "Button50"
+        Me.Button50.Size = New System.Drawing.Size(139, 65)
+        Me.Button50.TabIndex = 2
+        Me.Button50.Text = "Nachos guacamole"
+        Me.Button50.UseVisualStyleBackColor = True
+        '
+        'Button51
+        '
+        Me.Button51.Location = New System.Drawing.Point(438, 3)
+        Me.Button51.Name = "Button51"
+        Me.Button51.Size = New System.Drawing.Size(139, 65)
+        Me.Button51.TabIndex = 3
+        Me.Button51.Text = "Nachos queso"
+        Me.Button51.UseVisualStyleBackColor = True
+        '
+        'Button52
+        '
+        Me.Button52.Location = New System.Drawing.Point(3, 74)
+        Me.Button52.Name = "Button52"
+        Me.Button52.Size = New System.Drawing.Size(139, 65)
+        Me.Button52.TabIndex = 4
+        Me.Button52.Text = "Patatas mayo."
+        Me.Button52.UseVisualStyleBackColor = True
+        '
+        'Button53
+        '
+        Me.Button53.Location = New System.Drawing.Point(148, 74)
+        Me.Button53.Name = "Button53"
+        Me.Button53.Size = New System.Drawing.Size(139, 65)
+        Me.Button53.TabIndex = 5
+        Me.Button53.Text = "Patatas queso"
+        Me.Button53.UseVisualStyleBackColor = True
+        '
+        'Button54
+        '
+        Me.Button54.Location = New System.Drawing.Point(293, 74)
+        Me.Button54.Name = "Button54"
+        Me.Button54.Size = New System.Drawing.Size(139, 65)
+        Me.Button54.TabIndex = 6
+        Me.Button54.Text = "Patatas trufa"
+        Me.Button54.UseVisualStyleBackColor = True
+        '
+        'Button55
+        '
+        Me.Button55.Location = New System.Drawing.Point(438, 74)
+        Me.Button55.Name = "Button55"
+        Me.Button55.Size = New System.Drawing.Size(139, 65)
+        Me.Button55.TabIndex = 7
+        Me.Button55.Text = "Palomitas pollo"
+        Me.Button55.TextAlign = System.Drawing.ContentAlignment.BottomCenter
+        Me.Button55.UseVisualStyleBackColor = True
+        '
+        'Button56
+        '
+        Me.Button56.Location = New System.Drawing.Point(3, 145)
+        Me.Button56.Name = "Button56"
+        Me.Button56.Size = New System.Drawing.Size(139, 65)
+        Me.Button56.TabIndex = 8
+        Me.Button56.Text = "Palomitas queso"
+        Me.Button56.UseVisualStyleBackColor = True
+        '
+        'Button57
+        '
+        Me.Button57.Location = New System.Drawing.Point(148, 145)
+        Me.Button57.Name = "Button57"
+        Me.Button57.Size = New System.Drawing.Size(139, 65)
+        Me.Button57.TabIndex = 9
+        Me.Button57.Text = "Salchichas"
+        Me.Button57.UseVisualStyleBackColor = True
+        '
+        'Button58
+        '
+        Me.Button58.Location = New System.Drawing.Point(293, 145)
+        Me.Button58.Name = "Button58"
+        Me.Button58.Size = New System.Drawing.Size(139, 65)
+        Me.Button58.TabIndex = 10
+        Me.Button58.Text = "Alitas de pollo"
+        Me.Button58.UseVisualStyleBackColor = True
+        '
+        'TxBUsuarioConectado
+        '
+        Me.TxBUsuarioConectado.Location = New System.Drawing.Point(12, 41)
+        Me.TxBUsuarioConectado.Name = "TxBUsuarioConectado"
+        Me.TxBUsuarioConectado.ReadOnly = True
+        Me.TxBUsuarioConectado.Size = New System.Drawing.Size(183, 32)
+        Me.TxBUsuarioConectado.TabIndex = 25
+        '
+        'LbFechaHora
+        '
+        Me.LbFechaHora.AutoSize = True
+        Me.LbFechaHora.Location = New System.Drawing.Point(201, 44)
+        Me.LbFechaHora.Name = "LbFechaHora"
+        Me.LbFechaHora.Size = New System.Drawing.Size(77, 26)
+        Me.LbFechaHora.TabIndex = 26
+        Me.LbFechaHora.Text = "Label1"
+        '
+        'TimerMain
+        '
+        Me.TimerMain.Enabled = True
+        '
+        'LBTiquet
+        '
+        Me.LBTiquet.FormattingEnabled = True
+        Me.LBTiquet.ItemHeight = 26
+        Me.LBTiquet.Location = New System.Drawing.Point(12, 79)
+        Me.LBTiquet.Name = "LBTiquet"
+        Me.LBTiquet.Size = New System.Drawing.Size(359, 264)
+        Me.LBTiquet.TabIndex = 27
+        '
+        'LBTotal
+        '
+        Me.LBTotal.AutoSize = True
+        Me.LBTotal.Font = New System.Drawing.Font("Microsoft Sans Serif", 25.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LBTotal.Location = New System.Drawing.Point(42, 349)
+        Me.LBTotal.Name = "LBTotal"
+        Me.LBTotal.Size = New System.Drawing.Size(111, 39)
+        Me.LBTotal.TabIndex = 28
+        Me.LBTotal.Text = "Total: "
+        '
+        'BtnImprimir
+        '
+        Me.BtnImprimir.Location = New System.Drawing.Point(12, 391)
+        Me.BtnImprimir.Name = "BtnImprimir"
+        Me.BtnImprimir.Size = New System.Drawing.Size(183, 66)
+        Me.BtnImprimir.TabIndex = 29
+        Me.BtnImprimir.Text = "Print tiquet"
+        Me.BtnImprimir.UseVisualStyleBackColor = True
+        '
+        'Button60
+        '
+        Me.Button60.Location = New System.Drawing.Point(206, 391)
+        Me.Button60.Name = "Button60"
+        Me.Button60.Size = New System.Drawing.Size(165, 66)
+        Me.Button60.TabIndex = 30
+        Me.Button60.Text = "Pagar"
+        Me.Button60.UseVisualStyleBackColor = True
         '
         'FormMain
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(13.0!, 26.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1350, 729)
+        Me.ClientSize = New System.Drawing.Size(1301, 729)
+        Me.Controls.Add(Me.Button60)
+        Me.Controls.Add(Me.BtnImprimir)
+        Me.Controls.Add(Me.LBTotal)
+        Me.Controls.Add(Me.LBTiquet)
+        Me.Controls.Add(Me.LbFechaHora)
+        Me.Controls.Add(Me.TxBUsuarioConectado)
+        Me.Controls.Add(Me.FLPpicar)
         Me.Controls.Add(Me.BtnMenuPicar)
         Me.Controls.Add(Me.BtnMenuDrinks)
         Me.Controls.Add(Me.BtnMenuSuper)
@@ -1617,6 +1822,7 @@ Partial Class FormMain
         Me.FLPDrinks.ResumeLayout(False)
         Me.MSMain.ResumeLayout(False)
         Me.MSMain.PerformLayout()
+        Me.FLPpicar.ResumeLayout(False)
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -1770,4 +1976,23 @@ Partial Class FormMain
     Friend WithEvents VerListaToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ToolStripSeparator2 As ToolStripSeparator
     Friend WithEvents VerListaToolStripMenuItem1 As ToolStripMenuItem
+    Friend WithEvents FLPpicar As FlowLayoutPanel
+    Friend WithEvents Button48 As Button
+    Friend WithEvents Button49 As Button
+    Friend WithEvents Button50 As Button
+    Friend WithEvents Button51 As Button
+    Friend WithEvents Button52 As Button
+    Friend WithEvents Button53 As Button
+    Friend WithEvents Button54 As Button
+    Friend WithEvents Button55 As Button
+    Friend WithEvents Button56 As Button
+    Friend WithEvents Button57 As Button
+    Friend WithEvents Button58 As Button
+    Friend WithEvents TxBUsuarioConectado As TextBox
+    Friend WithEvents LbFechaHora As Label
+    Friend WithEvents TimerMain As Timer
+    Friend WithEvents LBTiquet As ListBox
+    Friend WithEvents LBTotal As Label
+    Friend WithEvents BtnImprimir As Button
+    Friend WithEvents Button60 As Button
 End Class

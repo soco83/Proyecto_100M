@@ -102,7 +102,7 @@ Public Class Montadito
 
 End Class
 
-Public Class bebidas
+Public Class Bebidas
     Inherits Producto
     'clase para todas las bebidas. 
 
