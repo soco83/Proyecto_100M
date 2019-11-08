@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class FormMain
     Inherits System.Windows.Forms.Form
 
     'Form reemplaza a Dispose para limpiar la lista de componentes.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,7 +20,7 @@ Partial Class FormMain
     'NOTA: el Diseñador de Windows Forms necesita el siguiente procedimiento
     'Se puede modificar usando el Diseñador de Windows Forms.  
     'No lo modifique con el editor de código.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Me.FLPcasa = New System.Windows.Forms.FlowLayoutPanel()
@@ -1449,13 +1449,13 @@ Partial Class FormMain
         'HoyToolStripMenuItem
         '
         Me.HoyToolStripMenuItem.Name = "HoyToolStripMenuItem"
-        Me.HoyToolStripMenuItem.Size = New System.Drawing.Size(127, 34)
+        Me.HoyToolStripMenuItem.Size = New System.Drawing.Size(180, 34)
         Me.HoyToolStripMenuItem.Text = "Hoy"
         '
         'MesToolStripMenuItem
         '
         Me.MesToolStripMenuItem.Name = "MesToolStripMenuItem"
-        Me.MesToolStripMenuItem.Size = New System.Drawing.Size(127, 34)
+        Me.MesToolStripMenuItem.Size = New System.Drawing.Size(180, 34)
         Me.MesToolStripMenuItem.Text = "Mes"
         '
         'UsuariosToolStripMenuItem

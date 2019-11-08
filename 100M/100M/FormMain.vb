@@ -1,9 +1,7 @@
 ﻿Public Class FormMain
     Private Sub Cerrar_SesionToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles Cerrar_SesionToolStripMenuItem.Click
-        'Dim a As Integer = MsgBox("¿Seguro que desea salir?", MsgBoxStyle.YesNo)
-        'If a = MsgBoxResult.Yes Then
-        End
-        'End If
+        Me.Close()
+        Inicio.Show()
     End Sub
 
     Private Sub FormMain_Load(sender As Object, e As EventArgs) Handles MyBase.Load
@@ -140,4 +138,5 @@
     Private Sub TimerMain_Tick(sender As Object, e As EventArgs) Handles TimerMain.Tick
         LbFechaHora.Text = Now
     End Sub
+
 End Class
