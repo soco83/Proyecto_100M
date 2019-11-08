@@ -1,4 +1,4 @@
-﻿Friend Class Usuario
+﻿Public Class Usuario
     Private password, nombre, ape1, ape2, dni, email, direccion As String
     Private tel As Long
     Public users As Usuario()
