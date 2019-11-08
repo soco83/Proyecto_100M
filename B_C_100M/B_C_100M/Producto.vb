@@ -12,7 +12,7 @@
 
 
     'este es el constructor de la clase el cual solo se pasa el nombre y la cantidad.
-    Public Sub Producto(ByVal nombre As String, ByVal cantidad As Integer)
+    Public Sub New(ByVal nombre As String, ByVal cantidad As Integer)
         Me.nombre = nombre
         Me.cantidad = cantidad
 
@@ -61,7 +61,7 @@ Public Class Montadito
     'se pone el constructor el cual hereda del padre y se pone tambien el tipo del montadito.
     Public Sub New(ByVal nombre As String, ByVal cantidad As Integer, ByVal tipo As t_montadito)
 
-        MyBase.Producto(nombre, cantidad)
+        MyBase.New(nombre, cantidad)
         Me.tipo = tipo
     End Sub
 
@@ -111,7 +111,7 @@ Public Class Bebidas
     'constructor de la clase bebidas que hereda de producto
     Public Sub New(ByVal nombre As String, ByVal cantidad As Integer, ByVal tipo As t_bebidas)
 
-        MyBase.Producto(nombre, cantidad)
+        MyBase.New(nombre, cantidad)
         Me.tipo = tipo
     End Sub
     'los enums del tipo de bebida

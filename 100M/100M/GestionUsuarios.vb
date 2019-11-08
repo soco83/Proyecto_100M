@@ -14,7 +14,7 @@
             MsgBox("Los campos de nombre, primer apellido, D.N.I., contraseña y rol son obligatorios.", MsgBoxStyle.Information)
         Else
             'se crea el usuario
-
+            'Dim user As New Usuario() --> no se como se hace
             Me.Close()
         End If
     End Sub
