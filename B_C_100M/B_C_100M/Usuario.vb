@@ -1,7 +1,7 @@
 ﻿Public Class Usuario
     Private password, nombre, ape1, ape2, dni, email, direccion As String
     Private tel As Long
-    Public users As Usuario()
+
 
     Public Sub New(ByVal password As String, ByVal nombre As String, ByVal ape1 As String, ByVal ape2 As String, ByVal dni As String, ByVal email As String, ByVal direccion As String, ByVal tel As Long)
         Me.password = password
@@ -14,11 +14,7 @@
         Me.tel = tel
     End Sub
 
-    Public Sub addUser(ByVal user As Usuario)
-        Dim i As Integer = 1
-        users(i) = user
-        i += 1
-    End Sub
+
 
     Public Function getPassword()
         Return Me.password
