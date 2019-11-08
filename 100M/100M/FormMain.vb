@@ -65,7 +65,7 @@
     Private Sub BtnsPicar_DoubleClick(sender As Object, e As EventArgs) Handles Button58.DoubleClick, Button57.DoubleClick, Button56.DoubleClick, Button55.DoubleClick, Button54.DoubleClick, Button53.DoubleClick, Button52.DoubleClick, Button51.DoubleClick, Button50.DoubleClick, Button49.DoubleClick, Button48.DoubleClick
         Dim botonActual As Button
         botonActual = sender
-        LBTiquet.Items.Add(botonActual.Name)
+        LBTiquet.Items.Add(botonActual.Text)
     End Sub
 
 
