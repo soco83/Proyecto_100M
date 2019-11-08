@@ -72,13 +72,11 @@ Partial Class Inicio
         '
         'BtnSalir
         '
-        'Me.BtnSalir.Image = Global._100M.My.Resources.Resources.SAD
         Me.BtnSalir.Location = New System.Drawing.Point(462, 527)
         Me.BtnSalir.Name = "BtnSalir"
         Me.BtnSalir.Size = New System.Drawing.Size(121, 105)
         Me.BtnSalir.TabIndex = 4
         Me.BtnSalir.Text = "Salir"
-        Me.BtnSalir.TextAlign = System.Drawing.ContentAlignment.BottomCenter
         Me.BtnSalir.UseVisualStyleBackColor = True
         '
         'Inicio

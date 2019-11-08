@@ -187,6 +187,7 @@ Partial Class FormMain
         Me.LBTotal = New System.Windows.Forms.Label()
         Me.BtnImprimir = New System.Windows.Forms.Button()
         Me.Button60 = New System.Windows.Forms.Button()
+        Me.BtnAñadir = New System.Windows.Forms.Button()
         Me.FLPcasa.SuspendLayout()
         Me.FLPClasic.SuspendLayout()
         Me.FLPespecials.SuspendLayout()
@@ -387,7 +388,7 @@ Partial Class FormMain
         '
         'TxBDatos
         '
-        Me.TxBDatos.Location = New System.Drawing.Point(734, 528)
+        Me.TxBDatos.Location = New System.Drawing.Point(626, 528)
         Me.TxBDatos.Multiline = True
         Me.TxBDatos.Name = "TxBDatos"
         Me.TxBDatos.Size = New System.Drawing.Size(461, 189)
@@ -1445,13 +1446,13 @@ Partial Class FormMain
         'HoyToolStripMenuItem
         '
         Me.HoyToolStripMenuItem.Name = "HoyToolStripMenuItem"
-        Me.HoyToolStripMenuItem.Size = New System.Drawing.Size(127, 34)
+        Me.HoyToolStripMenuItem.Size = New System.Drawing.Size(180, 34)
         Me.HoyToolStripMenuItem.Text = "Hoy"
         '
         'MesToolStripMenuItem
         '
         Me.MesToolStripMenuItem.Name = "MesToolStripMenuItem"
-        Me.MesToolStripMenuItem.Size = New System.Drawing.Size(127, 34)
+        Me.MesToolStripMenuItem.Size = New System.Drawing.Size(180, 34)
         Me.MesToolStripMenuItem.Text = "Mes"
         '
         'UsuariosToolStripMenuItem
@@ -1464,13 +1465,13 @@ Partial Class FormMain
         'NuevoUToolStripMenuItem
         '
         Me.NuevoUToolStripMenuItem.Name = "NuevoUToolStripMenuItem"
-        Me.NuevoUToolStripMenuItem.Size = New System.Drawing.Size(162, 34)
+        Me.NuevoUToolStripMenuItem.Size = New System.Drawing.Size(180, 34)
         Me.NuevoUToolStripMenuItem.Text = "Nuevo"
         '
         'ToolStripSeparator1
         '
         Me.ToolStripSeparator1.Name = "ToolStripSeparator1"
-        Me.ToolStripSeparator1.Size = New System.Drawing.Size(159, 6)
+        Me.ToolStripSeparator1.Size = New System.Drawing.Size(177, 6)
         '
         'VerListaToolStripMenuItem
         '
@@ -1723,14 +1724,14 @@ Partial Class FormMain
         Me.LBTiquet.ItemHeight = 26
         Me.LBTiquet.Location = New System.Drawing.Point(12, 79)
         Me.LBTiquet.Name = "LBTiquet"
-        Me.LBTiquet.Size = New System.Drawing.Size(359, 264)
+        Me.LBTiquet.Size = New System.Drawing.Size(359, 498)
         Me.LBTiquet.TabIndex = 27
         '
         'LBTotal
         '
         Me.LBTotal.AutoSize = True
         Me.LBTotal.Font = New System.Drawing.Font("Microsoft Sans Serif", 25.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LBTotal.Location = New System.Drawing.Point(42, 349)
+        Me.LBTotal.Location = New System.Drawing.Point(46, 599)
         Me.LBTotal.Name = "LBTotal"
         Me.LBTotal.Size = New System.Drawing.Size(111, 39)
         Me.LBTotal.TabIndex = 28
@@ -1738,7 +1739,7 @@ Partial Class FormMain
         '
         'BtnImprimir
         '
-        Me.BtnImprimir.Location = New System.Drawing.Point(12, 391)
+        Me.BtnImprimir.Location = New System.Drawing.Point(12, 651)
         Me.BtnImprimir.Name = "BtnImprimir"
         Me.BtnImprimir.Size = New System.Drawing.Size(183, 66)
         Me.BtnImprimir.TabIndex = 29
@@ -1747,18 +1748,28 @@ Partial Class FormMain
         '
         'Button60
         '
-        Me.Button60.Location = New System.Drawing.Point(206, 391)
+        Me.Button60.Location = New System.Drawing.Point(206, 651)
         Me.Button60.Name = "Button60"
         Me.Button60.Size = New System.Drawing.Size(165, 66)
         Me.Button60.TabIndex = 30
         Me.Button60.Text = "Pago en efectivo"
         Me.Button60.UseVisualStyleBackColor = True
         '
+        'BtnAñadir
+        '
+        Me.BtnAñadir.Location = New System.Drawing.Point(1093, 528)
+        Me.BtnAñadir.Name = "BtnAñadir"
+        Me.BtnAñadir.Size = New System.Drawing.Size(200, 189)
+        Me.BtnAñadir.TabIndex = 31
+        Me.BtnAñadir.Text = "Añadir producto al tiquet"
+        Me.BtnAñadir.UseVisualStyleBackColor = True
+        '
         'FormMain
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(13.0!, 26.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1301, 729)
+        Me.Controls.Add(Me.BtnAñadir)
         Me.Controls.Add(Me.Button60)
         Me.Controls.Add(Me.BtnImprimir)
         Me.Controls.Add(Me.LBTotal)
@@ -1963,4 +1974,5 @@ Partial Class FormMain
     Friend WithEvents LBTotal As Label
     Friend WithEvents BtnImprimir As Button
     Friend WithEvents Button60 As Button
+    Friend WithEvents BtnAñadir As Button
 End Class

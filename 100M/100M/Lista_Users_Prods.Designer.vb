@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class ListaProductos
+Partial Class Lista_Users_Prods
     Inherits System.Windows.Forms.Form
 
     'Form reemplaza a Dispose para limpiar la lista de componentes.
@@ -34,9 +34,9 @@ Partial Class ListaProductos
         Me.LbTitulo.AutoSize = True
         Me.LbTitulo.Location = New System.Drawing.Point(7, 9)
         Me.LbTitulo.Name = "LbTitulo"
-        Me.LbTitulo.Size = New System.Drawing.Size(189, 26)
+        Me.LbTitulo.Size = New System.Drawing.Size(94, 26)
         Me.LbTitulo.TabIndex = 0
-        Me.LbTitulo.Text = "Lista de productos"
+        Me.LbTitulo.Text = "Lista de "
         '
         'ListBox1
         '
@@ -74,7 +74,7 @@ Partial Class ListaProductos
         Me.BtnVolver.Text = "Volver"
         Me.BtnVolver.UseVisualStyleBackColor = True
         '
-        'ListaProductos
+        'Lista_Users_Prods
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(13.0!, 26.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
@@ -86,7 +86,8 @@ Partial Class ListaProductos
         Me.Controls.Add(Me.LbTitulo)
         Me.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.5!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Margin = New System.Windows.Forms.Padding(7, 6, 7, 6)
-        Me.Name = "ListaProductos"
+        Me.Name = "Lista_Users_Prods"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Lista de los productos"
         Me.ResumeLayout(False)
         Me.PerformLayout()

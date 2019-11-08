@@ -57,7 +57,7 @@ Partial Class GestionProductos
         'LbTitulo
         '
         Me.LbTitulo.AutoSize = True
-        Me.LbTitulo.Location = New System.Drawing.Point(133, 9)
+        Me.LbTitulo.Location = New System.Drawing.Point(97, 9)
         Me.LbTitulo.Name = "LbTitulo"
         Me.LbTitulo.Size = New System.Drawing.Size(77, 26)
         Me.LbTitulo.TabIndex = 41

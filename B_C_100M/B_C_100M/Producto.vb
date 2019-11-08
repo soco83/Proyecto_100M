@@ -109,7 +109,7 @@ Public Class Bebidas
     Dim tipo As t_bebidas
 
     'constructor de la clase bebidas que hereda de producto
-    Public Sub New(ByVal nombre As String, ByVal cantidad As Integer, ByVal tipo As t_bebidas)
+    Public Sub New(ByVal nombre As String, ByVal cantidad As Integer)
 
         MyBase.New(nombre, cantidad)
         Me.tipo = tipo

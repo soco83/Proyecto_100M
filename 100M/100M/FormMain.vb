@@ -62,12 +62,10 @@
         TxBDatos.Text = botonActual.Text
     End Sub
 
-    Private Sub BtnsPicar_DoubleClick(sender As Object, e As EventArgs) Handles Button58.DoubleClick, Button57.DoubleClick, Button56.DoubleClick, Button55.DoubleClick, Button54.DoubleClick, Button53.DoubleClick, Button52.DoubleClick, Button51.DoubleClick, Button50.DoubleClick, Button49.DoubleClick, Button48.DoubleClick
-        Dim botonActual As Button
-        botonActual = sender
-        LBTiquet.Items.Add(botonActual.Text)
+    'método que añade lo que haya en el TextBox de datos al tiquet
+    Private Sub BtnAñadir_Click(sender As Object, e As EventArgs) Handles BtnAñadir.Click
+        LBTiquet.Items.Add(TxBDatos.Text)
     End Sub
-
 
     'métodos de los botones de las categorías de productos
     '   que controlan que grupo de botones aparece en pantalla.
@@ -141,7 +139,8 @@
     End Sub
     Private Sub VerListaToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles VerListaToolStripMenuItem.Click
         'llama al form donde se visualiza la lista de usuarios
-
+        Lista_Users_Prods.openType = 1
+        Lista_Users_Prods.Show()
     End Sub
 
     Private Sub NuevoPToolStripMenuItem1_Click(sender As Object, e As EventArgs) Handles NuevoPToolStripMenuItem1.Click
@@ -150,7 +149,8 @@
     End Sub
     Private Sub VerListaToolStripMenuItem1_Click(sender As Object, e As EventArgs) Handles VerListaToolStripMenuItem1.Click
         'llama al form donde se visualiza la lista de productos
-
+        Lista_Users_Prods.openType = 2
+        Lista_Users_Prods.Show()
     End Sub
 
 
