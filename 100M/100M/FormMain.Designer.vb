@@ -153,14 +153,10 @@ Partial Class FormMain
         Me.MesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.UsuariosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.NuevoUToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.EditarUToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.BorrarUToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStripSeparator1 = New System.Windows.Forms.ToolStripSeparator()
         Me.VerListaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ProductosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.NuevoPToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
-        Me.EditarPToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
-        Me.BorrarPToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStripSeparator2 = New System.Windows.Forms.ToolStripSeparator()
         Me.VerListaToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
         Me.AjustesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -1449,18 +1445,18 @@ Partial Class FormMain
         'HoyToolStripMenuItem
         '
         Me.HoyToolStripMenuItem.Name = "HoyToolStripMenuItem"
-        Me.HoyToolStripMenuItem.Size = New System.Drawing.Size(180, 34)
+        Me.HoyToolStripMenuItem.Size = New System.Drawing.Size(127, 34)
         Me.HoyToolStripMenuItem.Text = "Hoy"
         '
         'MesToolStripMenuItem
         '
         Me.MesToolStripMenuItem.Name = "MesToolStripMenuItem"
-        Me.MesToolStripMenuItem.Size = New System.Drawing.Size(180, 34)
+        Me.MesToolStripMenuItem.Size = New System.Drawing.Size(127, 34)
         Me.MesToolStripMenuItem.Text = "Mes"
         '
         'UsuariosToolStripMenuItem
         '
-        Me.UsuariosToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.NuevoUToolStripMenuItem, Me.EditarUToolStripMenuItem, Me.BorrarUToolStripMenuItem, Me.ToolStripSeparator1, Me.VerListaToolStripMenuItem})
+        Me.UsuariosToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.NuevoUToolStripMenuItem, Me.ToolStripSeparator1, Me.VerListaToolStripMenuItem})
         Me.UsuariosToolStripMenuItem.Name = "UsuariosToolStripMenuItem"
         Me.UsuariosToolStripMenuItem.Size = New System.Drawing.Size(107, 34)
         Me.UsuariosToolStripMenuItem.Text = "Usuarios"
@@ -1471,18 +1467,6 @@ Partial Class FormMain
         Me.NuevoUToolStripMenuItem.Size = New System.Drawing.Size(162, 34)
         Me.NuevoUToolStripMenuItem.Text = "Nuevo"
         '
-        'EditarUToolStripMenuItem
-        '
-        Me.EditarUToolStripMenuItem.Name = "EditarUToolStripMenuItem"
-        Me.EditarUToolStripMenuItem.Size = New System.Drawing.Size(162, 34)
-        Me.EditarUToolStripMenuItem.Text = "Editar"
-        '
-        'BorrarUToolStripMenuItem
-        '
-        Me.BorrarUToolStripMenuItem.Name = "BorrarUToolStripMenuItem"
-        Me.BorrarUToolStripMenuItem.Size = New System.Drawing.Size(162, 34)
-        Me.BorrarUToolStripMenuItem.Text = "Borrar"
-        '
         'ToolStripSeparator1
         '
         Me.ToolStripSeparator1.Name = "ToolStripSeparator1"
@@ -1491,12 +1475,12 @@ Partial Class FormMain
         'VerListaToolStripMenuItem
         '
         Me.VerListaToolStripMenuItem.Name = "VerListaToolStripMenuItem"
-        Me.VerListaToolStripMenuItem.Size = New System.Drawing.Size(162, 34)
+        Me.VerListaToolStripMenuItem.Size = New System.Drawing.Size(180, 34)
         Me.VerListaToolStripMenuItem.Text = "Ver lista"
         '
         'ProductosToolStripMenuItem
         '
-        Me.ProductosToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.NuevoPToolStripMenuItem1, Me.EditarPToolStripMenuItem1, Me.BorrarPToolStripMenuItem1, Me.ToolStripSeparator2, Me.VerListaToolStripMenuItem1})
+        Me.ProductosToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.NuevoPToolStripMenuItem1, Me.ToolStripSeparator2, Me.VerListaToolStripMenuItem1})
         Me.ProductosToolStripMenuItem.Name = "ProductosToolStripMenuItem"
         Me.ProductosToolStripMenuItem.Size = New System.Drawing.Size(122, 34)
         Me.ProductosToolStripMenuItem.Text = "Productos"
@@ -1504,30 +1488,18 @@ Partial Class FormMain
         'NuevoPToolStripMenuItem1
         '
         Me.NuevoPToolStripMenuItem1.Name = "NuevoPToolStripMenuItem1"
-        Me.NuevoPToolStripMenuItem1.Size = New System.Drawing.Size(162, 34)
+        Me.NuevoPToolStripMenuItem1.Size = New System.Drawing.Size(180, 34)
         Me.NuevoPToolStripMenuItem1.Text = "Nuevo"
-        '
-        'EditarPToolStripMenuItem1
-        '
-        Me.EditarPToolStripMenuItem1.Name = "EditarPToolStripMenuItem1"
-        Me.EditarPToolStripMenuItem1.Size = New System.Drawing.Size(162, 34)
-        Me.EditarPToolStripMenuItem1.Text = "Editar"
-        '
-        'BorrarPToolStripMenuItem1
-        '
-        Me.BorrarPToolStripMenuItem1.Name = "BorrarPToolStripMenuItem1"
-        Me.BorrarPToolStripMenuItem1.Size = New System.Drawing.Size(162, 34)
-        Me.BorrarPToolStripMenuItem1.Text = "Borrar"
         '
         'ToolStripSeparator2
         '
         Me.ToolStripSeparator2.Name = "ToolStripSeparator2"
-        Me.ToolStripSeparator2.Size = New System.Drawing.Size(159, 6)
+        Me.ToolStripSeparator2.Size = New System.Drawing.Size(177, 6)
         '
         'VerListaToolStripMenuItem1
         '
         Me.VerListaToolStripMenuItem1.Name = "VerListaToolStripMenuItem1"
-        Me.VerListaToolStripMenuItem1.Size = New System.Drawing.Size(162, 34)
+        Me.VerListaToolStripMenuItem1.Size = New System.Drawing.Size(180, 34)
         Me.VerListaToolStripMenuItem1.Text = "Ver lista"
         '
         'AjustesToolStripMenuItem
@@ -1770,7 +1742,7 @@ Partial Class FormMain
         Me.BtnImprimir.Name = "BtnImprimir"
         Me.BtnImprimir.Size = New System.Drawing.Size(183, 66)
         Me.BtnImprimir.TabIndex = 29
-        Me.BtnImprimir.Text = "Print tiquet"
+        Me.BtnImprimir.Text = "Imprimir tiquet"
         Me.BtnImprimir.UseVisualStyleBackColor = True
         '
         'Button60
@@ -1779,7 +1751,7 @@ Partial Class FormMain
         Me.Button60.Name = "Button60"
         Me.Button60.Size = New System.Drawing.Size(165, 66)
         Me.Button60.TabIndex = 30
-        Me.Button60.Text = "Pagar"
+        Me.Button60.Text = "Pago en efectivo"
         Me.Button60.UseVisualStyleBackColor = True
         '
         'FormMain
@@ -1957,12 +1929,8 @@ Partial Class FormMain
     Friend WithEvents MesToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents UsuariosToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents NuevoUToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents EditarUToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents BorrarUToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ProductosToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents NuevoPToolStripMenuItem1 As ToolStripMenuItem
-    Friend WithEvents EditarPToolStripMenuItem1 As ToolStripMenuItem
-    Friend WithEvents BorrarPToolStripMenuItem1 As ToolStripMenuItem
     Friend WithEvents AjustesToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents Cerrar_SesionToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents BtnMenuCasa As Button

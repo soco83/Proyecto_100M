@@ -4,6 +4,10 @@
         Inicio.Show()
     End Sub
 
+    Private Sub TimerMain_Tick(sender As Object, e As EventArgs) Handles TimerMain.Tick
+        LbFechaHora.Text = Now
+    End Sub
+
     Private Sub FormMain_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         'se carga por defecto al iniciarse el form el primer grupo de botones.
         FLPcasa.Visible = True
@@ -132,11 +136,22 @@
     End Sub
 
     Private Sub NuevoUToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles NuevoUToolStripMenuItem.Click
+        'llama al form donde se crean usuarios nuevos
         GestionUsuarios.Show()
     End Sub
+    Private Sub VerListaToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles VerListaToolStripMenuItem.Click
+        'llama al form donde se visualiza la lista de usuarios
 
-    Private Sub TimerMain_Tick(sender As Object, e As EventArgs) Handles TimerMain.Tick
-        LbFechaHora.Text = Now
     End Sub
+
+    Private Sub NuevoPToolStripMenuItem1_Click(sender As Object, e As EventArgs) Handles NuevoPToolStripMenuItem1.Click
+        'llama al form donde se crean productos nuevos
+        GestionProductos.Show()
+    End Sub
+    Private Sub VerListaToolStripMenuItem1_Click(sender As Object, e As EventArgs) Handles VerListaToolStripMenuItem1.Click
+        'llama al form donde se visualiza la lista de productos
+
+    End Sub
+
 
 End Class

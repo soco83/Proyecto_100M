@@ -1,6 +1,6 @@
 ﻿Public Class GestionUsuarios
 
-    'ste form deberá servir tanto como para crear como para editar usuarios.
+    'Este form deberá servir tanto como para crear como para editar usuarios.
     'si el form fue llamado desde el botón crear, los TextBox aparecerán vacíos y el
     '   título del form (el Label LbTitulo) será "Nuevo usuario"
     'si fue llamado desde editar, el form aparecerá con, en los TextBox los datos del
