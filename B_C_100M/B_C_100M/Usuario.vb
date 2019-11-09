@@ -1,9 +1,10 @@
 ﻿Public Class Usuario
-    Private password, nombre, ape1, ape2, dni, email, direccion As String
-    Private tel As Long
+    Dim codigo, password, nombre, ape1, ape2, dni, email, direccion As String
+    Dim tel As Long
 
 
-    Public Sub New(ByVal password As String, ByVal nombre As String, ByVal ape1 As String, ByVal ape2 As String, ByVal dni As String, ByVal email As String, ByVal direccion As String, ByVal tel As Long)
+    Public Sub New(ByVal codigo As String, ByVal password As String, ByVal nombre As String, ByVal ape1 As String, ByVal ape2 As String, ByVal dni As String, ByVal email As String, ByVal direccion As String, ByVal tel As Long)
+        Me.codigo = codigo
         Me.password = password
         Me.nombre = nombre
         Me.ape1 = ape1
@@ -15,7 +16,9 @@
     End Sub
 
 
-
+    Public Function getCodigo()
+        Return Me.codigo
+    End Function
     Public Function getPassword()
         Return Me.password
     End Function

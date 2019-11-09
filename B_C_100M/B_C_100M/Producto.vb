@@ -5,24 +5,25 @@
     'se añade los atributos de la clase los cuales son el nombre para saber que montado se elije,
     'la cantidad para saber cuantos productos iguales se elijen y que modifique el precio.
     'el precio y el tipo de montadito(aun por ver)
-    Dim nombre As String
+    Dim codigo, nombre As String
     Dim cantidad As Integer
     Dim precio As Single
-
+    Dim precioTotalUnitario As Integer
 
 
     'este es el constructor de la clase el cual solo se pasa el nombre y la cantidad.
-    Public Sub New(ByVal nombre As String, ByVal cantidad As Integer)
+    Public Sub New(ByVal codigo As String, ByVal nombre As String, ByVal precio As Single)
+        Me.codigo = codigo
         Me.nombre = nombre
-        Me.cantidad = cantidad
-
+        Me.precio = precio
     End Sub
 
-    'se pone el proceso para que le pase al hijo para obtener el precio.
-    Public Sub ponerPrecio()
 
-    End Sub
-    'funciones que devuelven el nombre, la cantidad y el precio.
+    'funciones que devuelven el codigo, el nombre, la cantidad y el precio.
+
+    Public Function getCodigo() As String
+        Return Me.codigo
+    End Function
     Public Function getNombre() As String
 
         Return Me.nombre
@@ -39,11 +40,11 @@
         Return Me.precio
     End Function
 
-    'se pone el set precio para poder poner el precio en los hijos
+
     Public Sub setPrecio(ByVal precio As Single)
         Me.Precio = precio
     End Sub
-    'se pone el set cantidad para poder cambiarla en los hijos
+
     Public Sub setCantidad(ByVal cantidad As Integer)
         Me.cantidad = cantidad
     End Sub
