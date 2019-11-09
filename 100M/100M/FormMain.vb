@@ -1,4 +1,5 @@
 ﻿Public Class FormMain
+    Public nombreUsuario As String
     Private Sub Cerrar_SesionToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles Cerrar_SesionToolStripMenuItem.Click
         Me.Close()
         Inicio.Show()
@@ -17,6 +18,8 @@
         FLPSuper.Visible = False
         FLPDrinks.Visible = False
         FLPpicar.Visible = False
+
+        TxBUsuarioConectado.Text = nombreUsuario
     End Sub
 
     'métodos que controlan lo que hacen los botones de cada grupo
@@ -64,7 +67,24 @@
 
     'método que añade lo que haya en el TextBox de datos al tiquet
     Private Sub BtnAñadir_Click(sender As Object, e As EventArgs) Handles BtnAñadir.Click
-        LBTiquet.Items.Add(TxBDatos.Text)
+        'si esta primera comprobación no se hiciera y sin hacer click en ningun boton se
+        '  hiciera click en el boton 'añadir a tiquet', en el tiquet se introduciría esa String.
+        Dim textMal As String = "- Haz click en un producto para ver sus datos -"
+        If Not TxBDatos.Text = textMal Then
+            'se comprueba que en el tiquet no esté ya el producto.
+            Dim cantidad As Integer = 1
+            If Not LBTiquet.Items.Contains(TxBDatos.Text) Then
+                LBTiquet.Items.Add(TxBDatos.Text)
+
+                LBCantidad.Items.Add(cantidad)
+            Else
+                LBCantidad.Items.Insert(LBTiquet.Items.IndexOf(TxBDatos.Text), cantidad + 1)
+                cantidad = 1
+            End If
+        Else
+            MsgBox("Selecciona un producto a meter en el tiquet.")
+        End If
+
     End Sub
 
     'métodos de los botones de las categorías de productos
@@ -135,6 +155,7 @@
 
     Private Sub NuevoUToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles NuevoUToolStripMenuItem.Click
         'llama al form donde se crean usuarios nuevos
+        GestionUsuarios.opentype = 1
         GestionUsuarios.Show()
     End Sub
     Private Sub VerListaToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles VerListaToolStripMenuItem.Click
@@ -145,6 +166,7 @@
 
     Private Sub NuevoPToolStripMenuItem1_Click(sender As Object, e As EventArgs) Handles NuevoPToolStripMenuItem1.Click
         'llama al form donde se crean productos nuevos
+        GestionProductos.openType = 1
         GestionProductos.Show()
     End Sub
     Private Sub VerListaToolStripMenuItem1_Click(sender As Object, e As EventArgs) Handles VerListaToolStripMenuItem1.Click

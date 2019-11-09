@@ -149,6 +149,7 @@ Partial Class GestionProductos
         Me.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.5!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Margin = New System.Windows.Forms.Padding(7, 6, 7, 6)
         Me.Name = "GestionProductos"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Gestion de productos"
         Me.ResumeLayout(False)
         Me.PerformLayout()

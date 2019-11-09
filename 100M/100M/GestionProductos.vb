@@ -2,6 +2,7 @@
 Imports B_C_100M.Bebidas
 
 Public Class GestionProductos
+    Public openType As Integer
     Private Sub BtnAceptar_Click(sender As Object, e As EventArgs) Handles BtnAceptar.Click
         If CBCategoria.Text = "" Or TxBNombre.Text = "" Or TxBPrecio.Text = "" Then
             MsgBox("Los campos de categoría, nombre y precio son obligatorios. Por favor rellénelos.", MsgBoxStyle.Information)
@@ -21,5 +22,15 @@ Public Class GestionProductos
             End If
         Next
 
+    End Sub
+
+    Private Sub GestionProductos_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        If openType = 1 Then
+            'crear un nuevo usuario
+            LbTitulo.Text = "Nuevo producto"
+        ElseIf openType = 2 Then
+            'editar usuario seleccionado
+            LbTitulo.Text = "Editar producto"
+        End If
     End Sub
 End Class

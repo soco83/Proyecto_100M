@@ -166,9 +166,9 @@ Partial Class GestionUsuarios
         Me.LbTitulo.AutoSize = True
         Me.LbTitulo.Location = New System.Drawing.Point(133, 9)
         Me.LbTitulo.Name = "LbTitulo"
-        Me.LbTitulo.Size = New System.Drawing.Size(77, 26)
+        Me.LbTitulo.Size = New System.Drawing.Size(70, 26)
         Me.LbTitulo.TabIndex = 14
-        Me.LbTitulo.Text = "Label2"
+        Me.LbTitulo.Text = "label2"
         '
         'LbDireccion
         '

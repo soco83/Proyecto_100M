@@ -1,12 +1,19 @@
-﻿Public Class GestionUsuarios
-
+﻿Imports B_C_100M
+Public Class GestionUsuarios
+    Public opentype As Integer
     'Este form deberá servir tanto como para crear como para editar usuarios.
     'si el form fue llamado desde el botón crear, los TextBox aparecerán vacíos y el
     '   título del form (el Label LbTitulo) será "Nuevo usuario"
     'si fue llamado desde editar, el form aparecerá con, en los TextBox los datos del
     '   usuario a ediar y en el Label del título "Editar usuario"
     Private Sub GestionUsuarios_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
+        If opentype = 1 Then
+            'crear un nuevo usuario
+            LbTitulo.Text = "Nuevo usuario"
+        ElseIf opentype = 2 Then
+            'editar usuario seleccionado
+            LbTitulo.Text = "Editar usuario"
+        End If
     End Sub
 
     Private Sub BtnAceptar_Click(sender As Object, e As EventArgs) Handles BtnAceptar.Click
@@ -14,7 +21,14 @@
             MsgBox("Los campos de nombre, primer apellido, D.N.I., contraseña y rol son obligatorios.", MsgBoxStyle.Information)
         Else
             'se crea el usuario
-            'Dim user As New Usuario() --> no se como se hace
+            Dim user As New Usuario(TxBPassWord.Text, True, TxBNombre.Text, TxBApe1.Text, TxBApe2.Text, TxBDNI.Text, TxBEmail.Text, TxBDireccion.Text, CLng(TxBTel.Text))
+            Try
+                Dim file As New Ficheros
+                file.guardarUsuario(user)
+                MsgBox("El usuario se ha guardado correctamente.", MsgBoxStyle.Information)
+            Catch ex As Exception
+                MsgBox("Ha ocurrido un error durante el proceso.", MsgBoxStyle.Exclamation)
+            End Try
             Me.Close()
         End If
     End Sub
