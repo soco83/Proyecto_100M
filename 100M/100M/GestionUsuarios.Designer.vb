@@ -42,8 +42,8 @@ Partial Class GestionUsuarios
         Me.TxBPassWord = New System.Windows.Forms.TextBox()
         Me.LbPassword = New System.Windows.Forms.Label()
         Me.LbRol = New System.Windows.Forms.Label()
-        Me.CBRoles = New System.Windows.Forms.ComboBox()
         Me.LBSeparador = New System.Windows.Forms.Label()
+        Me.txBCodigo = New System.Windows.Forms.TextBox()
         Me.SuspendLayout()
         '
         'LbNombre
@@ -207,19 +207,9 @@ Partial Class GestionUsuarios
         Me.LbRol.AutoSize = True
         Me.LbRol.Location = New System.Drawing.Point(14, 50)
         Me.LbRol.Name = "LbRol"
-        Me.LbRol.Size = New System.Drawing.Size(54, 26)
+        Me.LbRol.Size = New System.Drawing.Size(90, 26)
         Me.LbRol.TabIndex = 21
-        Me.LbRol.Text = "Rol*"
-        '
-        'CBRoles
-        '
-        Me.CBRoles.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.CBRoles.FormattingEnabled = True
-        Me.CBRoles.Items.AddRange(New Object() {"Admimistrador", "Empleado"})
-        Me.CBRoles.Location = New System.Drawing.Point(209, 42)
-        Me.CBRoles.Name = "CBRoles"
-        Me.CBRoles.Size = New System.Drawing.Size(193, 34)
-        Me.CBRoles.TabIndex = 1
+        Me.LbRol.Text = "Código*"
         '
         'LBSeparador
         '
@@ -231,13 +221,20 @@ Partial Class GestionUsuarios
         Me.LBSeparador.TabIndex = 23
         Me.LBSeparador.Text = "_______________________________________________"
         '
+        'txBCodigo
+        '
+        Me.txBCodigo.Location = New System.Drawing.Point(209, 44)
+        Me.txBCodigo.Name = "txBCodigo"
+        Me.txBCodigo.Size = New System.Drawing.Size(191, 32)
+        Me.txBCodigo.TabIndex = 24
+        '
         'GestionUsuarios
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(13.0!, 26.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(414, 508)
+        Me.Controls.Add(Me.txBCodigo)
         Me.Controls.Add(Me.LBSeparador)
-        Me.Controls.Add(Me.CBRoles)
         Me.Controls.Add(Me.LbRol)
         Me.Controls.Add(Me.TxBPassWord)
         Me.Controls.Add(Me.LbPassword)
@@ -288,6 +285,6 @@ Partial Class GestionUsuarios
     Friend WithEvents TxBPassWord As TextBox
     Friend WithEvents LbPassword As Label
     Friend WithEvents LbRol As Label
-    Friend WithEvents CBRoles As ComboBox
     Friend WithEvents LBSeparador As Label
+    Friend WithEvents txBCodigo As TextBox
 End Class

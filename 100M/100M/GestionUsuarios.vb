@@ -17,11 +17,11 @@ Public Class GestionUsuarios
     End Sub
 
     Private Sub BtnAceptar_Click(sender As Object, e As EventArgs) Handles BtnAceptar.Click
-        If TxBNombre.Text = "" Or TxBApe1.Text = "" Or TxBDNI.Text = "" Or TxBPassWord.Text = "" Or CBRoles.Text = "" Then
+        If TxBNombre.Text = "" Or TxBApe1.Text = "" Or TxBDNI.Text = "" Or TxBPassWord.Text = "" Or txBCodigo.Text = "" Then
             MsgBox("Los campos de nombre, primer apellido, D.N.I., contraseña y rol son obligatorios.", MsgBoxStyle.Information)
         Else
             'se crea el usuario
-            Dim user As New Usuario(TxBPassWord.Text, True, TxBNombre.Text, TxBApe1.Text, TxBApe2.Text, TxBDNI.Text, TxBEmail.Text, TxBDireccion.Text, CLng(TxBTel.Text))
+            Dim user As New Usuario(txBCodigo.Text, TxBPassWord.Text, TxBNombre.Text, TxBApe1.Text, TxBApe2.Text, TxBDNI.Text, TxBTel.Text, TxBEmail.Text, TxBDireccion.Text)
             Try
                 Dim file As New Ficheros
                 file.guardarUsuario(user)

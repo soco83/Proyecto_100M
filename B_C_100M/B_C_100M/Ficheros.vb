@@ -38,8 +38,8 @@
             users.direccion = user.getDireccion
             users.email = user.getEmail
 
-            FilePut(1, users, 1)
-            MsgBox("registro guardado correctamente", 64, "Información")
+            FilePut(1, users, c)
+            MsgBox("Registro guardado correctamente.", 64, "Información")
         Catch ex As Exception
             MsgBox("Se produjo un fallo en la escritura del registro, por favor vuelva a intentarlo", 48, "Fallo escritura")
         End Try
