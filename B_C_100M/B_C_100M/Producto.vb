@@ -12,10 +12,10 @@
 
 
     'este es el constructor de la clase el cual solo se pasa el nombre y la cantidad.
-    Public Sub New(ByVal codigo As String, ByVal nombre As String) ', ByVal precio As Single)
+    Public Sub New(ByVal codigo As String, ByVal nombre As String, ByVal precio As Single) ', ByVal precio As Single)
         Me.codigo = codigo
         Me.nombre = nombre
-        ' Me.precio = precio
+        Me.precio = precio
     End Sub
 
 
@@ -48,123 +48,4 @@
     Public Sub setCantidad(ByVal cantidad As Integer)
         Me.cantidad = cantidad
     End Sub
-End Class
-
-
-
-Public Class Montadito
-    Inherits Producto
-    'esta es la clase montadito que hereda de la clase producto y el cual tiene un atributo mas que es el tipo.
-
-    'se define el atributo tipo para poder adjudicar un tipo a cada montado que se elija y asi poder darle precio
-    Dim tipo As t_montadito
-
-    'se pone el constructor el cual hereda del padre y se pone tambien el tipo del montadito.
-    Public Sub New(ByVal nombre As String, ByVal cantidad As Integer, ByVal tipo As t_montadito)
-
-        MyBase.New(nombre, cantidad)
-        Me.tipo = tipo
-    End Sub
-
-    'Este será el enum de los tipos de los montaditos 
-    Enum t_montadito
-        deLaCasa
-        clasicos
-        especiales
-        dulces
-        superMontys
-    End Enum
-
-    'se sobreescribe el metodo del padre para poner el precio(cuando vea mas de ficheros lo cambiare para que recoja el precio de los ficheros)
-    Public Overloads Sub ponerPrecio()
-        Select Case tipo
-            Case t_montadito.deLaCasa
-                setPrecio(1)
-            Case t_montadito.clasicos
-                setPrecio(1.2)
-            Case t_montadito.especiales
-                setPrecio(1.5)
-            Case t_montadito.dulces
-                setPrecio(1.5)
-            Case t_montadito.superMontys
-                setPrecio(2)
-        End Select
-
-    End Sub
-    'metodo para aumentar en 1 la cantidad del producto.
-    Public Sub aumentarCantidad()
-        Dim cantidad As Integer
-        cantidad = getCantidad()
-        cantidad = cantidad + 1
-        setCantidad(cantidad)
-    End Sub
-
-
-
-End Class
-
-Public Class Bebidas
-    Inherits Producto
-    'clase para todas las bebidas. 
-
-    Dim tipo As t_bebidas
-
-    'constructor de la clase bebidas que hereda de producto
-    Public Sub New(ByVal nombre As String, ByVal cantidad As Integer)
-
-        MyBase.New(nombre, cantidad)
-        Me.tipo = tipo
-    End Sub
-    'los enums del tipo de bebida
-    Enum t_bebidas
-        refresco1_8
-        refresco_2
-        apletiser
-        monster
-        agua
-        zumo
-        batidos
-        cafe
-        infusiones
-        vino
-        canna
-        jarra_2
-        jarra1_5
-        paulaner2_5
-    End Enum
-    'metodo para seleccionar el precio de las bebidas dependiendo del tipo
-    Public Overloads Sub ponerPrecio()
-        Select Case tipo
-            Case t_bebidas.refresco1_8
-
-            Case t_bebidas.refresco_2
-
-            Case t_bebidas.apletiser
-
-            Case t_bebidas.monster
-
-            Case t_bebidas.agua
-
-            Case t_bebidas.zumo
-
-            Case t_bebidas.batidos
-
-            Case t_bebidas.cafe
-
-            Case t_bebidas.infusiones
-
-            Case t_bebidas.vino
-
-            Case t_bebidas.canna
-
-            Case t_bebidas.jarra_2
-
-            Case t_bebidas.jarra1_5
-
-            Case t_bebidas.paulaner2_5
-
-
-        End Select
-    End Sub
-
 End Class

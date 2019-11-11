@@ -81,7 +81,7 @@ Public Class FormMain
         'si esta primera comprobación no se hiciera y sin hacer click en ningun boton se
         '  hiciera click en el boton 'añadir a tiquet', en el tiquet se introduciría esa String.
         Dim TEXT_MAL As String = "- Haz click en un producto para ver sus datos -"
-        Dim prod As New Montadito(TxBDatos.Text, cantidad, vbNull)
+        'Dim prod As New Montadito(TxBDatos.Text, cantidad, vbNull)
         If Not TxBDatos.Text = TEXT_MAL Then
             'se comprueba que en el tiquet no esté ya el producto.
             If Not LBTiquet.Items.Contains(TxBDatos.Text) Then

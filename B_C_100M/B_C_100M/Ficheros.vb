@@ -93,9 +93,9 @@
 
             FilePut(2, product, c)
 
-            MsgBox("registro guardado correctamente", 64, "Información")
+            MsgBox("Registro guardado correctamente.", 64, "Información")
         Catch ex As Exception
-            MsgBox("Se produjo un fallo en la escritura del registro, por favor vuelva a intentarlo", 48, "Fallo escritura")
+            MsgBox("Se produjo un fallo en la escritura del registro, por favor vuelva a intentarlo.", 48, "Fallo escritura")
         End Try
         FileClose()
 
@@ -109,7 +109,7 @@
         Catch ex As Exception
             MsgBox("Se produjo un fallo en la lectura del registro, por favor vuelva a intentarlo", 48, "Fallo lectura")
         End Try
-        Dim prod As New Producto(product.codigo, product.nombre) ', product.precio)
+        Dim prod As New Producto(product.codigo, product.nombre, product.precio)
         Return prod
     End Function
 

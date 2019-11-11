@@ -22,7 +22,6 @@ Partial Class GestionProductos
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Me.CBCategoria = New System.Windows.Forms.ComboBox()
         Me.LbRol = New System.Windows.Forms.Label()
         Me.LbTitulo = New System.Windows.Forms.Label()
         Me.BtnAceptar = New System.Windows.Forms.Button()
@@ -31,28 +30,17 @@ Partial Class GestionProductos
         Me.Label1 = New System.Windows.Forms.Label()
         Me.LbPrecio = New System.Windows.Forms.Label()
         Me.LbNombre = New System.Windows.Forms.Label()
-        Me.TxBPrecioEspecial = New System.Windows.Forms.TextBox()
-        Me.LbPrecioEspecial = New System.Windows.Forms.Label()
+        Me.TxBCodigo = New System.Windows.Forms.TextBox()
         Me.SuspendLayout()
-        '
-        'CBCategoria
-        '
-        Me.CBCategoria.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.CBCategoria.FormattingEnabled = True
-        Me.CBCategoria.Items.AddRange(New Object() {"Mont. De la casa", "Mont. Clásico", "Mont. Especiales", "Mont. Dulces", "Mont. Super", "Bebidas", "Para picar"})
-        Me.CBCategoria.Location = New System.Drawing.Point(209, 42)
-        Me.CBCategoria.Name = "CBCategoria"
-        Me.CBCategoria.Size = New System.Drawing.Size(193, 34)
-        Me.CBCategoria.TabIndex = 25
         '
         'LbRol
         '
         Me.LbRol.AutoSize = True
         Me.LbRol.Location = New System.Drawing.Point(14, 50)
         Me.LbRol.Name = "LbRol"
-        Me.LbRol.Size = New System.Drawing.Size(115, 26)
+        Me.LbRol.Size = New System.Drawing.Size(90, 26)
         Me.LbRol.TabIndex = 44
-        Me.LbRol.Text = "Categoría*"
+        Me.LbRol.Text = "Código*"
         '
         'LbTitulo
         '
@@ -65,7 +53,7 @@ Partial Class GestionProductos
         '
         'BtnAceptar
         '
-        Me.BtnAceptar.Location = New System.Drawing.Point(138, 235)
+        Me.BtnAceptar.Location = New System.Drawing.Point(142, 174)
         Me.BtnAceptar.Name = "BtnAceptar"
         Me.BtnAceptar.Size = New System.Drawing.Size(135, 39)
         Me.BtnAceptar.TabIndex = 40
@@ -90,7 +78,7 @@ Partial Class GestionProductos
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(12, 301)
+        Me.Label1.Location = New System.Drawing.Point(16, 240)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(151, 17)
         Me.Label1.TabIndex = 36
@@ -114,30 +102,19 @@ Partial Class GestionProductos
         Me.LbNombre.TabIndex = 24
         Me.LbNombre.Text = "Nombre*"
         '
-        'TxBPrecioEspecial
+        'TxBCodigo
         '
-        Me.TxBPrecioEspecial.Location = New System.Drawing.Point(209, 158)
-        Me.TxBPrecioEspecial.Name = "TxBPrecioEspecial"
-        Me.TxBPrecioEspecial.Size = New System.Drawing.Size(193, 32)
-        Me.TxBPrecioEspecial.TabIndex = 46
-        '
-        'LbPrecioEspecial
-        '
-        Me.LbPrecioEspecial.AutoSize = True
-        Me.LbPrecioEspecial.Location = New System.Drawing.Point(14, 161)
-        Me.LbPrecioEspecial.Name = "LbPrecioEspecial"
-        Me.LbPrecioEspecial.Size = New System.Drawing.Size(160, 26)
-        Me.LbPrecioEspecial.TabIndex = 45
-        Me.LbPrecioEspecial.Text = "Precio especial"
+        Me.TxBCodigo.Location = New System.Drawing.Point(209, 44)
+        Me.TxBCodigo.Name = "TxBCodigo"
+        Me.TxBCodigo.Size = New System.Drawing.Size(193, 32)
+        Me.TxBCodigo.TabIndex = 47
         '
         'GestionProductos
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(13.0!, 26.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(414, 327)
-        Me.Controls.Add(Me.TxBPrecioEspecial)
-        Me.Controls.Add(Me.LbPrecioEspecial)
-        Me.Controls.Add(Me.CBCategoria)
+        Me.ClientSize = New System.Drawing.Size(414, 266)
+        Me.Controls.Add(Me.TxBCodigo)
         Me.Controls.Add(Me.LbRol)
         Me.Controls.Add(Me.LbTitulo)
         Me.Controls.Add(Me.BtnAceptar)
@@ -155,7 +132,6 @@ Partial Class GestionProductos
         Me.PerformLayout()
 
     End Sub
-    Friend WithEvents CBCategoria As ComboBox
     Friend WithEvents LbRol As Label
     Friend WithEvents LbTitulo As Label
     Friend WithEvents BtnAceptar As Button
@@ -164,6 +140,5 @@ Partial Class GestionProductos
     Friend WithEvents Label1 As Label
     Friend WithEvents LbPrecio As Label
     Friend WithEvents LbNombre As Label
-    Friend WithEvents TxBPrecioEspecial As TextBox
-    Friend WithEvents LbPrecioEspecial As Label
+    Friend WithEvents TxBCodigo As TextBox
 End Class
