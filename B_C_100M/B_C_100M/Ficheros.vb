@@ -38,7 +38,7 @@
             users.direccion = user.getDireccion
             users.email = user.getEmail
 
-            FilePut(1, users, c)
+            FilePut(1, users, 1)
             MsgBox("registro guardado correctamente", 64, "Información")
         Catch ex As Exception
             MsgBox("Se produjo un fallo en la escritura del registro, por favor vuelva a intentarlo", 48, "Fallo escritura")
@@ -109,7 +109,7 @@
         Catch ex As Exception
             MsgBox("Se produjo un fallo en la lectura del registro, por favor vuelva a intentarlo", 48, "Fallo lectura")
         End Try
-        Dim prod As New Producto(product.codigo, product.nombre, product.precio)
+        Dim prod As New Producto(product.codigo, product.nombre) ', product.precio)
         Return prod
     End Function
 

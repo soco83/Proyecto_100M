@@ -12,10 +12,10 @@
 
 
     'este es el constructor de la clase el cual solo se pasa el nombre y la cantidad.
-    Public Sub New(ByVal codigo As String, ByVal nombre As String, ByVal precio As Single)
+    Public Sub New(ByVal codigo As String, ByVal nombre As String) ', ByVal precio As Single)
         Me.codigo = codigo
         Me.nombre = nombre
-        Me.precio = precio
+        ' Me.precio = precio
     End Sub
 
 

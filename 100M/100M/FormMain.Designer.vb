@@ -1723,9 +1723,9 @@ Partial Class FormMain
         '
         Me.LBTiquet.FormattingEnabled = True
         Me.LBTiquet.ItemHeight = 26
-        Me.LBTiquet.Location = New System.Drawing.Point(12, 79)
+        Me.LBTiquet.Location = New System.Drawing.Point(191, 79)
         Me.LBTiquet.Name = "LBTiquet"
-        Me.LBTiquet.Size = New System.Drawing.Size(180, 498)
+        Me.LBTiquet.Size = New System.Drawing.Size(364, 498)
         Me.LBTiquet.TabIndex = 27
         '
         'LBTotal
@@ -1769,7 +1769,7 @@ Partial Class FormMain
         '
         Me.LBCantidad.FormattingEnabled = True
         Me.LBCantidad.ItemHeight = 26
-        Me.LBCantidad.Location = New System.Drawing.Point(191, 79)
+        Me.LBCantidad.Location = New System.Drawing.Point(12, 79)
         Me.LBCantidad.Name = "LBCantidad"
         Me.LBCantidad.Size = New System.Drawing.Size(180, 498)
         Me.LBCantidad.TabIndex = 32

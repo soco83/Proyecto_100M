@@ -10,7 +10,7 @@ Public Class Inicio
         Dim a As Integer = MsgBox("¿Seguro que desea salir?", 292)
         If a = MsgBoxResult.Yes Then
             Try
-                End
+                Application.Exit()
             Catch ex As Exception
                 MsgBox("No se ha podido salir, intentelo denuevo.", MsgBoxStyle.Critical)
             End Try
