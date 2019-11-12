@@ -1,7 +1,10 @@
 ﻿Imports B_C_100M
+Imports System.Drawing.Printing
 Public Class FormMain
     Public nombreUsuario As String
     Dim precio, total As Single
+    Public elClienteHaPagado, aDevolver As Single
+    Public seHaPagado As Boolean = False
 
     Private Sub Cerrar_SesionToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles Cerrar_SesionToolStripMenuItem.Click
         Me.Close()
@@ -248,9 +251,104 @@ Public Class FormMain
 
     End Sub
 
-    Private Sub Button60_Click(sender As Object, e As EventArgs) Handles Button60.Click
+    Private Sub BtnPagar_Click(sender As Object, e As EventArgs) Handles BtnPagar.Click
         Pago.importe = total
         Pago.Show()
+    End Sub
+
+    Private Sub BtnImprimir_Click(sender As Object, e As EventArgs) Handles BtnImprimir.Click
+        If seHaPagado = True Then
+            Try
+                AddHandler PrintDocument1.PrintPage, AddressOf imprimirTiquet
+                PrintDocument1.Print()
+            Catch ex As Exception
+                MsgBox("Error durante la impresión del tiquet. Compruebe que la impresora está conectada al ordenador, está enchufada, tiene papel y tinta...", MsgBoxStyle.Exclamation)
+            End Try
+        Else
+            MsgBox("Todavía no se ha pagado, diríjase a la ventana de pago.", MsgBoxStyle.Information)
+        End If
+    End Sub
+    Public Sub imprimirTiquet(ByVal sender As Object, ByVal ev As PrintPageEventArgs)
+        Dim foto As String = "C:\Users\Óscar\OneDrive\Pictures\Saved Pictures\Desarrollo de interfaces (DAM2)\100M_inicio.png"
+        Try
+            Dim y As Integer = 0
+
+            'se imprime la imagen del principio
+            ev.Graphics.DrawImage(Image.FromFile(foto), 120, y, 318, 159)
+            y += 120
+
+            'se imprime la cabecera de información del local
+            Dim cabecera As String
+            cabecera = "Princesa 7" & vbCrLf & "28008 Madrid" & vbCrLf & "MontaPrincesa 7 SL" & vbCrLf & "CIF: B8598903" & vbCrLf & "FACTURA SIMPLIFICADA"
+            ev.Graphics.DrawString(cabecera, New Font("Arial", 9, FontStyle.Regular), Brushes.Black, 120, y)
+            y += 100
+
+            'separador
+            Dim separador As String = "------------------------------------------------"
+            ev.Graphics.DrawString(separador, New Font("Arial", 9, FontStyle.Regular), Brushes.Black, 120, y)
+            y += 20
+
+            'se imprimen datos secundarios
+            Dim secundarios As String
+            secundarios = "Nº T422154213        PN 0262" & vbCrLf & "   " & Now
+            ev.Graphics.DrawString(secundarios, New Font("Arial", 9, FontStyle.Regular), Brushes.Black, 120, y)
+            y += 40
+
+            'se imprime el cuerpo del tiquet, los productos.
+            Dim a As Integer
+            Dim tiquet As String
+            tiquet = ""
+            For a = 0 To LBTiquet.Items.Count - 1
+                '                      (que quieres imprimir,                                                                                   cómo lo quieres imprimir,                color, coordenada x en el papel, coordenada y)
+                ev.Graphics.DrawString(LBCantidad.Items.Item(a) & "   " & LBTiquet.Items.Item(a) & "                " & LBPrecio.Items.Item(a), New Font("Arial", 9, FontStyle.Regular), Brushes.Black, 120, y)
+                'salto de línea
+                y += 20
+            Next
+
+            'separador  
+            ev.Graphics.DrawString(separador, New Font("Arial", 9, FontStyle.Regular), Brushes.Black, 120, y)
+            y += 20
+
+            'se imprime el total del tiquet
+            Dim euros As String = "             TOTAL: " & total & "€" & vbCrLf & "              IVA INCLUIDO"
+            ev.Graphics.DrawString(euros, New Font("Arial", 9, FontStyle.Regular), Brushes.Black, 120, y)
+            y += 40
+
+            'separador  
+            ev.Graphics.DrawString(separador, New Font("Arial", 9, FontStyle.Regular), Brushes.Black, 120, y)
+            y += 20
+
+            'se imprime el apartado de impuestos del tiquet
+            Dim impuestos As String
+            Dim baseImponible, iva As Single
+            iva = total * 0.1
+            baseImponible = total - iva
+            impuestos = "Base Imp       %IVA        IVA" & vbCrLf &
+                        "     " & baseImponible & "          10         " & iva & vbCrLf &
+                        "              Forma de pago:" & vbCrLf &
+                        " EFECTIVO:" & elClienteHaPagado & vbCrLf &
+                        " ENTREGA: " & elClienteHaPagado & vbCrLf &
+                        " DEVOLUCIÓN: " & aDevolver & vbCrLf &
+                        "           Le antendió: " & nombreUsuario
+            ev.Graphics.DrawString(impuestos, New Font("Arial", 9, FontStyle.Regular), Brushes.Black, 120, y)
+            y += 140
+
+            'separador  
+            ev.Graphics.DrawString(separador, New Font("Arial", 9, FontStyle.Regular), Brushes.Black, 120, y)
+            y += 40
+
+            'separador  
+            ev.Graphics.DrawString(separador, New Font("Arial", 9, FontStyle.Regular), Brushes.Black, 120, y)
+            y += 20
+
+            'se imprime la despedida
+            Dim despedia As String = "              CONSERVE SU TIQUET" & vbCrLf &
+                                     "         HASTA LA RETIRADA DE SU PRODUCTO" & vbCrLf &
+                                     "             GRACIAS POR SU VISITA"
+            ev.Graphics.DrawString(despedia, New Font("Arial", 9, FontStyle.Regular), Brushes.Black, 120, y)
+        Catch ex As Exception
+
+        End Try
     End Sub
 
     Private Sub BtnBorrarLinea_Click(sender As Object, e As EventArgs) Handles BtnBorrarLinea.Click

@@ -19,6 +19,9 @@
         If CInt(TxBHaPagado.Text) < CInt(LbImporte.Text) Then
             MsgBox("Introduce un valor superior o igual al importe")
         Else
+            FormMain.elClienteHaPagado = CSng(TxBHaPagado.Text)
+            FormMain.aDevolver = CSng(LbADevolver.Text)
+            FormMain.seHaPagado = True
             MsgBox("ahora se introduciría la venta en el registro")
 
             Me.Close()
