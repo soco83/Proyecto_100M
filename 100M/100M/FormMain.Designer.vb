@@ -149,8 +149,6 @@ Partial Class FormMain
         Me.Button47 = New System.Windows.Forms.Button()
         Me.MSMain = New System.Windows.Forms.MenuStrip()
         Me.CajaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.HoyToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.MesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.UsuariosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.NuevoUToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStripSeparator1 = New System.Windows.Forms.ToolStripSeparator()
@@ -1444,22 +1442,9 @@ Partial Class FormMain
         '
         'CajaToolStripMenuItem
         '
-        Me.CajaToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.HoyToolStripMenuItem, Me.MesToolStripMenuItem})
         Me.CajaToolStripMenuItem.Name = "CajaToolStripMenuItem"
-        Me.CajaToolStripMenuItem.Size = New System.Drawing.Size(66, 34)
-        Me.CajaToolStripMenuItem.Text = "Caja"
-        '
-        'HoyToolStripMenuItem
-        '
-        Me.HoyToolStripMenuItem.Name = "HoyToolStripMenuItem"
-        Me.HoyToolStripMenuItem.Size = New System.Drawing.Size(127, 34)
-        Me.HoyToolStripMenuItem.Text = "Hoy"
-        '
-        'MesToolStripMenuItem
-        '
-        Me.MesToolStripMenuItem.Name = "MesToolStripMenuItem"
-        Me.MesToolStripMenuItem.Size = New System.Drawing.Size(127, 34)
-        Me.MesToolStripMenuItem.Text = "Mes"
+        Me.CajaToolStripMenuItem.Size = New System.Drawing.Size(129, 34)
+        Me.CajaToolStripMenuItem.Text = "Cerrar caja"
         '
         'UsuariosToolStripMenuItem
         '
@@ -2009,8 +1994,6 @@ Partial Class FormMain
     Friend WithEvents Button47 As Button
     Friend WithEvents MSMain As MenuStrip
     Friend WithEvents CajaToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents HoyToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents MesToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents UsuariosToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents NuevoUToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ProductosToolStripMenuItem As ToolStripMenuItem

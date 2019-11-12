@@ -23,6 +23,9 @@ Public Class FormMain
         FLPpicar.Visible = False
 
         TxBUsuarioConectado.Text = nombreUsuario
+        If nombreUsuario = "admin" Then
+
+        End If
     End Sub
 
     'métodos que controlan lo que hacen los botones de cada grupo
@@ -114,8 +117,6 @@ Public Class FormMain
                 LBCantidad.Items.Insert(LBTiquet.Items.IndexOf(prod.getNombre()), 1)
                 LBPrecio.Items.Insert(LBTiquet.Items.IndexOf(prod.getNombre()), precio)
 
-                actualizarPrecio()
-
             ElseIf LBTiquet.Items.Contains(prod.getNombre()) Then
                 'si sí está, se recoge el valor de la cantidad del LBCantidad en la
                 '   posición del producto que se quiere aumentar y se aumenta en 1.
@@ -127,14 +128,13 @@ Public Class FormMain
                 Dim price As Single = CSng(LBPrecio.Items.Item(LBTiquet.Items.IndexOf(prod.getNombre())))
                 price += precio
 
-                actualizarPrecio()
-
                 LBCantidad.Items.RemoveAt(LBTiquet.Items.IndexOf(prod.getNombre()))
                 LBCantidad.Items.Insert(LBTiquet.Items.IndexOf(prod.getNombre()), cant)
 
                 LBPrecio.Items.RemoveAt(LBTiquet.Items.IndexOf(prod.getNombre()))
                 LBPrecio.Items.Insert(LBTiquet.Items.IndexOf(prod.getNombre()), price)
             End If
+            actualizarPrecio()
         Else
             MsgBox("Selecciona un producto a meter en el tiquet.")
         End If
@@ -240,11 +240,16 @@ Public Class FormMain
         Lista_Users_Prods.Show()
     End Sub
 
+    Private Sub CajaToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles CajaToolStripMenuItem.Click
+
+    End Sub
+
     Private Sub BtnBorrarLinea_Click(sender As Object, e As EventArgs) Handles BtnBorrarLinea.Click
         Try
             LBCantidad.Items.RemoveAt(LBTiquet.Items.IndexOf(LBTiquet.SelectedItem))
             LBPrecio.Items.RemoveAt(LBTiquet.Items.IndexOf(LBTiquet.SelectedItem))
             LBTiquet.Items.Remove(LBTiquet.SelectedItem)
+            actualizarPrecio()
         Catch ex As ArgumentNullException
             MsgBox("Selecciona un producto a eliminar del tiquet.", MsgBoxStyle.Information)
         End Try

@@ -6,13 +6,15 @@ Public Class Inicio
         If file.verifUser(TxBNombre.Text, TxBPassword.Text) Then
             FormMain.nombreUsuario = TxBNombre.Text
             file.registrarAcesso(TxBNombre.Text, TxBPassword.Text)
+            TxBNombre.Clear()
+            TxBPassword.Clear()
             FormMain.Show()
             Me.Hide()
         Else
             MsgBox("Nombre contraseña incorrectos, por favor vuelva a intentarlo.", 64, "Fallo de inicio de sesión")
             TxBNombre.Clear()
             TxBPassword.Clear()
-
+            TxBNombre.Focus()
         End If
 
     End Sub
