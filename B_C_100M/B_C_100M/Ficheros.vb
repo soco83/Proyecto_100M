@@ -59,7 +59,7 @@
         Catch ex As Exception
             MsgBox("Se produjo un fallo en la lectura del registro, por favor vuelva a intentarlo", 48, "Fallo lectura")
         End Try
-        Dim user As New Usuario(users.codigo, users.contrasenna, users.nombre, users.apellido1, users.apellido2, users.dni, users.email, users.direccion, users.telefono)
+        Dim user As New Usuario(users.codigo.Trim(" "), users.contrasenna.Trim(" "), users.nombre.Trim(" "), users.apellido1.Trim(" "), users.apellido2.Trim(" "), users.dni.Trim(" "), users.email(" "), users.direccion.Trim(" "), users.telefono(" "))
         FileClose()
         Return user
     End Function
@@ -145,7 +145,7 @@
         Catch ex As Exception
             MsgBox("Se produjo un fallo en la lectura del registro, por favor vuelva a intentarlo", 48, "Fallo lectura")
         End Try
-        Dim prod As New Producto(product.codigo, product.nombre, product.precio)
+        Dim prod As New Producto(product.codigo.Trim(" "), product.nombre.Trim(" "), product.precio)
         Return prod
     End Function
 
