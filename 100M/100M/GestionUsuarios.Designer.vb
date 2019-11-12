@@ -114,42 +114,42 @@ Partial Class GestionUsuarios
         '
         Me.TxBEmail.Location = New System.Drawing.Point(209, 295)
         Me.TxBEmail.Name = "TxBEmail"
-        Me.TxBEmail.Size = New System.Drawing.Size(193, 32)
+        Me.TxBEmail.Size = New System.Drawing.Size(351, 32)
         Me.TxBEmail.TabIndex = 7
         '
         'TxBDNI
         '
         Me.TxBDNI.Location = New System.Drawing.Point(209, 257)
         Me.TxBDNI.Name = "TxBDNI"
-        Me.TxBDNI.Size = New System.Drawing.Size(193, 32)
+        Me.TxBDNI.Size = New System.Drawing.Size(351, 32)
         Me.TxBDNI.TabIndex = 6
         '
         'TxBApe2
         '
         Me.TxBApe2.Location = New System.Drawing.Point(209, 219)
         Me.TxBApe2.Name = "TxBApe2"
-        Me.TxBApe2.Size = New System.Drawing.Size(193, 32)
+        Me.TxBApe2.Size = New System.Drawing.Size(351, 32)
         Me.TxBApe2.TabIndex = 5
         '
         'TxBTel
         '
         Me.TxBTel.Location = New System.Drawing.Point(209, 333)
         Me.TxBTel.Name = "TxBTel"
-        Me.TxBTel.Size = New System.Drawing.Size(193, 32)
+        Me.TxBTel.Size = New System.Drawing.Size(351, 32)
         Me.TxBTel.TabIndex = 8
         '
         'TxBNombre
         '
         Me.TxBNombre.Location = New System.Drawing.Point(209, 143)
         Me.TxBNombre.Name = "TxBNombre"
-        Me.TxBNombre.Size = New System.Drawing.Size(193, 32)
+        Me.TxBNombre.Size = New System.Drawing.Size(351, 32)
         Me.TxBNombre.TabIndex = 3
         '
         'TxBApe1
         '
         Me.TxBApe1.Location = New System.Drawing.Point(209, 181)
         Me.TxBApe1.Name = "TxBApe1"
-        Me.TxBApe1.Size = New System.Drawing.Size(193, 32)
+        Me.TxBApe1.Size = New System.Drawing.Size(351, 32)
         Me.TxBApe1.TabIndex = 4
         '
         'BtnAceptar
@@ -183,14 +183,14 @@ Partial Class GestionUsuarios
         '
         Me.TxBDireccion.Location = New System.Drawing.Point(209, 371)
         Me.TxBDireccion.Name = "TxBDireccion"
-        Me.TxBDireccion.Size = New System.Drawing.Size(193, 32)
+        Me.TxBDireccion.Size = New System.Drawing.Size(351, 32)
         Me.TxBDireccion.TabIndex = 9
         '
         'TxBPassWord
         '
         Me.TxBPassWord.Location = New System.Drawing.Point(209, 82)
         Me.TxBPassWord.Name = "TxBPassWord"
-        Me.TxBPassWord.Size = New System.Drawing.Size(193, 32)
+        Me.TxBPassWord.Size = New System.Drawing.Size(351, 32)
         Me.TxBPassWord.TabIndex = 2
         '
         'LbPassword
@@ -217,22 +217,22 @@ Partial Class GestionUsuarios
         Me.LBSeparador.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LBSeparador.Location = New System.Drawing.Point(16, 117)
         Me.LBSeparador.Name = "LBSeparador"
-        Me.LBSeparador.Size = New System.Drawing.Size(384, 17)
+        Me.LBSeparador.Size = New System.Drawing.Size(544, 17)
         Me.LBSeparador.TabIndex = 23
-        Me.LBSeparador.Text = "_______________________________________________"
+        Me.LBSeparador.Text = "___________________________________________________________________"
         '
         'txBCodigo
         '
         Me.txBCodigo.Location = New System.Drawing.Point(209, 44)
         Me.txBCodigo.Name = "txBCodigo"
-        Me.txBCodigo.Size = New System.Drawing.Size(191, 32)
+        Me.txBCodigo.Size = New System.Drawing.Size(351, 32)
         Me.txBCodigo.TabIndex = 24
         '
         'GestionUsuarios
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(13.0!, 26.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(414, 508)
+        Me.ClientSize = New System.Drawing.Size(572, 508)
         Me.Controls.Add(Me.txBCodigo)
         Me.Controls.Add(Me.LBSeparador)
         Me.Controls.Add(Me.LbRol)

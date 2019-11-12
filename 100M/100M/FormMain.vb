@@ -23,8 +23,12 @@ Public Class FormMain
         FLPpicar.Visible = False
 
         TxBUsuarioConectado.Text = nombreUsuario
-        If nombreUsuario = "admin" Then
-
+        If Not nombreUsuario = "admin" Then
+            UsuariosToolStripMenuItem.Visible = False
+            ProductosToolStripMenuItem.Visible = False
+        Else
+            UsuariosToolStripMenuItem.Visible = True
+            ProductosToolStripMenuItem.Visible = True
         End If
     End Sub
 
@@ -242,6 +246,11 @@ Public Class FormMain
 
     Private Sub CajaToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles CajaToolStripMenuItem.Click
 
+    End Sub
+
+    Private Sub Button60_Click(sender As Object, e As EventArgs) Handles Button60.Click
+        Pago.importe = total
+        Pago.Show()
     End Sub
 
     Private Sub BtnBorrarLinea_Click(sender As Object, e As EventArgs) Handles BtnBorrarLinea.Click

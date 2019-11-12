@@ -155,6 +155,7 @@ Partial Class FormMain
         Me.VerListaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ProductosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.NuevoPToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ToolStripSeparator2 = New System.Windows.Forms.ToolStripSeparator()
         Me.VerListaToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
         Me.AjustesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.Cerrar_SesionToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -1472,7 +1473,7 @@ Partial Class FormMain
         '
         'ProductosToolStripMenuItem
         '
-        Me.ProductosToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.NuevoPToolStripMenuItem1, Me.VerListaToolStripMenuItem1})
+        Me.ProductosToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.NuevoPToolStripMenuItem1, Me.ToolStripSeparator2, Me.VerListaToolStripMenuItem1})
         Me.ProductosToolStripMenuItem.Name = "ProductosToolStripMenuItem"
         Me.ProductosToolStripMenuItem.Size = New System.Drawing.Size(122, 34)
         Me.ProductosToolStripMenuItem.Text = "Productos"
@@ -1482,6 +1483,11 @@ Partial Class FormMain
         Me.NuevoPToolStripMenuItem1.Name = "NuevoPToolStripMenuItem1"
         Me.NuevoPToolStripMenuItem1.Size = New System.Drawing.Size(162, 34)
         Me.NuevoPToolStripMenuItem1.Text = "Nuevo"
+        '
+        'ToolStripSeparator2
+        '
+        Me.ToolStripSeparator2.Name = "ToolStripSeparator2"
+        Me.ToolStripSeparator2.Size = New System.Drawing.Size(159, 6)
         '
         'VerListaToolStripMenuItem1
         '
@@ -2037,4 +2043,5 @@ Partial Class FormMain
     Friend WithEvents LBPrecio As ListBox
     Friend WithEvents LbTituloPrecio As Label
     Friend WithEvents LbPrecioTotal As Label
+    Friend WithEvents ToolStripSeparator2 As ToolStripSeparator
 End Class
