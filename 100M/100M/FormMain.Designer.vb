@@ -191,6 +191,9 @@ Partial Class FormMain
         Me.BtnBorrarLinea = New System.Windows.Forms.Button()
         Me.LbTituloCantidad = New System.Windows.Forms.Label()
         Me.LbTituloTiquet = New System.Windows.Forms.Label()
+        Me.LBPrecio = New System.Windows.Forms.ListBox()
+        Me.LbTituloPrecio = New System.Windows.Forms.Label()
+        Me.LbPrecioTotal = New System.Windows.Forms.Label()
         Me.FLPcasa.SuspendLayout()
         Me.FLPClasic.SuspendLayout()
         Me.FLPespecials.SuspendLayout()
@@ -1449,13 +1452,13 @@ Partial Class FormMain
         'HoyToolStripMenuItem
         '
         Me.HoyToolStripMenuItem.Name = "HoyToolStripMenuItem"
-        Me.HoyToolStripMenuItem.Size = New System.Drawing.Size(180, 34)
+        Me.HoyToolStripMenuItem.Size = New System.Drawing.Size(127, 34)
         Me.HoyToolStripMenuItem.Text = "Hoy"
         '
         'MesToolStripMenuItem
         '
         Me.MesToolStripMenuItem.Name = "MesToolStripMenuItem"
-        Me.MesToolStripMenuItem.Size = New System.Drawing.Size(180, 34)
+        Me.MesToolStripMenuItem.Size = New System.Drawing.Size(127, 34)
         Me.MesToolStripMenuItem.Text = "Mes"
         '
         'UsuariosToolStripMenuItem
@@ -1468,18 +1471,18 @@ Partial Class FormMain
         'NuevoUToolStripMenuItem
         '
         Me.NuevoUToolStripMenuItem.Name = "NuevoUToolStripMenuItem"
-        Me.NuevoUToolStripMenuItem.Size = New System.Drawing.Size(180, 34)
+        Me.NuevoUToolStripMenuItem.Size = New System.Drawing.Size(162, 34)
         Me.NuevoUToolStripMenuItem.Text = "Nuevo"
         '
         'ToolStripSeparator1
         '
         Me.ToolStripSeparator1.Name = "ToolStripSeparator1"
-        Me.ToolStripSeparator1.Size = New System.Drawing.Size(177, 6)
+        Me.ToolStripSeparator1.Size = New System.Drawing.Size(159, 6)
         '
         'VerListaToolStripMenuItem
         '
         Me.VerListaToolStripMenuItem.Name = "VerListaToolStripMenuItem"
-        Me.VerListaToolStripMenuItem.Size = New System.Drawing.Size(180, 34)
+        Me.VerListaToolStripMenuItem.Size = New System.Drawing.Size(162, 34)
         Me.VerListaToolStripMenuItem.Text = "Ver lista"
         '
         'ProductosToolStripMenuItem
@@ -1492,13 +1495,13 @@ Partial Class FormMain
         'NuevoPToolStripMenuItem1
         '
         Me.NuevoPToolStripMenuItem1.Name = "NuevoPToolStripMenuItem1"
-        Me.NuevoPToolStripMenuItem1.Size = New System.Drawing.Size(180, 34)
+        Me.NuevoPToolStripMenuItem1.Size = New System.Drawing.Size(162, 34)
         Me.NuevoPToolStripMenuItem1.Text = "Nuevo"
         '
         'VerListaToolStripMenuItem1
         '
         Me.VerListaToolStripMenuItem1.Name = "VerListaToolStripMenuItem1"
-        Me.VerListaToolStripMenuItem1.Size = New System.Drawing.Size(180, 34)
+        Me.VerListaToolStripMenuItem1.Size = New System.Drawing.Size(162, 34)
         Me.VerListaToolStripMenuItem1.Text = "Ver lista"
         '
         'AjustesToolStripMenuItem
@@ -1708,9 +1711,9 @@ Partial Class FormMain
         Me.LbFechaHora.AutoSize = True
         Me.LbFechaHora.Location = New System.Drawing.Point(201, 44)
         Me.LbFechaHora.Name = "LbFechaHora"
-        Me.LbFechaHora.Size = New System.Drawing.Size(77, 26)
+        Me.LbFechaHora.Size = New System.Drawing.Size(135, 26)
         Me.LbFechaHora.TabIndex = 26
-        Me.LbFechaHora.Text = "Label1"
+        Me.LbFechaHora.Text = "Hora y fecha"
         '
         'TimerMain
         '
@@ -1720,9 +1723,9 @@ Partial Class FormMain
         '
         Me.LBTiquet.FormattingEnabled = True
         Me.LBTiquet.ItemHeight = 26
-        Me.LBTiquet.Location = New System.Drawing.Point(191, 131)
+        Me.LBTiquet.Location = New System.Drawing.Point(107, 131)
         Me.LBTiquet.Name = "LBTiquet"
-        Me.LBTiquet.Size = New System.Drawing.Size(364, 446)
+        Me.LBTiquet.Size = New System.Drawing.Size(264, 446)
         Me.LBTiquet.TabIndex = 27
         '
         'LBTotal
@@ -1764,11 +1767,12 @@ Partial Class FormMain
         '
         'LBCantidad
         '
+        Me.LBCantidad.Enabled = False
         Me.LBCantidad.FormattingEnabled = True
         Me.LBCantidad.ItemHeight = 26
         Me.LBCantidad.Location = New System.Drawing.Point(12, 131)
         Me.LBCantidad.Name = "LBCantidad"
-        Me.LBCantidad.Size = New System.Drawing.Size(180, 446)
+        Me.LBCantidad.Size = New System.Drawing.Size(99, 446)
         Me.LBCantidad.TabIndex = 32
         '
         'BtnBorrarLinea
@@ -1798,11 +1802,42 @@ Partial Class FormMain
         Me.LbTituloTiquet.TabIndex = 35
         Me.LbTituloTiquet.Text = "Producto"
         '
+        'LBPrecio
+        '
+        Me.LBPrecio.Enabled = False
+        Me.LBPrecio.FormattingEnabled = True
+        Me.LBPrecio.ItemHeight = 26
+        Me.LBPrecio.Location = New System.Drawing.Point(366, 131)
+        Me.LBPrecio.Name = "LBPrecio"
+        Me.LBPrecio.Size = New System.Drawing.Size(102, 446)
+        Me.LBPrecio.TabIndex = 36
+        '
+        'LbTituloPrecio
+        '
+        Me.LbTituloPrecio.AutoSize = True
+        Me.LbTituloPrecio.Location = New System.Drawing.Point(361, 102)
+        Me.LbTituloPrecio.Name = "LbTituloPrecio"
+        Me.LbTituloPrecio.Size = New System.Drawing.Size(74, 26)
+        Me.LbTituloPrecio.TabIndex = 37
+        Me.LbTituloPrecio.Text = "Precio"
+        '
+        'LbPrecioTotal
+        '
+        Me.LbPrecioTotal.AutoSize = True
+        Me.LbPrecioTotal.Font = New System.Drawing.Font("Microsoft Sans Serif", 25.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LbPrecioTotal.Location = New System.Drawing.Point(144, 599)
+        Me.LbPrecioTotal.Name = "LbPrecioTotal"
+        Me.LbPrecioTotal.Size = New System.Drawing.Size(0, 39)
+        Me.LbPrecioTotal.TabIndex = 38
+        '
         'FormMain
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(13.0!, 26.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1301, 729)
+        Me.Controls.Add(Me.LbPrecioTotal)
+        Me.Controls.Add(Me.LbTituloPrecio)
+        Me.Controls.Add(Me.LBPrecio)
         Me.Controls.Add(Me.LbTituloTiquet)
         Me.Controls.Add(Me.LbTituloCantidad)
         Me.Controls.Add(Me.BtnBorrarLinea)
@@ -1814,11 +1849,11 @@ Partial Class FormMain
         Me.Controls.Add(Me.LBTiquet)
         Me.Controls.Add(Me.LbFechaHora)
         Me.Controls.Add(Me.TxBUsuarioConectado)
-        Me.Controls.Add(Me.FLPpicar)
         Me.Controls.Add(Me.BtnMenuPicar)
         Me.Controls.Add(Me.BtnMenuDrinks)
         Me.Controls.Add(Me.BtnMenuSuper)
         Me.Controls.Add(Me.BtnMenuDulces)
+        Me.Controls.Add(Me.FLPpicar)
         Me.Controls.Add(Me.BtnMenuEspeciales)
         Me.Controls.Add(Me.BtnMenuClasicos)
         Me.Controls.Add(Me.BtnMenuCasa)
@@ -2016,4 +2051,7 @@ Partial Class FormMain
     Friend WithEvents BtnBorrarLinea As Button
     Friend WithEvents LbTituloCantidad As Label
     Friend WithEvents LbTituloTiquet As Label
+    Friend WithEvents LBPrecio As ListBox
+    Friend WithEvents LbTituloPrecio As Label
+    Friend WithEvents LbPrecioTotal As Label
 End Class
