@@ -20,16 +20,12 @@ Public Class GestionUsuarios
         If TxBNombre.Text = "" Or TxBApe1.Text = "" Or TxBDNI.Text = "" Or TxBPassWord.Text = "" Or txBCodigo.Text = "" Then
             MsgBox("Los campos de nombre, primer apellido, D.N.I., contraseña y rol son obligatorios.", MsgBoxStyle.Information)
         Else
+
+            Dim file As New Ficheros
             'se crea el usuario
             Dim user As New Usuario(txBCodigo.Text, TxBPassWord.Text, TxBNombre.Text, TxBApe1.Text, TxBApe2.Text, TxBDNI.Text, TxBTel.Text, TxBEmail.Text, TxBDireccion.Text)
-            Try
-                Dim file As New Ficheros
-                file.guardarUsuario(user)
-                MsgBox("El usuario se ha guardado correctamente.", MsgBoxStyle.Information)
-            Catch ex As Exception
-                MsgBox("Ha ocurrido un error durante el proceso.", MsgBoxStyle.Exclamation)
-            End Try
-            Me.Close()
+            file.guardarUsuario(user)
+
         End If
     End Sub
 End Class

@@ -3,7 +3,8 @@
     Dim listaProductos As List(Of Producto)
     Dim precioTotal As Single
 
-
+    'metodo para añadir productos a la list creada para luego pasarlo a la lista.
+    'se pasa por parametro un objeto de tipo producto.
     Public Sub annadirProducto(ByVal producto As Producto)
         Dim i As Integer
         If listaProductos.Count = 0 Then

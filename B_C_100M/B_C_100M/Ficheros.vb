@@ -2,8 +2,8 @@
 
     'se genera la estructura para poder gestionar el fichero de productos
     Structure productos
-        <VBFixedArray(5)> Dim codigo As String
-        <VBFixedArray(20)> Dim nombre As String
+        <VBFixedString(5)> Dim codigo As String
+        <VBFixedString(20)> Dim nombre As String
         Dim precio As Single
     End Structure
     'variable que se usa para referenciar a la estructura de productos.
@@ -11,13 +11,16 @@
 
     'se genera la estructura para poder gestionar el fichero de usuarios
     Structure usuarios
-        <VBFixedArray(5)> Dim codigo As String
-        <VBFixedArray(15)> Dim nombre As String
-        <VBFixedArray(10)> Dim contrasenna As String
-        <VBFixedArray(15)> Dim apellido1, apellido2 As String
-        <VBFixedArray(9)> Dim dni, telefono As String
-        <VBFixedArray(25)> Dim email As String
-        <VBFixedArray(30)> Dim direccion As String
+        <VBFixedString(10)> Dim codigo As String
+        <VBFixedString(20)> Dim nombre As String
+        <VBFixedString(20)> Dim contrasenna As String
+        <VBFixedString(30)> Dim apellido1 As String
+        <VBFixedString(30)> Dim apellido2 As String
+        <VBFixedString(9)> Dim dni As String
+        <VBFixedString(9)> Dim telefono As String
+        <VBFixedString(25)> Dim email As String
+        <VBFixedString(30)> Dim direccion As String
+
     End Structure
     'variable que se  usa para referenciar a la estructura de usuarios.
     Dim users As usuarios
@@ -41,7 +44,7 @@
             FilePut(1, users, c)
             MsgBox("Registro guardado correctamente.", 64, "Información")
         Catch ex As Exception
-            MsgBox("Se produjo un fallo en la escritura del registro, por favor vuelva a intentarlo", 48, "Fallo escritura")
+            MsgBox(Err.Description & ", por favor vuelva a intentarlo", 48, "Fallo escritura")
         End Try
         FileClose()
     End Sub
@@ -52,13 +55,46 @@
         Try
             FileOpen(1, "usuarios", OpenMode.Random, OpenAccess.Read,, Len(users))
             FileGet(1, users, codigo)
+
         Catch ex As Exception
             MsgBox("Se produjo un fallo en la lectura del registro, por favor vuelva a intentarlo", 48, "Fallo lectura")
         End Try
-        Dim user As New Usuario(users.codigo, users.contrasenna, users.nombre, users.apellido1, users.apellido2, users.dni, users.email, users.direccion, users.telefono)
+        Dim user As New Usuario(users.codigo.Trim(" "), users.contrasenna.Trim(" "), users.nombre.Trim(" "), users.apellido1.Trim(" "), users.apellido2.Trim(" "), users.dni.Trim(" "), users.email(" "), users.direccion.Trim(" "), users.telefono(" "))
         FileClose()
         Return user
     End Function
+
+
+    'metodo que verifica si el nombre y la contraseña coincide con algun registro del fichero para poder entrar al programa.
+    'se pasa por parametro 
+    Public Function verifUser(ByVal nombre As String, ByVal contrasenna As String) As Boolean
+        Dim verif As Boolean
+        Dim c As Integer = 1
+        Try
+            FileOpen(1, "usuarios", OpenMode.Random, OpenAccess.Read,, Len(users))
+            While Not EOF(1)
+                FileGet(1, users, c)
+                If users.nombre.Trim(" ") = nombre And users.contrasenna.Trim(" ") = contrasenna Then
+                    verif = True
+                    Exit While
+                Else
+                    verif = False
+
+                End If
+                c = c + 1
+
+            End While
+
+        Catch ex As Exception
+            MsgBox(Err.Description & ", por favor vuelva a intentarlo", 48, "Fallo Lectura")
+        End Try
+
+        FileClose()
+        Return verif
+
+
+    End Function
+
 
     'Metodo para borrar un registro de tipo usuario. se pasa por parametro el codigo para buscar en el fichero.
 
@@ -109,7 +145,7 @@
         Catch ex As Exception
             MsgBox("Se produjo un fallo en la lectura del registro, por favor vuelva a intentarlo", 48, "Fallo lectura")
         End Try
-        Dim prod As New Producto(product.codigo, product.nombre, product.precio)
+        Dim prod As New Producto(product.codigo.Trim(" "), product.nombre.Trim(" "), product.precio)
         Return prod
     End Function
 
@@ -151,6 +187,8 @@
         Catch ex As Exception
             MsgBox("Se produjo un fallo en la escritura del registro, por favor vuelva a intentarlo", 48, "Fallo escritura")
         End Try
+        FileClose()
+
     End Sub
 
 

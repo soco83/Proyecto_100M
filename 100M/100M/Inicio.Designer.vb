@@ -28,6 +28,8 @@ Partial Class Inicio
         Me.TxBPassword = New System.Windows.Forms.TextBox()
         Me.BtnAceptar = New System.Windows.Forms.Button()
         Me.BtnSalir = New System.Windows.Forms.Button()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.Label2 = New System.Windows.Forms.Label()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -49,7 +51,6 @@ Partial Class Inicio
         Me.TxBNombre.Name = "TxBNombre"
         Me.TxBNombre.Size = New System.Drawing.Size(236, 32)
         Me.TxBNombre.TabIndex = 1
-        Me.TxBNombre.Text = "Nombre"
         '
         'TxBPassword
         '
@@ -58,7 +59,7 @@ Partial Class Inicio
         Me.TxBPassword.Name = "TxBPassword"
         Me.TxBPassword.Size = New System.Drawing.Size(236, 32)
         Me.TxBPassword.TabIndex = 2
-        Me.TxBPassword.Text = "Contraseña"
+        Me.TxBPassword.UseSystemPasswordChar = True
         '
         'BtnAceptar
         '
@@ -79,11 +80,32 @@ Partial Class Inicio
         Me.BtnSalir.Text = "Salir"
         Me.BtnSalir.UseVisualStyleBackColor = True
         '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 17.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Location = New System.Drawing.Point(57, 337)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(107, 29)
+        Me.Label1.TabIndex = 5
+        Me.Label1.Text = "Nombre:"
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Location = New System.Drawing.Point(28, 384)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(136, 26)
+        Me.Label2.TabIndex = 6
+        Me.Label2.Text = "Contraseña :"
+        '
         'Inicio
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(13.0!, 26.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(595, 641)
+        Me.Controls.Add(Me.Label2)
+        Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.BtnSalir)
         Me.Controls.Add(Me.BtnAceptar)
         Me.Controls.Add(Me.TxBPassword)
@@ -105,4 +127,6 @@ Partial Class Inicio
     Friend WithEvents TxBPassword As TextBox
     Friend WithEvents BtnAceptar As Button
     Friend WithEvents BtnSalir As Button
+    Friend WithEvents Label1 As Label
+    Friend WithEvents Label2 As Label
 End Class
