@@ -85,11 +85,19 @@ Public Class FormMain
         If Not TxBDatos.Text = TEXT_MAL Then
             'se comprueba que en el tiquet no esté ya el producto.
             If Not LBTiquet.Items.Contains(TxBDatos.Text) Then
+                'si el producto no está en el tiquet, se añade el nombre al LBTiquet
+                '   y la cantidad a esa misma posición, que al principio es 1.
                 LBTiquet.Items.Add(TxBDatos.Text)
                 LBCantidad.Items.Insert(LBTiquet.Items.IndexOf(TxBDatos.Text), cantidad)
             ElseIf LBTiquet.Items.Contains(TxBDatos.Text) Then
+                'si sí está, se recoge el valor de la cantidad del LBCantidad en la
+                '   posición del producto que se quiere aumentar y se aumenta en 1.
+                '   Después se borra ese registro y se vuelve a introducir con el valor
+                '   de la cantidad actualizado.
+                Dim cant As Integer = CInt(LBCantidad.Items.Item(LBTiquet.Items.IndexOf(TxBDatos.Text)))
+                cant += 1
                 LBCantidad.Items.RemoveAt(LBTiquet.Items.IndexOf(TxBDatos.Text))
-                LBCantidad.Items.Insert(LBTiquet.Items.IndexOf(TxBDatos.Text), cantidad + 1)
+                LBCantidad.Items.Insert(LBTiquet.Items.IndexOf(TxBDatos.Text), cant)
             End If
         Else
             MsgBox("Selecciona un producto a meter en el tiquet.")
@@ -198,5 +206,8 @@ Public Class FormMain
         Lista_Users_Prods.Show()
     End Sub
 
-
+    Private Sub BtnBorrarLinea_Click(sender As Object, e As EventArgs) Handles BtnBorrarLinea.Click
+        LBCantidad.Items.RemoveAt(LBTiquet.Items.IndexOf(LBTiquet.SelectedItem))
+        LBTiquet.Items.Remove(LBTiquet.SelectedItem)
+    End Sub
 End Class
