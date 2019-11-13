@@ -17,7 +17,7 @@ Public Class GestionUsuarios
             'editar usuario seleccionado
             LbTitulo.Text = "Editar usuario"
             Dim user As New Usuario()
-            user = file.leerUsuario(codigo)
+            user = file.leerUsuario(codigo + 1)
             txBCodigo.Text = user.getCodigo
             TxBApe1.Text = user.getApe1
             TxBApe2.Text = user.getApe2
