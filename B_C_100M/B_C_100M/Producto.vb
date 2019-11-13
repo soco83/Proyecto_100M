@@ -18,6 +18,10 @@
         Me.precio = precio
     End Sub
 
+    Public Sub New()
+
+    End Sub
+
     Public Sub New(ByVal nombre As String, ByVal precio As Single)
         Me.nombre = nombre
         Me.precio = precio
