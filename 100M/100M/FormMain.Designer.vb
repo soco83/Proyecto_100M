@@ -23,6 +23,7 @@ Partial Class FormMain
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FormMain))
         Me.FLPcasa = New System.Windows.Forms.FlowLayoutPanel()
         Me.m01 = New System.Windows.Forms.Button()
         Me.m02 = New System.Windows.Forms.Button()
@@ -194,6 +195,10 @@ Partial Class FormMain
         Me.LbTituloPrecio = New System.Windows.Forms.Label()
         Me.LbPrecioTotal = New System.Windows.Forms.Label()
         Me.PrintDocument1 = New System.Drawing.Printing.PrintDocument()
+        Me.ImageList1 = New System.Windows.Forms.ImageList(Me.components)
+        Me.FLPCategorias = New System.Windows.Forms.FlowLayoutPanel()
+        Me.BtnAñadir1producto = New System.Windows.Forms.Button()
+        Me.Beliminar1Producto = New System.Windows.Forms.Button()
         Me.FLPcasa.SuspendLayout()
         Me.FLPClasic.SuspendLayout()
         Me.FLPespecials.SuspendLayout()
@@ -202,11 +207,13 @@ Partial Class FormMain
         Me.FLPDrinks.SuspendLayout()
         Me.MSMain.SuspendLayout()
         Me.FLPpicar.SuspendLayout()
+        Me.FLPCategorias.SuspendLayout()
         Me.SuspendLayout()
         '
         'FLPcasa
         '
         Me.FLPcasa.BackColor = System.Drawing.SystemColors.ControlDark
+        Me.FLPcasa.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.FLPcasa.Controls.Add(Me.m01)
         Me.FLPcasa.Controls.Add(Me.m02)
         Me.FLPcasa.Controls.Add(Me.m03)
@@ -225,7 +232,7 @@ Partial Class FormMain
         Me.FLPcasa.Controls.Add(Me.m16)
         Me.FLPcasa.Controls.Add(Me.m17)
         Me.FLPcasa.Controls.Add(Me.m18)
-        Me.FLPcasa.Location = New System.Drawing.Point(626, 118)
+        Me.FLPcasa.Location = New System.Drawing.Point(613, 234)
         Me.FLPcasa.Name = "FLPcasa"
         Me.FLPcasa.Size = New System.Drawing.Size(667, 404)
         Me.FLPcasa.TabIndex = 2
@@ -234,177 +241,197 @@ Partial Class FormMain
         '
         Me.m01.Location = New System.Drawing.Point(3, 3)
         Me.m01.Name = "m01"
-        Me.m01.Size = New System.Drawing.Size(101, 51)
+        Me.m01.Size = New System.Drawing.Size(142, 72)
         Me.m01.TabIndex = 0
-        Me.m01.Text = "01"
+        Me.m01.Tag = "1"
+        Me.m01.Text = "Montado" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & " 1-N"
         Me.m01.UseVisualStyleBackColor = True
         '
         'm02
         '
-        Me.m02.Location = New System.Drawing.Point(110, 3)
+        Me.m02.Location = New System.Drawing.Point(151, 3)
         Me.m02.Name = "m02"
-        Me.m02.Size = New System.Drawing.Size(101, 51)
+        Me.m02.Size = New System.Drawing.Size(142, 72)
         Me.m02.TabIndex = 1
-        Me.m02.Text = "02"
+        Me.m02.Tag = "2"
+        Me.m02.Text = "Montado" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "2-N"
         Me.m02.UseVisualStyleBackColor = True
         '
         'm03
         '
-        Me.m03.Location = New System.Drawing.Point(217, 3)
+        Me.m03.Location = New System.Drawing.Point(299, 3)
         Me.m03.Name = "m03"
-        Me.m03.Size = New System.Drawing.Size(101, 51)
+        Me.m03.Size = New System.Drawing.Size(142, 72)
         Me.m03.TabIndex = 2
-        Me.m03.Text = "03"
+        Me.m03.Tag = "3"
+        Me.m03.Text = "Montado" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "3-N"
         Me.m03.UseVisualStyleBackColor = True
         '
         'm04
         '
-        Me.m04.Location = New System.Drawing.Point(324, 3)
+        Me.m04.Location = New System.Drawing.Point(447, 3)
         Me.m04.Name = "m04"
-        Me.m04.Size = New System.Drawing.Size(101, 51)
+        Me.m04.Size = New System.Drawing.Size(142, 72)
         Me.m04.TabIndex = 3
-        Me.m04.Text = "04"
+        Me.m04.Tag = "4"
+        Me.m04.Text = "Montado" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "4-N"
         Me.m04.UseVisualStyleBackColor = True
         '
         'm05
         '
-        Me.m05.Location = New System.Drawing.Point(431, 3)
+        Me.m05.Location = New System.Drawing.Point(3, 81)
         Me.m05.Name = "m05"
-        Me.m05.Size = New System.Drawing.Size(101, 51)
+        Me.m05.Size = New System.Drawing.Size(142, 72)
         Me.m05.TabIndex = 4
-        Me.m05.Text = "05"
+        Me.m05.Tag = "5"
+        Me.m05.Text = "Montado" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "5-N"
         Me.m05.UseVisualStyleBackColor = True
         '
         'm06
         '
-        Me.m06.Location = New System.Drawing.Point(538, 3)
+        Me.m06.Location = New System.Drawing.Point(151, 81)
         Me.m06.Name = "m06"
-        Me.m06.Size = New System.Drawing.Size(101, 51)
+        Me.m06.Size = New System.Drawing.Size(142, 72)
         Me.m06.TabIndex = 5
-        Me.m06.Text = "06"
+        Me.m06.Tag = "6"
+        Me.m06.Text = "Montado" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "6-N"
         Me.m06.UseVisualStyleBackColor = True
         '
         'm07
         '
-        Me.m07.Location = New System.Drawing.Point(3, 60)
+        Me.m07.Location = New System.Drawing.Point(299, 81)
         Me.m07.Name = "m07"
-        Me.m07.Size = New System.Drawing.Size(101, 51)
+        Me.m07.Size = New System.Drawing.Size(142, 72)
         Me.m07.TabIndex = 6
-        Me.m07.Text = "07"
+        Me.m07.Tag = "7"
+        Me.m07.Text = "Montado" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "7-N"
         Me.m07.UseVisualStyleBackColor = True
         '
         'm08
         '
-        Me.m08.Location = New System.Drawing.Point(110, 60)
+        Me.m08.Location = New System.Drawing.Point(447, 81)
         Me.m08.Name = "m08"
-        Me.m08.Size = New System.Drawing.Size(101, 51)
+        Me.m08.Size = New System.Drawing.Size(142, 72)
         Me.m08.TabIndex = 7
-        Me.m08.Text = "08"
+        Me.m08.Tag = "8"
+        Me.m08.Text = "Montado" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "8-N"
         Me.m08.UseVisualStyleBackColor = True
         '
         'm09
         '
-        Me.m09.Location = New System.Drawing.Point(217, 60)
+        Me.m09.Location = New System.Drawing.Point(3, 159)
         Me.m09.Name = "m09"
-        Me.m09.Size = New System.Drawing.Size(101, 51)
+        Me.m09.Size = New System.Drawing.Size(142, 72)
         Me.m09.TabIndex = 8
-        Me.m09.Text = "09"
+        Me.m09.Tag = "9"
+        Me.m09.Text = "Montado" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "9-N"
         Me.m09.UseVisualStyleBackColor = True
         '
         'm10
         '
-        Me.m10.Location = New System.Drawing.Point(324, 60)
+        Me.m10.Location = New System.Drawing.Point(151, 159)
         Me.m10.Name = "m10"
-        Me.m10.Size = New System.Drawing.Size(101, 51)
+        Me.m10.Size = New System.Drawing.Size(142, 72)
         Me.m10.TabIndex = 9
-        Me.m10.Text = "10"
+        Me.m10.Tag = "10"
+        Me.m10.Text = "Montado" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "10-N"
         Me.m10.UseVisualStyleBackColor = True
         '
         'm11
         '
-        Me.m11.Location = New System.Drawing.Point(431, 60)
+        Me.m11.Location = New System.Drawing.Point(299, 159)
         Me.m11.Name = "m11"
-        Me.m11.Size = New System.Drawing.Size(101, 51)
+        Me.m11.Size = New System.Drawing.Size(142, 72)
         Me.m11.TabIndex = 10
-        Me.m11.Text = "11"
+        Me.m11.Tag = "11"
+        Me.m11.Text = "Montado" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "11-N"
         Me.m11.UseVisualStyleBackColor = True
         '
         'm12
         '
-        Me.m12.Location = New System.Drawing.Point(538, 60)
+        Me.m12.Location = New System.Drawing.Point(447, 159)
         Me.m12.Name = "m12"
-        Me.m12.Size = New System.Drawing.Size(101, 51)
+        Me.m12.Size = New System.Drawing.Size(142, 72)
         Me.m12.TabIndex = 11
-        Me.m12.Text = "12"
+        Me.m12.Tag = "12"
+        Me.m12.Text = "Montado" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "12-N"
         Me.m12.UseVisualStyleBackColor = True
         '
         'm13
         '
-        Me.m13.Location = New System.Drawing.Point(3, 117)
+        Me.m13.Location = New System.Drawing.Point(3, 237)
         Me.m13.Name = "m13"
-        Me.m13.Size = New System.Drawing.Size(101, 51)
+        Me.m13.Size = New System.Drawing.Size(142, 72)
         Me.m13.TabIndex = 12
-        Me.m13.Text = "13"
+        Me.m13.Tag = "13"
+        Me.m13.Text = "Montado" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "13-N"
         Me.m13.UseVisualStyleBackColor = True
         '
         'm14
         '
-        Me.m14.Location = New System.Drawing.Point(110, 117)
+        Me.m14.Location = New System.Drawing.Point(151, 237)
         Me.m14.Name = "m14"
-        Me.m14.Size = New System.Drawing.Size(101, 51)
+        Me.m14.Size = New System.Drawing.Size(142, 72)
         Me.m14.TabIndex = 13
-        Me.m14.Text = "14"
+        Me.m14.Tag = "14"
+        Me.m14.Text = "Montado" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "14-N"
         Me.m14.UseVisualStyleBackColor = True
         '
         'm15
         '
-        Me.m15.Location = New System.Drawing.Point(217, 117)
+        Me.m15.Location = New System.Drawing.Point(299, 237)
         Me.m15.Name = "m15"
-        Me.m15.Size = New System.Drawing.Size(101, 51)
+        Me.m15.Size = New System.Drawing.Size(142, 72)
         Me.m15.TabIndex = 14
-        Me.m15.Text = "15"
+        Me.m15.Tag = "15"
+        Me.m15.Text = "Montado" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "15-N"
         Me.m15.UseVisualStyleBackColor = True
         '
         'm16
         '
-        Me.m16.Location = New System.Drawing.Point(324, 117)
+        Me.m16.Location = New System.Drawing.Point(447, 237)
         Me.m16.Name = "m16"
-        Me.m16.Size = New System.Drawing.Size(101, 51)
+        Me.m16.Size = New System.Drawing.Size(142, 72)
         Me.m16.TabIndex = 15
-        Me.m16.Text = "16"
+        Me.m16.Tag = "16"
+        Me.m16.Text = "Montado" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "16-N"
         Me.m16.UseVisualStyleBackColor = True
         '
         'm17
         '
-        Me.m17.Location = New System.Drawing.Point(431, 117)
+        Me.m17.Location = New System.Drawing.Point(3, 315)
         Me.m17.Name = "m17"
-        Me.m17.Size = New System.Drawing.Size(101, 51)
+        Me.m17.Size = New System.Drawing.Size(142, 72)
         Me.m17.TabIndex = 16
-        Me.m17.Text = "17"
+        Me.m17.Tag = "17"
+        Me.m17.Text = "Montado" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "17-N"
         Me.m17.UseVisualStyleBackColor = True
         '
         'm18
         '
-        Me.m18.Location = New System.Drawing.Point(538, 117)
+        Me.m18.Location = New System.Drawing.Point(151, 315)
         Me.m18.Name = "m18"
-        Me.m18.Size = New System.Drawing.Size(101, 51)
+        Me.m18.Size = New System.Drawing.Size(142, 72)
         Me.m18.TabIndex = 17
-        Me.m18.Text = "18"
+        Me.m18.Tag = "18"
+        Me.m18.Text = "Montado" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "18-N"
         Me.m18.UseVisualStyleBackColor = True
         '
         'TxBDatos
         '
-        Me.TxBDatos.Location = New System.Drawing.Point(626, 528)
+        Me.TxBDatos.Location = New System.Drawing.Point(629, 667)
         Me.TxBDatos.Multiline = True
         Me.TxBDatos.Name = "TxBDatos"
         Me.TxBDatos.ReadOnly = True
-        Me.TxBDatos.Size = New System.Drawing.Size(461, 189)
+        Me.TxBDatos.Size = New System.Drawing.Size(458, 50)
         Me.TxBDatos.TabIndex = 3
         Me.TxBDatos.Text = "- Haz click en un producto para ver sus datos -"
         '
         'FLPClasic
         '
+        Me.FLPClasic.AutoScroll = True
         Me.FLPClasic.BackColor = System.Drawing.SystemColors.ControlDark
+        Me.FLPClasic.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.FLPClasic.Controls.Add(Me.m19)
         Me.FLPClasic.Controls.Add(Me.m20)
         Me.FLPClasic.Controls.Add(Me.m21)
@@ -446,7 +473,7 @@ Partial Class FormMain
         Me.FLPClasic.Controls.Add(Me.m57)
         Me.FLPClasic.Controls.Add(Me.m58)
         Me.FLPClasic.Controls.Add(Me.m59)
-        Me.FLPClasic.Location = New System.Drawing.Point(626, 118)
+        Me.FLPClasic.Location = New System.Drawing.Point(613, 234)
         Me.FLPClasic.Name = "FLPClasic"
         Me.FLPClasic.Size = New System.Drawing.Size(667, 404)
         Me.FLPClasic.TabIndex = 10
@@ -455,374 +482,417 @@ Partial Class FormMain
         '
         Me.m19.Location = New System.Drawing.Point(3, 3)
         Me.m19.Name = "m19"
-        Me.m19.Size = New System.Drawing.Size(101, 51)
+        Me.m19.Size = New System.Drawing.Size(142, 72)
         Me.m19.TabIndex = 0
-        Me.m19.Text = "19"
+        Me.m19.Tag = "19"
+        Me.m19.Text = "Montado" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "19-N"
         Me.m19.UseVisualStyleBackColor = True
         '
         'm20
         '
-        Me.m20.Location = New System.Drawing.Point(110, 3)
+        Me.m20.Location = New System.Drawing.Point(151, 3)
         Me.m20.Name = "m20"
-        Me.m20.Size = New System.Drawing.Size(101, 51)
+        Me.m20.Size = New System.Drawing.Size(142, 72)
         Me.m20.TabIndex = 1
-        Me.m20.Text = "20"
+        Me.m20.Tag = "20"
+        Me.m20.Text = "Montado" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "20-N"
         Me.m20.UseVisualStyleBackColor = True
         '
         'm21
         '
-        Me.m21.Location = New System.Drawing.Point(217, 3)
+        Me.m21.Location = New System.Drawing.Point(299, 3)
         Me.m21.Name = "m21"
-        Me.m21.Size = New System.Drawing.Size(101, 51)
+        Me.m21.Size = New System.Drawing.Size(142, 72)
         Me.m21.TabIndex = 2
-        Me.m21.Text = "21"
+        Me.m21.Tag = "21"
+        Me.m21.Text = "Montado" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "21-N"
         Me.m21.UseVisualStyleBackColor = True
         '
         'm22
         '
-        Me.m22.Location = New System.Drawing.Point(324, 3)
+        Me.m22.Location = New System.Drawing.Point(447, 3)
         Me.m22.Name = "m22"
-        Me.m22.Size = New System.Drawing.Size(101, 51)
+        Me.m22.Size = New System.Drawing.Size(142, 72)
         Me.m22.TabIndex = 3
-        Me.m22.Text = "22"
+        Me.m22.Tag = "22"
+        Me.m22.Text = "Montado" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "22-N"
         Me.m22.UseVisualStyleBackColor = True
         '
         'm23
         '
-        Me.m23.Location = New System.Drawing.Point(431, 3)
+        Me.m23.Location = New System.Drawing.Point(3, 81)
         Me.m23.Name = "m23"
-        Me.m23.Size = New System.Drawing.Size(101, 51)
+        Me.m23.Size = New System.Drawing.Size(142, 72)
         Me.m23.TabIndex = 4
-        Me.m23.Text = "23"
+        Me.m23.Tag = "23"
+        Me.m23.Text = "Montado" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "23-N"
         Me.m23.UseVisualStyleBackColor = True
         '
         'm24
         '
-        Me.m24.Location = New System.Drawing.Point(538, 3)
+        Me.m24.Location = New System.Drawing.Point(151, 81)
         Me.m24.Name = "m24"
-        Me.m24.Size = New System.Drawing.Size(101, 51)
+        Me.m24.Size = New System.Drawing.Size(142, 72)
         Me.m24.TabIndex = 5
-        Me.m24.Text = "24"
+        Me.m24.Tag = "24"
+        Me.m24.Text = "Montado" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "24-N"
         Me.m24.UseVisualStyleBackColor = True
         '
         'm25
         '
-        Me.m25.Location = New System.Drawing.Point(3, 60)
+        Me.m25.Location = New System.Drawing.Point(299, 81)
         Me.m25.Name = "m25"
-        Me.m25.Size = New System.Drawing.Size(101, 51)
+        Me.m25.Size = New System.Drawing.Size(142, 72)
         Me.m25.TabIndex = 6
-        Me.m25.Text = "25"
+        Me.m25.Tag = "25"
+        Me.m25.Text = "Montado" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "25-N"
         Me.m25.UseVisualStyleBackColor = True
         '
         'm26
         '
-        Me.m26.Location = New System.Drawing.Point(110, 60)
+        Me.m26.Location = New System.Drawing.Point(447, 81)
         Me.m26.Name = "m26"
-        Me.m26.Size = New System.Drawing.Size(101, 51)
+        Me.m26.Size = New System.Drawing.Size(142, 72)
         Me.m26.TabIndex = 7
-        Me.m26.Text = "26"
+        Me.m26.Tag = "26"
+        Me.m26.Text = "Montado" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "26-N"
         Me.m26.UseVisualStyleBackColor = True
         '
         'm27
         '
-        Me.m27.Location = New System.Drawing.Point(217, 60)
+        Me.m27.Location = New System.Drawing.Point(3, 159)
         Me.m27.Name = "m27"
-        Me.m27.Size = New System.Drawing.Size(101, 51)
+        Me.m27.Size = New System.Drawing.Size(142, 72)
         Me.m27.TabIndex = 8
-        Me.m27.Text = "27"
+        Me.m27.Tag = "27"
+        Me.m27.Text = "Montado" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "27-N"
         Me.m27.UseVisualStyleBackColor = True
         '
         'm28
         '
-        Me.m28.Location = New System.Drawing.Point(324, 60)
+        Me.m28.Location = New System.Drawing.Point(151, 159)
         Me.m28.Name = "m28"
-        Me.m28.Size = New System.Drawing.Size(101, 51)
+        Me.m28.Size = New System.Drawing.Size(142, 72)
         Me.m28.TabIndex = 9
-        Me.m28.Text = "28"
+        Me.m28.Tag = "28"
+        Me.m28.Text = "Montado" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "28-N"
         Me.m28.UseVisualStyleBackColor = True
         '
         'm29
         '
-        Me.m29.Location = New System.Drawing.Point(431, 60)
+        Me.m29.Location = New System.Drawing.Point(299, 159)
         Me.m29.Name = "m29"
-        Me.m29.Size = New System.Drawing.Size(101, 51)
+        Me.m29.Size = New System.Drawing.Size(142, 72)
         Me.m29.TabIndex = 10
-        Me.m29.Text = "29"
+        Me.m29.Tag = "29"
+        Me.m29.Text = "Montado" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "29-N"
         Me.m29.UseVisualStyleBackColor = True
         '
         'm30
         '
-        Me.m30.Location = New System.Drawing.Point(538, 60)
+        Me.m30.Location = New System.Drawing.Point(447, 159)
         Me.m30.Name = "m30"
-        Me.m30.Size = New System.Drawing.Size(101, 51)
+        Me.m30.Size = New System.Drawing.Size(142, 72)
         Me.m30.TabIndex = 11
-        Me.m30.Text = "30"
+        Me.m30.Tag = "30"
+        Me.m30.Text = "Montado" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "30-N"
         Me.m30.UseVisualStyleBackColor = True
         '
         'm31
         '
-        Me.m31.Location = New System.Drawing.Point(3, 117)
+        Me.m31.Location = New System.Drawing.Point(3, 237)
         Me.m31.Name = "m31"
-        Me.m31.Size = New System.Drawing.Size(101, 51)
+        Me.m31.Size = New System.Drawing.Size(142, 72)
         Me.m31.TabIndex = 12
-        Me.m31.Text = "31"
+        Me.m31.Tag = "31"
+        Me.m31.Text = "Montado" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "31-N"
         Me.m31.UseVisualStyleBackColor = True
         '
         'm32
         '
-        Me.m32.Location = New System.Drawing.Point(110, 117)
+        Me.m32.Location = New System.Drawing.Point(151, 237)
         Me.m32.Name = "m32"
-        Me.m32.Size = New System.Drawing.Size(101, 51)
+        Me.m32.Size = New System.Drawing.Size(142, 72)
         Me.m32.TabIndex = 13
-        Me.m32.Text = "32"
+        Me.m32.Tag = "32"
+        Me.m32.Text = "Montado" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "32-N"
         Me.m32.UseVisualStyleBackColor = True
         '
         'm33
         '
-        Me.m33.Location = New System.Drawing.Point(217, 117)
+        Me.m33.Location = New System.Drawing.Point(299, 237)
         Me.m33.Name = "m33"
-        Me.m33.Size = New System.Drawing.Size(101, 51)
+        Me.m33.Size = New System.Drawing.Size(142, 72)
         Me.m33.TabIndex = 14
-        Me.m33.Text = "33"
+        Me.m33.Tag = "33"
+        Me.m33.Text = "Montado" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "33-N"
         Me.m33.UseVisualStyleBackColor = True
         '
         'm34
         '
-        Me.m34.Location = New System.Drawing.Point(324, 117)
+        Me.m34.Location = New System.Drawing.Point(447, 237)
         Me.m34.Name = "m34"
-        Me.m34.Size = New System.Drawing.Size(101, 51)
+        Me.m34.Size = New System.Drawing.Size(142, 72)
         Me.m34.TabIndex = 15
-        Me.m34.Text = "34"
+        Me.m34.Tag = "34"
+        Me.m34.Text = "Montado" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "34-N"
         Me.m34.UseVisualStyleBackColor = True
         '
         'm35
         '
-        Me.m35.Location = New System.Drawing.Point(431, 117)
+        Me.m35.Location = New System.Drawing.Point(3, 315)
         Me.m35.Name = "m35"
-        Me.m35.Size = New System.Drawing.Size(101, 51)
+        Me.m35.Size = New System.Drawing.Size(142, 72)
         Me.m35.TabIndex = 16
-        Me.m35.Text = "35"
+        Me.m35.Tag = "35"
+        Me.m35.Text = "Montado" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "35-N"
         Me.m35.UseVisualStyleBackColor = True
         '
         'm36
         '
-        Me.m36.Location = New System.Drawing.Point(538, 117)
+        Me.m36.Location = New System.Drawing.Point(151, 315)
         Me.m36.Name = "m36"
-        Me.m36.Size = New System.Drawing.Size(101, 51)
+        Me.m36.Size = New System.Drawing.Size(142, 72)
         Me.m36.TabIndex = 17
-        Me.m36.Text = "36"
+        Me.m36.Tag = "36"
+        Me.m36.Text = "Montado" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "36-N"
         Me.m36.UseVisualStyleBackColor = True
         '
         'm37
         '
-        Me.m37.Location = New System.Drawing.Point(3, 174)
+        Me.m37.Location = New System.Drawing.Point(299, 315)
         Me.m37.Name = "m37"
-        Me.m37.Size = New System.Drawing.Size(101, 51)
+        Me.m37.Size = New System.Drawing.Size(142, 72)
         Me.m37.TabIndex = 18
-        Me.m37.Text = "37"
+        Me.m37.Tag = "37"
+        Me.m37.Text = "Montado" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "37-N"
         Me.m37.UseVisualStyleBackColor = True
         '
         'm38
         '
-        Me.m38.Location = New System.Drawing.Point(110, 174)
+        Me.m38.Location = New System.Drawing.Point(447, 315)
         Me.m38.Name = "m38"
-        Me.m38.Size = New System.Drawing.Size(101, 51)
+        Me.m38.Size = New System.Drawing.Size(142, 72)
         Me.m38.TabIndex = 19
-        Me.m38.Text = "38"
+        Me.m38.Tag = "38"
+        Me.m38.Text = "Montado" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "38-N"
         Me.m38.UseVisualStyleBackColor = True
         '
         'm39
         '
-        Me.m39.Location = New System.Drawing.Point(217, 174)
+        Me.m39.Location = New System.Drawing.Point(3, 393)
         Me.m39.Name = "m39"
-        Me.m39.Size = New System.Drawing.Size(101, 51)
+        Me.m39.Size = New System.Drawing.Size(142, 72)
         Me.m39.TabIndex = 20
-        Me.m39.Text = "39"
+        Me.m39.Tag = "39"
+        Me.m39.Text = "Montado" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "39-N"
         Me.m39.UseVisualStyleBackColor = True
         '
         'm40
         '
-        Me.m40.Location = New System.Drawing.Point(324, 174)
+        Me.m40.Location = New System.Drawing.Point(151, 393)
         Me.m40.Name = "m40"
-        Me.m40.Size = New System.Drawing.Size(101, 51)
+        Me.m40.Size = New System.Drawing.Size(142, 72)
         Me.m40.TabIndex = 21
-        Me.m40.Text = "40"
+        Me.m40.Tag = "40"
+        Me.m40.Text = "Montado" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "40-N"
         Me.m40.UseVisualStyleBackColor = True
         '
         'm41
         '
-        Me.m41.Location = New System.Drawing.Point(431, 174)
+        Me.m41.Location = New System.Drawing.Point(299, 393)
         Me.m41.Name = "m41"
-        Me.m41.Size = New System.Drawing.Size(101, 51)
+        Me.m41.Size = New System.Drawing.Size(142, 72)
         Me.m41.TabIndex = 22
-        Me.m41.Text = "41"
+        Me.m41.Tag = "41"
+        Me.m41.Text = "Montado" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "41-N"
         Me.m41.UseVisualStyleBackColor = True
         '
         'm42
         '
-        Me.m42.Location = New System.Drawing.Point(538, 174)
+        Me.m42.Location = New System.Drawing.Point(447, 393)
         Me.m42.Name = "m42"
-        Me.m42.Size = New System.Drawing.Size(101, 51)
+        Me.m42.Size = New System.Drawing.Size(142, 72)
         Me.m42.TabIndex = 23
-        Me.m42.Text = "42"
+        Me.m42.Tag = "42"
+        Me.m42.Text = "Montado" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "42-N"
         Me.m42.UseVisualStyleBackColor = True
         '
         'm43
         '
-        Me.m43.Location = New System.Drawing.Point(3, 231)
+        Me.m43.Location = New System.Drawing.Point(3, 471)
         Me.m43.Name = "m43"
-        Me.m43.Size = New System.Drawing.Size(101, 51)
+        Me.m43.Size = New System.Drawing.Size(142, 72)
         Me.m43.TabIndex = 24
-        Me.m43.Text = "43"
+        Me.m43.Tag = "43"
+        Me.m43.Text = "Montado" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "43-N"
         Me.m43.UseVisualStyleBackColor = True
         '
         'm44
         '
-        Me.m44.Location = New System.Drawing.Point(110, 231)
+        Me.m44.Location = New System.Drawing.Point(151, 471)
         Me.m44.Name = "m44"
-        Me.m44.Size = New System.Drawing.Size(101, 51)
+        Me.m44.Size = New System.Drawing.Size(142, 72)
         Me.m44.TabIndex = 25
-        Me.m44.Text = "44"
+        Me.m44.Tag = "44"
+        Me.m44.Text = "Montado" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "44-N"
         Me.m44.UseVisualStyleBackColor = True
         '
         'm45
         '
-        Me.m45.Location = New System.Drawing.Point(217, 231)
+        Me.m45.Location = New System.Drawing.Point(299, 471)
         Me.m45.Name = "m45"
-        Me.m45.Size = New System.Drawing.Size(101, 51)
+        Me.m45.Size = New System.Drawing.Size(142, 72)
         Me.m45.TabIndex = 26
-        Me.m45.Text = "45"
+        Me.m45.Tag = "45"
+        Me.m45.Text = "Montado" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "45-N"
         Me.m45.UseVisualStyleBackColor = True
         '
         'm46
         '
-        Me.m46.Location = New System.Drawing.Point(324, 231)
+        Me.m46.Location = New System.Drawing.Point(447, 471)
         Me.m46.Name = "m46"
-        Me.m46.Size = New System.Drawing.Size(101, 51)
+        Me.m46.Size = New System.Drawing.Size(142, 72)
         Me.m46.TabIndex = 27
-        Me.m46.Text = "46"
+        Me.m46.Tag = "46"
+        Me.m46.Text = "Montado" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "46-N"
         Me.m46.UseVisualStyleBackColor = True
         '
         'm47
         '
-        Me.m47.Location = New System.Drawing.Point(431, 231)
+        Me.m47.Location = New System.Drawing.Point(3, 549)
         Me.m47.Name = "m47"
-        Me.m47.Size = New System.Drawing.Size(101, 51)
+        Me.m47.Size = New System.Drawing.Size(142, 72)
         Me.m47.TabIndex = 28
-        Me.m47.Text = "47"
+        Me.m47.Tag = "47"
+        Me.m47.Text = "Montado" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "47-N"
         Me.m47.UseVisualStyleBackColor = True
         '
         'm48
         '
-        Me.m48.Location = New System.Drawing.Point(538, 231)
+        Me.m48.Location = New System.Drawing.Point(151, 549)
         Me.m48.Name = "m48"
-        Me.m48.Size = New System.Drawing.Size(101, 51)
+        Me.m48.Size = New System.Drawing.Size(142, 72)
         Me.m48.TabIndex = 29
-        Me.m48.Text = "48"
+        Me.m48.Tag = "48"
+        Me.m48.Text = "Montado" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "48-N"
         Me.m48.UseVisualStyleBackColor = True
         '
         'm49
         '
-        Me.m49.Location = New System.Drawing.Point(3, 288)
+        Me.m49.Location = New System.Drawing.Point(299, 549)
         Me.m49.Name = "m49"
-        Me.m49.Size = New System.Drawing.Size(101, 51)
+        Me.m49.Size = New System.Drawing.Size(142, 72)
         Me.m49.TabIndex = 30
-        Me.m49.Text = "49"
+        Me.m49.Tag = "49"
+        Me.m49.Text = "Montado" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "49-N"
         Me.m49.UseVisualStyleBackColor = True
         '
         'm50
         '
-        Me.m50.Location = New System.Drawing.Point(110, 288)
+        Me.m50.Location = New System.Drawing.Point(447, 549)
         Me.m50.Name = "m50"
-        Me.m50.Size = New System.Drawing.Size(101, 51)
+        Me.m50.Size = New System.Drawing.Size(142, 72)
         Me.m50.TabIndex = 31
-        Me.m50.Text = "50"
+        Me.m50.Tag = "50"
+        Me.m50.Text = "Montado" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "50-N"
         Me.m50.UseVisualStyleBackColor = True
         '
         'm51
         '
-        Me.m51.Location = New System.Drawing.Point(217, 288)
+        Me.m51.Location = New System.Drawing.Point(3, 627)
         Me.m51.Name = "m51"
-        Me.m51.Size = New System.Drawing.Size(101, 51)
+        Me.m51.Size = New System.Drawing.Size(142, 72)
         Me.m51.TabIndex = 32
-        Me.m51.Text = "51"
+        Me.m51.Tag = "51"
+        Me.m51.Text = "Montado" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "51-N"
         Me.m51.UseVisualStyleBackColor = True
         '
         'm52
         '
-        Me.m52.Location = New System.Drawing.Point(324, 288)
+        Me.m52.Location = New System.Drawing.Point(151, 627)
         Me.m52.Name = "m52"
-        Me.m52.Size = New System.Drawing.Size(101, 51)
+        Me.m52.Size = New System.Drawing.Size(142, 72)
         Me.m52.TabIndex = 33
-        Me.m52.Text = "52"
+        Me.m52.Tag = "52"
+        Me.m52.Text = "Montado" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "52-N"
         Me.m52.UseVisualStyleBackColor = True
         '
         'm53
         '
-        Me.m53.Location = New System.Drawing.Point(431, 288)
+        Me.m53.Location = New System.Drawing.Point(299, 627)
         Me.m53.Name = "m53"
-        Me.m53.Size = New System.Drawing.Size(101, 51)
+        Me.m53.Size = New System.Drawing.Size(142, 72)
         Me.m53.TabIndex = 34
-        Me.m53.Text = "53"
+        Me.m53.Tag = "53"
+        Me.m53.Text = "Montado" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "53-N"
         Me.m53.UseVisualStyleBackColor = True
         '
         'm54
         '
-        Me.m54.Location = New System.Drawing.Point(538, 288)
+        Me.m54.Location = New System.Drawing.Point(447, 627)
         Me.m54.Name = "m54"
-        Me.m54.Size = New System.Drawing.Size(101, 51)
+        Me.m54.Size = New System.Drawing.Size(142, 72)
         Me.m54.TabIndex = 35
-        Me.m54.Text = "54"
+        Me.m54.Tag = "54"
+        Me.m54.Text = "Montado" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "54-N"
         Me.m54.UseVisualStyleBackColor = True
         '
         'm55
         '
-        Me.m55.Location = New System.Drawing.Point(3, 345)
+        Me.m55.Location = New System.Drawing.Point(3, 705)
         Me.m55.Name = "m55"
-        Me.m55.Size = New System.Drawing.Size(101, 51)
+        Me.m55.Size = New System.Drawing.Size(142, 72)
         Me.m55.TabIndex = 36
-        Me.m55.Text = "55"
+        Me.m55.Tag = "55"
+        Me.m55.Text = "Montado" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "55-N"
         Me.m55.UseVisualStyleBackColor = True
         '
         'm56
         '
-        Me.m56.Location = New System.Drawing.Point(110, 345)
+        Me.m56.Location = New System.Drawing.Point(151, 705)
         Me.m56.Name = "m56"
-        Me.m56.Size = New System.Drawing.Size(101, 51)
+        Me.m56.Size = New System.Drawing.Size(142, 72)
         Me.m56.TabIndex = 37
-        Me.m56.Text = "56"
+        Me.m56.Tag = "56"
+        Me.m56.Text = "Montado" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "56-N"
         Me.m56.UseVisualStyleBackColor = True
         '
         'm57
         '
-        Me.m57.Location = New System.Drawing.Point(217, 345)
+        Me.m57.Location = New System.Drawing.Point(299, 705)
         Me.m57.Name = "m57"
-        Me.m57.Size = New System.Drawing.Size(101, 51)
+        Me.m57.Size = New System.Drawing.Size(142, 72)
         Me.m57.TabIndex = 38
-        Me.m57.Text = "57"
+        Me.m57.Tag = "57"
+        Me.m57.Text = "Montado" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "57-N"
         Me.m57.UseVisualStyleBackColor = True
         '
         'm58
         '
-        Me.m58.Location = New System.Drawing.Point(324, 345)
+        Me.m58.Location = New System.Drawing.Point(447, 705)
         Me.m58.Name = "m58"
-        Me.m58.Size = New System.Drawing.Size(101, 51)
+        Me.m58.Size = New System.Drawing.Size(142, 72)
         Me.m58.TabIndex = 39
-        Me.m58.Text = "58"
+        Me.m58.Tag = "58"
+        Me.m58.Text = "Montado" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "58-N"
         Me.m58.UseVisualStyleBackColor = True
         '
         'm59
         '
-        Me.m59.Location = New System.Drawing.Point(431, 345)
+        Me.m59.Location = New System.Drawing.Point(3, 783)
         Me.m59.Name = "m59"
-        Me.m59.Size = New System.Drawing.Size(101, 51)
+        Me.m59.Size = New System.Drawing.Size(142, 72)
         Me.m59.TabIndex = 40
-        Me.m59.Text = "59"
+        Me.m59.Tag = "59"
+        Me.m59.Text = "Montado" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "59-N"
         Me.m59.UseVisualStyleBackColor = True
         '
         'FLPespecials
         '
+        Me.FLPespecials.AutoScroll = True
         Me.FLPespecials.BackColor = System.Drawing.SystemColors.ControlDark
+        Me.FLPespecials.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.FLPespecials.Controls.Add(Me.Button1)
         Me.FLPespecials.Controls.Add(Me.Button2)
         Me.FLPespecials.Controls.Add(Me.Button3)
@@ -853,7 +923,7 @@ Partial Class FormMain
         Me.FLPespecials.Controls.Add(Me.Button28)
         Me.FLPespecials.Controls.Add(Me.Button29)
         Me.FLPespecials.Controls.Add(Me.Button30)
-        Me.FLPespecials.Location = New System.Drawing.Point(626, 118)
+        Me.FLPespecials.Location = New System.Drawing.Point(613, 234)
         Me.FLPespecials.Name = "FLPespecials"
         Me.FLPespecials.Size = New System.Drawing.Size(667, 404)
         Me.FLPespecials.TabIndex = 11
@@ -862,281 +932,312 @@ Partial Class FormMain
         '
         Me.Button1.Location = New System.Drawing.Point(3, 3)
         Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(101, 51)
+        Me.Button1.Size = New System.Drawing.Size(142, 72)
         Me.Button1.TabIndex = 0
-        Me.Button1.Text = "60"
+        Me.Button1.Tag = "60"
+        Me.Button1.Text = "Montado" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "60-N"
         Me.Button1.UseVisualStyleBackColor = True
         '
         'Button2
         '
-        Me.Button2.Location = New System.Drawing.Point(110, 3)
+        Me.Button2.Location = New System.Drawing.Point(151, 3)
         Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(101, 51)
+        Me.Button2.Size = New System.Drawing.Size(142, 72)
         Me.Button2.TabIndex = 1
-        Me.Button2.Text = "61"
+        Me.Button2.Tag = "61"
+        Me.Button2.Text = "Montado" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "60-N"
         Me.Button2.UseVisualStyleBackColor = True
         '
         'Button3
         '
-        Me.Button3.Location = New System.Drawing.Point(217, 3)
+        Me.Button3.Location = New System.Drawing.Point(299, 3)
         Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(101, 51)
+        Me.Button3.Size = New System.Drawing.Size(142, 72)
         Me.Button3.TabIndex = 2
-        Me.Button3.Text = "62"
+        Me.Button3.Tag = "62"
+        Me.Button3.Text = "Montado" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "62-N"
         Me.Button3.UseVisualStyleBackColor = True
         '
         'Button4
         '
-        Me.Button4.Location = New System.Drawing.Point(324, 3)
+        Me.Button4.Location = New System.Drawing.Point(447, 3)
         Me.Button4.Name = "Button4"
-        Me.Button4.Size = New System.Drawing.Size(101, 51)
+        Me.Button4.Size = New System.Drawing.Size(142, 72)
         Me.Button4.TabIndex = 3
-        Me.Button4.Text = "63"
+        Me.Button4.Tag = "63"
+        Me.Button4.Text = "Montado" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "63-N"
         Me.Button4.UseVisualStyleBackColor = True
         '
         'Button5
         '
-        Me.Button5.Location = New System.Drawing.Point(431, 3)
+        Me.Button5.Location = New System.Drawing.Point(3, 81)
         Me.Button5.Name = "Button5"
-        Me.Button5.Size = New System.Drawing.Size(101, 51)
+        Me.Button5.Size = New System.Drawing.Size(142, 72)
         Me.Button5.TabIndex = 4
-        Me.Button5.Text = "64"
+        Me.Button5.Tag = "64"
+        Me.Button5.Text = "Montado" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "64-N"
         Me.Button5.UseVisualStyleBackColor = True
         '
         'Button6
         '
-        Me.Button6.Location = New System.Drawing.Point(538, 3)
+        Me.Button6.Location = New System.Drawing.Point(151, 81)
         Me.Button6.Name = "Button6"
-        Me.Button6.Size = New System.Drawing.Size(101, 51)
+        Me.Button6.Size = New System.Drawing.Size(142, 72)
         Me.Button6.TabIndex = 5
-        Me.Button6.Text = "65"
+        Me.Button6.Tag = "65"
+        Me.Button6.Text = "Montado" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "65-N"
         Me.Button6.UseVisualStyleBackColor = True
         '
         'Button7
         '
-        Me.Button7.Location = New System.Drawing.Point(3, 60)
+        Me.Button7.Location = New System.Drawing.Point(299, 81)
         Me.Button7.Name = "Button7"
-        Me.Button7.Size = New System.Drawing.Size(101, 51)
+        Me.Button7.Size = New System.Drawing.Size(142, 72)
         Me.Button7.TabIndex = 6
-        Me.Button7.Text = "66"
+        Me.Button7.Tag = "66"
+        Me.Button7.Text = "Montado" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "66-N"
         Me.Button7.UseVisualStyleBackColor = True
         '
         'Button8
         '
-        Me.Button8.Location = New System.Drawing.Point(110, 60)
+        Me.Button8.Location = New System.Drawing.Point(447, 81)
         Me.Button8.Name = "Button8"
-        Me.Button8.Size = New System.Drawing.Size(101, 51)
+        Me.Button8.Size = New System.Drawing.Size(142, 72)
         Me.Button8.TabIndex = 7
-        Me.Button8.Text = "67"
+        Me.Button8.Tag = "67"
+        Me.Button8.Text = "Montado" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "67-N"
         Me.Button8.UseVisualStyleBackColor = True
         '
         'Button9
         '
-        Me.Button9.Location = New System.Drawing.Point(217, 60)
+        Me.Button9.Location = New System.Drawing.Point(3, 159)
         Me.Button9.Name = "Button9"
-        Me.Button9.Size = New System.Drawing.Size(101, 51)
+        Me.Button9.Size = New System.Drawing.Size(142, 72)
         Me.Button9.TabIndex = 8
-        Me.Button9.Text = "68"
+        Me.Button9.Tag = "68"
+        Me.Button9.Text = "Montado" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "68-N"
         Me.Button9.UseVisualStyleBackColor = True
         '
         'Button10
         '
-        Me.Button10.Location = New System.Drawing.Point(324, 60)
+        Me.Button10.Location = New System.Drawing.Point(151, 159)
         Me.Button10.Name = "Button10"
-        Me.Button10.Size = New System.Drawing.Size(101, 51)
+        Me.Button10.Size = New System.Drawing.Size(142, 72)
         Me.Button10.TabIndex = 9
-        Me.Button10.Text = "69"
+        Me.Button10.Tag = "69"
+        Me.Button10.Text = "Montado" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "69-N"
         Me.Button10.UseVisualStyleBackColor = True
         '
         'Button11
         '
-        Me.Button11.Location = New System.Drawing.Point(431, 60)
+        Me.Button11.Location = New System.Drawing.Point(299, 159)
         Me.Button11.Name = "Button11"
-        Me.Button11.Size = New System.Drawing.Size(101, 51)
+        Me.Button11.Size = New System.Drawing.Size(142, 72)
         Me.Button11.TabIndex = 10
-        Me.Button11.Text = "70"
+        Me.Button11.Tag = "70"
+        Me.Button11.Text = "Montado" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "70-N"
         Me.Button11.UseVisualStyleBackColor = True
         '
         'Button12
         '
-        Me.Button12.Location = New System.Drawing.Point(538, 60)
+        Me.Button12.Location = New System.Drawing.Point(447, 159)
         Me.Button12.Name = "Button12"
-        Me.Button12.Size = New System.Drawing.Size(101, 51)
+        Me.Button12.Size = New System.Drawing.Size(142, 72)
         Me.Button12.TabIndex = 11
-        Me.Button12.Text = "71"
+        Me.Button12.Tag = "71"
+        Me.Button12.Text = "Montado" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "71-N"
         Me.Button12.UseVisualStyleBackColor = True
         '
         'Button13
         '
-        Me.Button13.Location = New System.Drawing.Point(3, 117)
+        Me.Button13.Location = New System.Drawing.Point(3, 237)
         Me.Button13.Name = "Button13"
-        Me.Button13.Size = New System.Drawing.Size(101, 51)
+        Me.Button13.Size = New System.Drawing.Size(142, 72)
         Me.Button13.TabIndex = 12
-        Me.Button13.Text = "72"
+        Me.Button13.Tag = "72"
+        Me.Button13.Text = "Montado" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "72-N"
         Me.Button13.UseVisualStyleBackColor = True
         '
         'Button14
         '
-        Me.Button14.Location = New System.Drawing.Point(110, 117)
+        Me.Button14.Location = New System.Drawing.Point(151, 237)
         Me.Button14.Name = "Button14"
-        Me.Button14.Size = New System.Drawing.Size(101, 51)
+        Me.Button14.Size = New System.Drawing.Size(142, 72)
         Me.Button14.TabIndex = 13
-        Me.Button14.Text = "73"
+        Me.Button14.Tag = "73"
+        Me.Button14.Text = "Montado" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "73-N"
         Me.Button14.UseVisualStyleBackColor = True
         '
         'Button15
         '
-        Me.Button15.Location = New System.Drawing.Point(217, 117)
+        Me.Button15.Location = New System.Drawing.Point(299, 237)
         Me.Button15.Name = "Button15"
-        Me.Button15.Size = New System.Drawing.Size(101, 51)
+        Me.Button15.Size = New System.Drawing.Size(142, 72)
         Me.Button15.TabIndex = 14
-        Me.Button15.Text = "74"
+        Me.Button15.Tag = "74"
+        Me.Button15.Text = "Montado" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "74-N"
         Me.Button15.UseVisualStyleBackColor = True
         '
         'Button16
         '
-        Me.Button16.Location = New System.Drawing.Point(324, 117)
+        Me.Button16.Location = New System.Drawing.Point(447, 237)
         Me.Button16.Name = "Button16"
-        Me.Button16.Size = New System.Drawing.Size(101, 51)
+        Me.Button16.Size = New System.Drawing.Size(142, 72)
         Me.Button16.TabIndex = 15
-        Me.Button16.Text = "75"
+        Me.Button16.Tag = "75"
+        Me.Button16.Text = "Montado" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "75-N"
         Me.Button16.UseVisualStyleBackColor = True
         '
         'Button17
         '
-        Me.Button17.Location = New System.Drawing.Point(431, 117)
+        Me.Button17.Location = New System.Drawing.Point(3, 315)
         Me.Button17.Name = "Button17"
-        Me.Button17.Size = New System.Drawing.Size(101, 51)
+        Me.Button17.Size = New System.Drawing.Size(142, 72)
         Me.Button17.TabIndex = 16
-        Me.Button17.Text = "76"
+        Me.Button17.Tag = "76"
+        Me.Button17.Text = "Montado" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "76-N"
         Me.Button17.UseVisualStyleBackColor = True
         '
         'Button18
         '
-        Me.Button18.Location = New System.Drawing.Point(538, 117)
+        Me.Button18.Location = New System.Drawing.Point(151, 315)
         Me.Button18.Name = "Button18"
-        Me.Button18.Size = New System.Drawing.Size(101, 51)
+        Me.Button18.Size = New System.Drawing.Size(142, 72)
         Me.Button18.TabIndex = 17
-        Me.Button18.Text = "77"
+        Me.Button18.Tag = "77"
+        Me.Button18.Text = "Montado" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "77-N"
         Me.Button18.UseVisualStyleBackColor = True
         '
         'Button19
         '
-        Me.Button19.Location = New System.Drawing.Point(3, 174)
+        Me.Button19.Location = New System.Drawing.Point(299, 315)
         Me.Button19.Name = "Button19"
-        Me.Button19.Size = New System.Drawing.Size(101, 51)
+        Me.Button19.Size = New System.Drawing.Size(142, 72)
         Me.Button19.TabIndex = 18
-        Me.Button19.Text = "78"
+        Me.Button19.Tag = "78"
+        Me.Button19.Text = "Montado" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "78-N"
         Me.Button19.UseVisualStyleBackColor = True
         '
         'Button20
         '
-        Me.Button20.Location = New System.Drawing.Point(110, 174)
+        Me.Button20.Location = New System.Drawing.Point(447, 315)
         Me.Button20.Name = "Button20"
-        Me.Button20.Size = New System.Drawing.Size(101, 51)
+        Me.Button20.Size = New System.Drawing.Size(142, 72)
         Me.Button20.TabIndex = 19
-        Me.Button20.Text = "79"
+        Me.Button20.Tag = "79"
+        Me.Button20.Text = "Montado" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "79-N"
         Me.Button20.UseVisualStyleBackColor = True
         '
         'Button21
         '
-        Me.Button21.Location = New System.Drawing.Point(217, 174)
+        Me.Button21.Location = New System.Drawing.Point(3, 393)
         Me.Button21.Name = "Button21"
-        Me.Button21.Size = New System.Drawing.Size(101, 51)
+        Me.Button21.Size = New System.Drawing.Size(142, 72)
         Me.Button21.TabIndex = 20
-        Me.Button21.Text = "80"
+        Me.Button21.Tag = "80"
+        Me.Button21.Text = "Montado" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "80-N"
         Me.Button21.UseVisualStyleBackColor = True
         '
         'Button22
         '
-        Me.Button22.Location = New System.Drawing.Point(324, 174)
+        Me.Button22.Location = New System.Drawing.Point(151, 393)
         Me.Button22.Name = "Button22"
-        Me.Button22.Size = New System.Drawing.Size(101, 51)
+        Me.Button22.Size = New System.Drawing.Size(142, 72)
         Me.Button22.TabIndex = 21
-        Me.Button22.Text = "81"
+        Me.Button22.Tag = "81"
+        Me.Button22.Text = "Montado" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "81-N"
         Me.Button22.UseVisualStyleBackColor = True
         '
         'Button23
         '
-        Me.Button23.Location = New System.Drawing.Point(431, 174)
+        Me.Button23.Location = New System.Drawing.Point(299, 393)
         Me.Button23.Name = "Button23"
-        Me.Button23.Size = New System.Drawing.Size(101, 51)
+        Me.Button23.Size = New System.Drawing.Size(142, 72)
         Me.Button23.TabIndex = 22
-        Me.Button23.Text = "82"
+        Me.Button23.Tag = "82"
+        Me.Button23.Text = "Montado" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "82-N"
         Me.Button23.UseVisualStyleBackColor = True
         '
         'Button24
         '
-        Me.Button24.Location = New System.Drawing.Point(538, 174)
+        Me.Button24.Location = New System.Drawing.Point(447, 393)
         Me.Button24.Name = "Button24"
-        Me.Button24.Size = New System.Drawing.Size(101, 51)
+        Me.Button24.Size = New System.Drawing.Size(142, 72)
         Me.Button24.TabIndex = 23
-        Me.Button24.Text = "83"
+        Me.Button24.Tag = "83"
+        Me.Button24.Text = "Montado" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "83-N"
         Me.Button24.UseVisualStyleBackColor = True
         '
         'Button25
         '
-        Me.Button25.Location = New System.Drawing.Point(3, 231)
+        Me.Button25.Location = New System.Drawing.Point(3, 471)
         Me.Button25.Name = "Button25"
-        Me.Button25.Size = New System.Drawing.Size(101, 51)
+        Me.Button25.Size = New System.Drawing.Size(142, 72)
         Me.Button25.TabIndex = 24
-        Me.Button25.Text = "84"
+        Me.Button25.Tag = "84"
+        Me.Button25.Text = "Montado" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "84-N"
         Me.Button25.UseVisualStyleBackColor = True
         '
         'Button26
         '
-        Me.Button26.Location = New System.Drawing.Point(110, 231)
+        Me.Button26.Location = New System.Drawing.Point(151, 471)
         Me.Button26.Name = "Button26"
-        Me.Button26.Size = New System.Drawing.Size(101, 51)
+        Me.Button26.Size = New System.Drawing.Size(142, 72)
         Me.Button26.TabIndex = 25
-        Me.Button26.Text = "85"
+        Me.Button26.Tag = "85"
+        Me.Button26.Text = "Montado" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "85-N"
         Me.Button26.UseVisualStyleBackColor = True
         '
         'Button27
         '
-        Me.Button27.Location = New System.Drawing.Point(217, 231)
+        Me.Button27.Location = New System.Drawing.Point(299, 471)
         Me.Button27.Name = "Button27"
-        Me.Button27.Size = New System.Drawing.Size(101, 51)
+        Me.Button27.Size = New System.Drawing.Size(142, 72)
         Me.Button27.TabIndex = 26
-        Me.Button27.Text = "86"
+        Me.Button27.Tag = "86"
+        Me.Button27.Text = "Montado" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "86-N"
         Me.Button27.UseVisualStyleBackColor = True
         '
         'Button28
         '
-        Me.Button28.Location = New System.Drawing.Point(324, 231)
+        Me.Button28.Location = New System.Drawing.Point(447, 471)
         Me.Button28.Name = "Button28"
-        Me.Button28.Size = New System.Drawing.Size(101, 51)
+        Me.Button28.Size = New System.Drawing.Size(142, 72)
         Me.Button28.TabIndex = 27
-        Me.Button28.Text = "87"
+        Me.Button28.Tag = "87"
+        Me.Button28.Text = "Montado" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "87-N"
         Me.Button28.UseVisualStyleBackColor = True
         '
         'Button29
         '
-        Me.Button29.Location = New System.Drawing.Point(431, 231)
+        Me.Button29.Location = New System.Drawing.Point(3, 549)
         Me.Button29.Name = "Button29"
-        Me.Button29.Size = New System.Drawing.Size(101, 51)
+        Me.Button29.Size = New System.Drawing.Size(142, 72)
         Me.Button29.TabIndex = 28
-        Me.Button29.Text = "88"
+        Me.Button29.Tag = "88"
+        Me.Button29.Text = "Montado" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "88-N"
         Me.Button29.UseVisualStyleBackColor = True
         '
         'Button30
         '
-        Me.Button30.Location = New System.Drawing.Point(538, 231)
+        Me.Button30.Location = New System.Drawing.Point(151, 549)
         Me.Button30.Name = "Button30"
-        Me.Button30.Size = New System.Drawing.Size(101, 51)
+        Me.Button30.Size = New System.Drawing.Size(142, 72)
         Me.Button30.TabIndex = 29
-        Me.Button30.Text = "89"
+        Me.Button30.Tag = "89"
+        Me.Button30.Text = "Montado" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "89-N"
         Me.Button30.UseVisualStyleBackColor = True
         '
         'FLPdulces
         '
         Me.FLPdulces.BackColor = System.Drawing.SystemColors.ControlDark
+        Me.FLPdulces.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.FLPdulces.Controls.Add(Me.m90)
         Me.FLPdulces.Controls.Add(Me.m91)
         Me.FLPdulces.Controls.Add(Me.m92)
         Me.FLPdulces.Controls.Add(Me.m93)
         Me.FLPdulces.Controls.Add(Me.m94)
-        Me.FLPdulces.Location = New System.Drawing.Point(626, 118)
+        Me.FLPdulces.Location = New System.Drawing.Point(613, 234)
         Me.FLPdulces.Name = "FLPdulces"
         Me.FLPdulces.Size = New System.Drawing.Size(667, 404)
         Me.FLPdulces.TabIndex = 12
@@ -1145,57 +1246,63 @@ Partial Class FormMain
         '
         Me.m90.Location = New System.Drawing.Point(3, 3)
         Me.m90.Name = "m90"
-        Me.m90.Size = New System.Drawing.Size(101, 51)
+        Me.m90.Size = New System.Drawing.Size(142, 72)
         Me.m90.TabIndex = 0
-        Me.m90.Text = "90"
+        Me.m90.Tag = "90"
+        Me.m90.Text = "Montado" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "90-N"
         Me.m90.UseVisualStyleBackColor = True
         '
         'm91
         '
-        Me.m91.Location = New System.Drawing.Point(110, 3)
+        Me.m91.Location = New System.Drawing.Point(151, 3)
         Me.m91.Name = "m91"
-        Me.m91.Size = New System.Drawing.Size(101, 51)
+        Me.m91.Size = New System.Drawing.Size(142, 72)
         Me.m91.TabIndex = 1
-        Me.m91.Text = "91"
+        Me.m91.Tag = "91"
+        Me.m91.Text = "Montado" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "91-N"
         Me.m91.UseVisualStyleBackColor = True
         '
         'm92
         '
-        Me.m92.Location = New System.Drawing.Point(217, 3)
+        Me.m92.Location = New System.Drawing.Point(299, 3)
         Me.m92.Name = "m92"
-        Me.m92.Size = New System.Drawing.Size(101, 51)
+        Me.m92.Size = New System.Drawing.Size(142, 72)
         Me.m92.TabIndex = 2
-        Me.m92.Text = "92"
+        Me.m92.Tag = "92"
+        Me.m92.Text = "Montado" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "92-N"
         Me.m92.UseVisualStyleBackColor = True
         '
         'm93
         '
-        Me.m93.Location = New System.Drawing.Point(324, 3)
+        Me.m93.Location = New System.Drawing.Point(447, 3)
         Me.m93.Name = "m93"
-        Me.m93.Size = New System.Drawing.Size(101, 51)
+        Me.m93.Size = New System.Drawing.Size(142, 72)
         Me.m93.TabIndex = 3
-        Me.m93.Text = "93"
+        Me.m93.Tag = "93"
+        Me.m93.Text = "Montado" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "93-N"
         Me.m93.UseVisualStyleBackColor = True
         '
         'm94
         '
-        Me.m94.Location = New System.Drawing.Point(431, 3)
+        Me.m94.Location = New System.Drawing.Point(3, 81)
         Me.m94.Name = "m94"
-        Me.m94.Size = New System.Drawing.Size(101, 51)
+        Me.m94.Size = New System.Drawing.Size(142, 72)
         Me.m94.TabIndex = 4
-        Me.m94.Text = "94"
+        Me.m94.Tag = "94"
+        Me.m94.Text = "Montado" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "94-N"
         Me.m94.UseVisualStyleBackColor = True
         '
         'FLPSuper
         '
         Me.FLPSuper.BackColor = System.Drawing.SystemColors.ControlDark
+        Me.FLPSuper.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.FLPSuper.Controls.Add(Me.m95)
         Me.FLPSuper.Controls.Add(Me.m96)
         Me.FLPSuper.Controls.Add(Me.m97)
         Me.FLPSuper.Controls.Add(Me.m98)
         Me.FLPSuper.Controls.Add(Me.m99)
         Me.FLPSuper.Controls.Add(Me.m100)
-        Me.FLPSuper.Location = New System.Drawing.Point(626, 118)
+        Me.FLPSuper.Location = New System.Drawing.Point(613, 234)
         Me.FLPSuper.Name = "FLPSuper"
         Me.FLPSuper.Size = New System.Drawing.Size(667, 404)
         Me.FLPSuper.TabIndex = 13
@@ -1204,59 +1311,66 @@ Partial Class FormMain
         '
         Me.m95.Location = New System.Drawing.Point(3, 3)
         Me.m95.Name = "m95"
-        Me.m95.Size = New System.Drawing.Size(101, 51)
+        Me.m95.Size = New System.Drawing.Size(142, 72)
         Me.m95.TabIndex = 0
-        Me.m95.Text = "95"
+        Me.m95.Tag = "95"
+        Me.m95.Text = "Montado" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "95-N"
         Me.m95.UseVisualStyleBackColor = True
         '
         'm96
         '
-        Me.m96.Location = New System.Drawing.Point(110, 3)
+        Me.m96.Location = New System.Drawing.Point(151, 3)
         Me.m96.Name = "m96"
-        Me.m96.Size = New System.Drawing.Size(101, 51)
+        Me.m96.Size = New System.Drawing.Size(142, 72)
         Me.m96.TabIndex = 1
-        Me.m96.Text = "96"
+        Me.m96.Tag = "96"
+        Me.m96.Text = "Montado" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "96-N"
         Me.m96.UseVisualStyleBackColor = True
         '
         'm97
         '
-        Me.m97.Location = New System.Drawing.Point(217, 3)
+        Me.m97.Location = New System.Drawing.Point(299, 3)
         Me.m97.Name = "m97"
-        Me.m97.Size = New System.Drawing.Size(101, 51)
+        Me.m97.Size = New System.Drawing.Size(142, 72)
         Me.m97.TabIndex = 2
-        Me.m97.Text = "97"
+        Me.m97.Tag = "97"
+        Me.m97.Text = "Montado" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "97-N"
         Me.m97.UseVisualStyleBackColor = True
         '
         'm98
         '
-        Me.m98.Location = New System.Drawing.Point(324, 3)
+        Me.m98.Location = New System.Drawing.Point(447, 3)
         Me.m98.Name = "m98"
-        Me.m98.Size = New System.Drawing.Size(101, 51)
+        Me.m98.Size = New System.Drawing.Size(142, 72)
         Me.m98.TabIndex = 3
-        Me.m98.Text = "98"
+        Me.m98.Tag = "98"
+        Me.m98.Text = "Montado" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "98-N"
         Me.m98.UseVisualStyleBackColor = True
         '
         'm99
         '
-        Me.m99.Location = New System.Drawing.Point(431, 3)
+        Me.m99.Location = New System.Drawing.Point(3, 81)
         Me.m99.Name = "m99"
-        Me.m99.Size = New System.Drawing.Size(101, 51)
+        Me.m99.Size = New System.Drawing.Size(142, 72)
         Me.m99.TabIndex = 4
-        Me.m99.Text = "99"
+        Me.m99.Tag = "99"
+        Me.m99.Text = "Montado" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "99-N"
         Me.m99.UseVisualStyleBackColor = True
         '
         'm100
         '
-        Me.m100.Location = New System.Drawing.Point(538, 3)
+        Me.m100.Location = New System.Drawing.Point(151, 81)
         Me.m100.Name = "m100"
-        Me.m100.Size = New System.Drawing.Size(101, 51)
+        Me.m100.Size = New System.Drawing.Size(142, 72)
         Me.m100.TabIndex = 5
-        Me.m100.Text = "100"
+        Me.m100.Tag = "100"
+        Me.m100.Text = "Montado" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "100-N"
         Me.m100.UseVisualStyleBackColor = True
         '
         'FLPDrinks
         '
         Me.FLPDrinks.BackColor = System.Drawing.SystemColors.ControlDark
+        Me.FLPDrinks.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.FLPDrinks.Controls.Add(Me.Button31)
         Me.FLPDrinks.Controls.Add(Me.Button32)
         Me.FLPDrinks.Controls.Add(Me.Button33)
@@ -1274,7 +1388,7 @@ Partial Class FormMain
         Me.FLPDrinks.Controls.Add(Me.Button45)
         Me.FLPDrinks.Controls.Add(Me.Button46)
         Me.FLPDrinks.Controls.Add(Me.Button47)
-        Me.FLPDrinks.Location = New System.Drawing.Point(626, 118)
+        Me.FLPDrinks.Location = New System.Drawing.Point(613, 234)
         Me.FLPDrinks.Name = "FLPDrinks"
         Me.FLPDrinks.Size = New System.Drawing.Size(667, 404)
         Me.FLPDrinks.TabIndex = 14
@@ -1285,6 +1399,7 @@ Partial Class FormMain
         Me.Button31.Name = "Button31"
         Me.Button31.Size = New System.Drawing.Size(139, 65)
         Me.Button31.TabIndex = 0
+        Me.Button31.Tag = "101"
         Me.Button31.Text = "Refresco cola/fanta"
         Me.Button31.UseVisualStyleBackColor = True
         '
@@ -1294,6 +1409,7 @@ Partial Class FormMain
         Me.Button32.Name = "Button32"
         Me.Button32.Size = New System.Drawing.Size(139, 65)
         Me.Button32.TabIndex = 1
+        Me.Button32.Tag = "102"
         Me.Button32.Text = "Refresco acuarius/nestea"
         Me.Button32.UseVisualStyleBackColor = True
         '
@@ -1303,6 +1419,7 @@ Partial Class FormMain
         Me.Button33.Name = "Button33"
         Me.Button33.Size = New System.Drawing.Size(139, 65)
         Me.Button33.TabIndex = 2
+        Me.Button33.Tag = "103"
         Me.Button33.Text = "Appletiser"
         Me.Button33.UseVisualStyleBackColor = True
         '
@@ -1312,6 +1429,7 @@ Partial Class FormMain
         Me.Button34.Name = "Button34"
         Me.Button34.Size = New System.Drawing.Size(139, 65)
         Me.Button34.TabIndex = 3
+        Me.Button34.Tag = "104"
         Me.Button34.Text = "Monster"
         Me.Button34.UseVisualStyleBackColor = True
         '
@@ -1321,6 +1439,7 @@ Partial Class FormMain
         Me.Button35.Name = "Button35"
         Me.Button35.Size = New System.Drawing.Size(139, 65)
         Me.Button35.TabIndex = 4
+        Me.Button35.Tag = "105"
         Me.Button35.Text = "Agua"
         Me.Button35.UseVisualStyleBackColor = True
         '
@@ -1330,6 +1449,7 @@ Partial Class FormMain
         Me.Button36.Name = "Button36"
         Me.Button36.Size = New System.Drawing.Size(139, 65)
         Me.Button36.TabIndex = 5
+        Me.Button36.Tag = "106"
         Me.Button36.Text = "Zumo"
         Me.Button36.UseVisualStyleBackColor = True
         '
@@ -1339,6 +1459,7 @@ Partial Class FormMain
         Me.Button37.Name = "Button37"
         Me.Button37.Size = New System.Drawing.Size(139, 65)
         Me.Button37.TabIndex = 6
+        Me.Button37.Tag = "107"
         Me.Button37.Text = "Batido"
         Me.Button37.UseVisualStyleBackColor = True
         '
@@ -1348,8 +1469,8 @@ Partial Class FormMain
         Me.Button38.Name = "Button38"
         Me.Button38.Size = New System.Drawing.Size(139, 65)
         Me.Button38.TabIndex = 7
+        Me.Button38.Tag = "108"
         Me.Button38.Text = "Café"
-        Me.Button38.TextAlign = System.Drawing.ContentAlignment.BottomCenter
         Me.Button38.UseVisualStyleBackColor = True
         '
         'Button39
@@ -1358,6 +1479,7 @@ Partial Class FormMain
         Me.Button39.Name = "Button39"
         Me.Button39.Size = New System.Drawing.Size(139, 65)
         Me.Button39.TabIndex = 8
+        Me.Button39.Tag = "109"
         Me.Button39.Text = "Infusiones"
         Me.Button39.UseVisualStyleBackColor = True
         '
@@ -1367,6 +1489,7 @@ Partial Class FormMain
         Me.Button40.Name = "Button40"
         Me.Button40.Size = New System.Drawing.Size(139, 65)
         Me.Button40.TabIndex = 9
+        Me.Button40.Tag = "110"
         Me.Button40.Text = "Vino"
         Me.Button40.UseVisualStyleBackColor = True
         '
@@ -1376,6 +1499,7 @@ Partial Class FormMain
         Me.Button41.Name = "Button41"
         Me.Button41.Size = New System.Drawing.Size(139, 65)
         Me.Button41.TabIndex = 10
+        Me.Button41.Tag = "111"
         Me.Button41.Text = "Caña Cruzcampo"
         Me.Button41.UseVisualStyleBackColor = True
         '
@@ -1385,6 +1509,7 @@ Partial Class FormMain
         Me.Button42.Name = "Button42"
         Me.Button42.Size = New System.Drawing.Size(139, 65)
         Me.Button42.TabIndex = 11
+        Me.Button42.Tag = "112"
         Me.Button42.Text = "Caña Radler"
         Me.Button42.UseVisualStyleBackColor = True
         '
@@ -1394,6 +1519,7 @@ Partial Class FormMain
         Me.Button43.Name = "Button43"
         Me.Button43.Size = New System.Drawing.Size(139, 65)
         Me.Button43.TabIndex = 12
+        Me.Button43.Tag = "113"
         Me.Button43.Text = "Jarra Heineken"
         Me.Button43.UseVisualStyleBackColor = True
         '
@@ -1403,6 +1529,7 @@ Partial Class FormMain
         Me.Button44.Name = "Button44"
         Me.Button44.Size = New System.Drawing.Size(139, 65)
         Me.Button44.TabIndex = 13
+        Me.Button44.Tag = "114"
         Me.Button44.Text = "Jarra Cruzcampo"
         Me.Button44.UseVisualStyleBackColor = True
         '
@@ -1412,6 +1539,7 @@ Partial Class FormMain
         Me.Button45.Name = "Button45"
         Me.Button45.Size = New System.Drawing.Size(139, 65)
         Me.Button45.TabIndex = 14
+        Me.Button45.Tag = "115"
         Me.Button45.Text = "Jarra Ladrón"
         Me.Button45.UseVisualStyleBackColor = True
         '
@@ -1421,6 +1549,7 @@ Partial Class FormMain
         Me.Button46.Name = "Button46"
         Me.Button46.Size = New System.Drawing.Size(139, 65)
         Me.Button46.TabIndex = 15
+        Me.Button46.Tag = "116"
         Me.Button46.Text = "Jarra tinto"
         Me.Button46.UseVisualStyleBackColor = True
         '
@@ -1430,6 +1559,7 @@ Partial Class FormMain
         Me.Button47.Name = "Button47"
         Me.Button47.Size = New System.Drawing.Size(139, 65)
         Me.Button47.TabIndex = 16
+        Me.Button47.Tag = "118"
         Me.Button47.Text = "Vaso Paulaner"
         Me.Button47.UseVisualStyleBackColor = True
         '
@@ -1511,70 +1641,93 @@ Partial Class FormMain
         '
         'BtnMenuCasa
         '
-        Me.BtnMenuCasa.Location = New System.Drawing.Point(613, 41)
+        Me.BtnMenuCasa.ImageIndex = 0
+        Me.BtnMenuCasa.ImageList = Me.ImageList1
+        Me.BtnMenuCasa.Location = New System.Drawing.Point(3, 3)
         Me.BtnMenuCasa.Name = "BtnMenuCasa"
-        Me.BtnMenuCasa.Size = New System.Drawing.Size(92, 71)
+        Me.BtnMenuCasa.Size = New System.Drawing.Size(157, 107)
         Me.BtnMenuCasa.TabIndex = 17
         Me.BtnMenuCasa.Text = "De la casa"
+        Me.BtnMenuCasa.TextAlign = System.Drawing.ContentAlignment.BottomCenter
+        Me.BtnMenuCasa.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
         Me.BtnMenuCasa.UseVisualStyleBackColor = True
         '
         'BtnMenuClasicos
         '
-        Me.BtnMenuClasicos.Location = New System.Drawing.Point(711, 41)
+        Me.BtnMenuClasicos.ImageIndex = 1
+        Me.BtnMenuClasicos.ImageList = Me.ImageList1
+        Me.BtnMenuClasicos.Location = New System.Drawing.Point(166, 3)
         Me.BtnMenuClasicos.Name = "BtnMenuClasicos"
-        Me.BtnMenuClasicos.Size = New System.Drawing.Size(92, 71)
+        Me.BtnMenuClasicos.Size = New System.Drawing.Size(157, 107)
         Me.BtnMenuClasicos.TabIndex = 18
         Me.BtnMenuClasicos.Text = "Clasic"
+        Me.BtnMenuClasicos.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
         Me.BtnMenuClasicos.UseVisualStyleBackColor = True
         '
         'BtnMenuEspeciales
         '
-        Me.BtnMenuEspeciales.Location = New System.Drawing.Point(809, 41)
+        Me.BtnMenuEspeciales.ImageIndex = 2
+        Me.BtnMenuEspeciales.ImageList = Me.ImageList1
+        Me.BtnMenuEspeciales.Location = New System.Drawing.Point(329, 3)
         Me.BtnMenuEspeciales.Name = "BtnMenuEspeciales"
-        Me.BtnMenuEspeciales.Size = New System.Drawing.Size(92, 71)
+        Me.BtnMenuEspeciales.Size = New System.Drawing.Size(157, 107)
         Me.BtnMenuEspeciales.TabIndex = 19
         Me.BtnMenuEspeciales.Text = "Especiales"
+        Me.BtnMenuEspeciales.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
         Me.BtnMenuEspeciales.UseVisualStyleBackColor = True
         '
         'BtnMenuDulces
         '
-        Me.BtnMenuDulces.Location = New System.Drawing.Point(907, 41)
+        Me.BtnMenuDulces.ImageIndex = 6
+        Me.BtnMenuDulces.ImageList = Me.ImageList1
+        Me.BtnMenuDulces.Location = New System.Drawing.Point(492, 3)
         Me.BtnMenuDulces.Name = "BtnMenuDulces"
-        Me.BtnMenuDulces.Size = New System.Drawing.Size(92, 71)
+        Me.BtnMenuDulces.Size = New System.Drawing.Size(143, 107)
         Me.BtnMenuDulces.TabIndex = 20
         Me.BtnMenuDulces.Text = "Dulce"
+        Me.BtnMenuDulces.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
         Me.BtnMenuDulces.UseVisualStyleBackColor = True
         '
         'BtnMenuSuper
         '
-        Me.BtnMenuSuper.Location = New System.Drawing.Point(1005, 41)
+        Me.BtnMenuSuper.ImageIndex = 3
+        Me.BtnMenuSuper.ImageList = Me.ImageList1
+        Me.BtnMenuSuper.Location = New System.Drawing.Point(3, 116)
         Me.BtnMenuSuper.Name = "BtnMenuSuper"
-        Me.BtnMenuSuper.Size = New System.Drawing.Size(92, 71)
+        Me.BtnMenuSuper.Size = New System.Drawing.Size(157, 107)
         Me.BtnMenuSuper.TabIndex = 21
         Me.BtnMenuSuper.Text = "SuperMontys"
+        Me.BtnMenuSuper.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
         Me.BtnMenuSuper.UseVisualStyleBackColor = True
         '
         'BtnMenuDrinks
         '
-        Me.BtnMenuDrinks.Location = New System.Drawing.Point(1103, 41)
+        Me.BtnMenuDrinks.ImageIndex = 4
+        Me.BtnMenuDrinks.ImageList = Me.ImageList1
+        Me.BtnMenuDrinks.Location = New System.Drawing.Point(166, 116)
         Me.BtnMenuDrinks.Name = "BtnMenuDrinks"
-        Me.BtnMenuDrinks.Size = New System.Drawing.Size(92, 71)
+        Me.BtnMenuDrinks.Size = New System.Drawing.Size(157, 107)
         Me.BtnMenuDrinks.TabIndex = 22
         Me.BtnMenuDrinks.Text = "Bebida"
+        Me.BtnMenuDrinks.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
         Me.BtnMenuDrinks.UseVisualStyleBackColor = True
         '
         'BtnMenuPicar
         '
-        Me.BtnMenuPicar.Location = New System.Drawing.Point(1201, 41)
+        Me.BtnMenuPicar.ImageIndex = 5
+        Me.BtnMenuPicar.ImageList = Me.ImageList1
+        Me.BtnMenuPicar.Location = New System.Drawing.Point(329, 116)
         Me.BtnMenuPicar.Name = "BtnMenuPicar"
-        Me.BtnMenuPicar.Size = New System.Drawing.Size(92, 71)
+        Me.BtnMenuPicar.Size = New System.Drawing.Size(157, 107)
         Me.BtnMenuPicar.TabIndex = 23
         Me.BtnMenuPicar.Text = "Para picar"
+        Me.BtnMenuPicar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
         Me.BtnMenuPicar.UseVisualStyleBackColor = True
         '
         'FLPpicar
         '
         Me.FLPpicar.BackColor = System.Drawing.SystemColors.ControlDark
+        Me.FLPpicar.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.FLPpicar.Controls.Add(Me.Button48)
         Me.FLPpicar.Controls.Add(Me.Button49)
         Me.FLPpicar.Controls.Add(Me.Button50)
@@ -1586,7 +1739,7 @@ Partial Class FormMain
         Me.FLPpicar.Controls.Add(Me.Button56)
         Me.FLPpicar.Controls.Add(Me.Button57)
         Me.FLPpicar.Controls.Add(Me.Button58)
-        Me.FLPpicar.Location = New System.Drawing.Point(626, 118)
+        Me.FLPpicar.Location = New System.Drawing.Point(613, 234)
         Me.FLPpicar.Name = "FLPpicar"
         Me.FLPpicar.Size = New System.Drawing.Size(667, 404)
         Me.FLPpicar.TabIndex = 24
@@ -1597,6 +1750,7 @@ Partial Class FormMain
         Me.Button48.Name = "Button48"
         Me.Button48.Size = New System.Drawing.Size(139, 65)
         Me.Button48.TabIndex = 0
+        Me.Button48.Tag = "119"
         Me.Button48.Text = "Aceitunas"
         Me.Button48.UseVisualStyleBackColor = True
         '
@@ -1606,6 +1760,7 @@ Partial Class FormMain
         Me.Button49.Name = "Button49"
         Me.Button49.Size = New System.Drawing.Size(139, 65)
         Me.Button49.TabIndex = 1
+        Me.Button49.Tag = "120"
         Me.Button49.Text = "Chips"
         Me.Button49.UseVisualStyleBackColor = True
         '
@@ -1615,6 +1770,7 @@ Partial Class FormMain
         Me.Button50.Name = "Button50"
         Me.Button50.Size = New System.Drawing.Size(139, 65)
         Me.Button50.TabIndex = 2
+        Me.Button50.Tag = "121"
         Me.Button50.Text = "Nachos guacamole"
         Me.Button50.UseVisualStyleBackColor = True
         '
@@ -1624,6 +1780,7 @@ Partial Class FormMain
         Me.Button51.Name = "Button51"
         Me.Button51.Size = New System.Drawing.Size(139, 65)
         Me.Button51.TabIndex = 3
+        Me.Button51.Tag = "122"
         Me.Button51.Text = "Nachos queso"
         Me.Button51.UseVisualStyleBackColor = True
         '
@@ -1633,6 +1790,7 @@ Partial Class FormMain
         Me.Button52.Name = "Button52"
         Me.Button52.Size = New System.Drawing.Size(139, 65)
         Me.Button52.TabIndex = 4
+        Me.Button52.Tag = "123"
         Me.Button52.Text = "Patatas mayo."
         Me.Button52.UseVisualStyleBackColor = True
         '
@@ -1642,6 +1800,7 @@ Partial Class FormMain
         Me.Button53.Name = "Button53"
         Me.Button53.Size = New System.Drawing.Size(139, 65)
         Me.Button53.TabIndex = 5
+        Me.Button53.Tag = "124"
         Me.Button53.Text = "Patatas queso"
         Me.Button53.UseVisualStyleBackColor = True
         '
@@ -1651,6 +1810,7 @@ Partial Class FormMain
         Me.Button54.Name = "Button54"
         Me.Button54.Size = New System.Drawing.Size(139, 65)
         Me.Button54.TabIndex = 6
+        Me.Button54.Tag = "125"
         Me.Button54.Text = "Patatas trufa"
         Me.Button54.UseVisualStyleBackColor = True
         '
@@ -1660,6 +1820,7 @@ Partial Class FormMain
         Me.Button55.Name = "Button55"
         Me.Button55.Size = New System.Drawing.Size(139, 65)
         Me.Button55.TabIndex = 7
+        Me.Button55.Tag = "126"
         Me.Button55.Text = "Palomitas pollo"
         Me.Button55.TextAlign = System.Drawing.ContentAlignment.BottomCenter
         Me.Button55.UseVisualStyleBackColor = True
@@ -1670,6 +1831,7 @@ Partial Class FormMain
         Me.Button56.Name = "Button56"
         Me.Button56.Size = New System.Drawing.Size(139, 65)
         Me.Button56.TabIndex = 8
+        Me.Button56.Tag = "127"
         Me.Button56.Text = "Palomitas queso"
         Me.Button56.UseVisualStyleBackColor = True
         '
@@ -1679,6 +1841,7 @@ Partial Class FormMain
         Me.Button57.Name = "Button57"
         Me.Button57.Size = New System.Drawing.Size(139, 65)
         Me.Button57.TabIndex = 9
+        Me.Button57.Tag = "128"
         Me.Button57.Text = "Salchichas"
         Me.Button57.UseVisualStyleBackColor = True
         '
@@ -1688,6 +1851,7 @@ Partial Class FormMain
         Me.Button58.Name = "Button58"
         Me.Button58.Size = New System.Drawing.Size(139, 65)
         Me.Button58.TabIndex = 10
+        Me.Button58.Tag = "129"
         Me.Button58.Text = "Alitas de pollo"
         Me.Button58.UseVisualStyleBackColor = True
         '
@@ -1751,9 +1915,9 @@ Partial Class FormMain
         '
         'BtnAñadir
         '
-        Me.BtnAñadir.Location = New System.Drawing.Point(1093, 528)
+        Me.BtnAñadir.Location = New System.Drawing.Point(1103, 667)
         Me.BtnAñadir.Name = "BtnAñadir"
-        Me.BtnAñadir.Size = New System.Drawing.Size(200, 189)
+        Me.BtnAñadir.Size = New System.Drawing.Size(190, 50)
         Me.BtnAñadir.TabIndex = 31
         Me.BtnAñadir.Text = "Añadir producto al tiquet"
         Me.BtnAñadir.UseVisualStyleBackColor = True
@@ -1770,9 +1934,9 @@ Partial Class FormMain
         '
         'BtnBorrarLinea
         '
-        Me.BtnBorrarLinea.Location = New System.Drawing.Point(386, 651)
+        Me.BtnBorrarLinea.Location = New System.Drawing.Point(488, 165)
         Me.BtnBorrarLinea.Name = "BtnBorrarLinea"
-        Me.BtnBorrarLinea.Size = New System.Drawing.Size(165, 66)
+        Me.BtnBorrarLinea.Size = New System.Drawing.Size(105, 66)
         Me.BtnBorrarLinea.TabIndex = 33
         Me.BtnBorrarLinea.Text = "Borrar línea"
         Me.BtnBorrarLinea.UseVisualStyleBackColor = True
@@ -1823,11 +1987,66 @@ Partial Class FormMain
         Me.LbPrecioTotal.Size = New System.Drawing.Size(0, 39)
         Me.LbPrecioTotal.TabIndex = 38
         '
+        'ImageList1
+        '
+        Me.ImageList1.ImageStream = CType(resources.GetObject("ImageList1.ImageStream"), System.Windows.Forms.ImageListStreamer)
+        Me.ImageList1.TransparentColor = System.Drawing.Color.Transparent
+        Me.ImageList1.Images.SetKeyName(0, "de la casa.jpg")
+        Me.ImageList1.Images.SetKeyName(1, "clasicos.jpg")
+        Me.ImageList1.Images.SetKeyName(2, "especiales.jpg")
+        Me.ImageList1.Images.SetKeyName(3, "supermontys.jpg")
+        Me.ImageList1.Images.SetKeyName(4, "bebidas.jpg")
+        Me.ImageList1.Images.SetKeyName(5, "paraPicar.jpg")
+        Me.ImageList1.Images.SetKeyName(6, "dulces.jpg")
+        '
+        'FLPCategorias
+        '
+        Me.FLPCategorias.AutoScroll = True
+        Me.FLPCategorias.BackColor = System.Drawing.SystemColors.ControlDark
+        Me.FLPCategorias.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.FLPCategorias.Controls.Add(Me.BtnMenuCasa)
+        Me.FLPCategorias.Controls.Add(Me.BtnMenuClasicos)
+        Me.FLPCategorias.Controls.Add(Me.BtnMenuEspeciales)
+        Me.FLPCategorias.Controls.Add(Me.BtnMenuDulces)
+        Me.FLPCategorias.Controls.Add(Me.BtnMenuSuper)
+        Me.FLPCategorias.Controls.Add(Me.BtnMenuDrinks)
+        Me.FLPCategorias.Controls.Add(Me.BtnMenuPicar)
+        Me.FLPCategorias.Location = New System.Drawing.Point(616, 44)
+        Me.FLPCategorias.Name = "FLPCategorias"
+        Me.FLPCategorias.Size = New System.Drawing.Size(664, 187)
+        Me.FLPCategorias.TabIndex = 39
+        '
+        'BtnAñadir1producto
+        '
+        Me.BtnAñadir1producto.Location = New System.Drawing.Point(488, 309)
+        Me.BtnAñadir1producto.Name = "BtnAñadir1producto"
+        Me.BtnAñadir1producto.Size = New System.Drawing.Size(105, 66)
+        Me.BtnAñadir1producto.TabIndex = 40
+        Me.BtnAñadir1producto.Text = "+ 1"
+        Me.BtnAñadir1producto.UseVisualStyleBackColor = True
+        '
+        'Beliminar1Producto
+        '
+        Me.Beliminar1Producto.Location = New System.Drawing.Point(488, 451)
+        Me.Beliminar1Producto.Name = "Beliminar1Producto"
+        Me.Beliminar1Producto.Size = New System.Drawing.Size(105, 66)
+        Me.Beliminar1Producto.TabIndex = 41
+        Me.Beliminar1Producto.Text = "- 1"
+        Me.Beliminar1Producto.UseVisualStyleBackColor = True
+        '
         'FormMain
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(13.0!, 26.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1301, 729)
+        Me.Controls.Add(Me.Beliminar1Producto)
+        Me.Controls.Add(Me.BtnAñadir1producto)
+        Me.Controls.Add(Me.FLPCategorias)
+        Me.Controls.Add(Me.FLPdulces)
+        Me.Controls.Add(Me.FLPespecials)
+        Me.Controls.Add(Me.FLPSuper)
+        Me.Controls.Add(Me.FLPClasic)
+        Me.Controls.Add(Me.FLPDrinks)
         Me.Controls.Add(Me.LbPrecioTotal)
         Me.Controls.Add(Me.LbTituloPrecio)
         Me.Controls.Add(Me.LBPrecio)
@@ -1842,20 +2061,8 @@ Partial Class FormMain
         Me.Controls.Add(Me.LBTiquet)
         Me.Controls.Add(Me.LbFechaHora)
         Me.Controls.Add(Me.TxBUsuarioConectado)
-        Me.Controls.Add(Me.BtnMenuPicar)
-        Me.Controls.Add(Me.BtnMenuDrinks)
-        Me.Controls.Add(Me.BtnMenuSuper)
-        Me.Controls.Add(Me.BtnMenuDulces)
         Me.Controls.Add(Me.FLPpicar)
-        Me.Controls.Add(Me.BtnMenuEspeciales)
-        Me.Controls.Add(Me.BtnMenuClasicos)
-        Me.Controls.Add(Me.BtnMenuCasa)
         Me.Controls.Add(Me.MSMain)
-        Me.Controls.Add(Me.FLPDrinks)
-        Me.Controls.Add(Me.FLPdulces)
-        Me.Controls.Add(Me.FLPespecials)
-        Me.Controls.Add(Me.FLPClasic)
-        Me.Controls.Add(Me.FLPSuper)
         Me.Controls.Add(Me.TxBDatos)
         Me.Controls.Add(Me.FLPcasa)
         Me.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.5!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -1872,6 +2079,7 @@ Partial Class FormMain
         Me.MSMain.ResumeLayout(False)
         Me.MSMain.PerformLayout()
         Me.FLPpicar.ResumeLayout(False)
+        Me.FLPCategorias.ResumeLayout(False)
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -2047,4 +2255,8 @@ Partial Class FormMain
     Friend WithEvents LbPrecioTotal As Label
     Friend WithEvents ToolStripSeparator2 As ToolStripSeparator
     Friend WithEvents PrintDocument1 As Printing.PrintDocument
+    Friend WithEvents ImageList1 As ImageList
+    Friend WithEvents FLPCategorias As FlowLayoutPanel
+    Friend WithEvents BtnAñadir1producto As Button
+    Friend WithEvents Beliminar1Producto As Button
 End Class

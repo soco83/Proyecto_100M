@@ -104,9 +104,11 @@
             FileOpen(1, "usuarios", OpenMode.Random, OpenAccess.Read,, Len(users))
             While Not EOF(1)
                 FileGet(1, users, c)
-                If users.codigo.Trim(" ") = "" Then
+                If Not String.IsNullOrWhiteSpace(users.codigo) Then
                     Dim user As New Usuario(users.codigo.Trim(" "), users.contrasenna.Trim(" "), users.nombre.Trim(" "), users.apellido1.Trim(" "), users.apellido2.Trim(" "), users.dni.Trim(" "), users.email.Trim(" "), users.direccion.Trim(" "), users.telefono.Trim(" "))
                     list.Add(user)
+                    c = c + 1
+                Else
                     c = c + 1
                 End If
 
@@ -138,7 +140,7 @@
             users.dni = ""
             users.direccion = ""
             users.email = ""
-            FilePut(1, users, codigo + 1)
+            FilePut(1, users, codigo)
             MsgBox("registro borrado correctamente", 64, "Información")
         Catch ex As Exception
             MsgBox(Err.Description & ", por favor vuelva a intentarlo", 48, "Fallos al borrar")
@@ -187,7 +189,7 @@
             product.codigo = ""
             product.nombre = ""
             product.precio = 0
-            FilePut(2, product, codigo + 1)
+            FilePut(2, product, codigo)
             MsgBox("registro borrado correctamente", 64, "Información")
         Catch ex As Exception
             MsgBox("Se produjo un fallo al borrar el registro, por favor vuelva a intentarlo", 48, "Fallos al borrar")

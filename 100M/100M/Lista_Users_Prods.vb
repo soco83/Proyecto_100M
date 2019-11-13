@@ -48,7 +48,7 @@ Public Class Lista_Users_Prods
             Select Case openType
                 Case 1
                     If Not LBVista.SelectedIndex = 0 Then
-                        file.borrarUsuario(LBVista.SelectedIndex)
+                        file.borrarUsuario(LBVista.SelectedIndex + 1)
                     End If
                     listaUser.Clear()
                     LBVista.Items.Clear()
@@ -58,7 +58,7 @@ Public Class Lista_Users_Prods
                     Next
 
                 Case 2
-                    file.borrarProducto(LBVista.SelectedIndex)
+                    file.borrarProducto(LBVista.SelectedIndex + 1)
                     listaProduct.Clear()
                     LBVista.Items.Clear()
                     listaProduct = file.listarProductos
