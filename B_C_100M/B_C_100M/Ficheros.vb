@@ -104,7 +104,7 @@
             FileOpen(1, "usuarios", OpenMode.Random, OpenAccess.Read,, Len(users))
             While Not EOF(1)
                 FileGet(1, users, c)
-                If users.codigo.Trim(" ") <> "" Then
+                If users.codigo.Trim(" ") = "" Then
                     Dim user As New Usuario(users.codigo.Trim(" "), users.contrasenna.Trim(" "), users.nombre.Trim(" "), users.apellido1.Trim(" "), users.apellido2.Trim(" "), users.dni.Trim(" "), users.email.Trim(" "), users.direccion.Trim(" "), users.telefono.Trim(" "))
                     list.Add(user)
                     c = c + 1

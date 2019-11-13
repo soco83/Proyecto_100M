@@ -8,8 +8,7 @@ Public Class FormMain
 
     Dim file As New Ficheros
 
-    Public elClienteHaPagado, aDevolver As Single
-    Public seHaPagado As Boolean = False
+
 
 
     Private Sub Cerrar_SesionToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles Cerrar_SesionToolStripMenuItem.Click
