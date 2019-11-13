@@ -16,15 +16,19 @@
     End Sub
 
     Private Sub BtnAceptar_Click(sender As Object, e As EventArgs) Handles BtnAceptar.Click
-        If CInt(TxBHaPagado.Text) < CInt(LbImporte.Text) Then
-            MsgBox("Introduce un valor superior o igual al importe")
-        Else
-            FormMain.elClienteHaPagado = CSng(TxBHaPagado.Text)
-            FormMain.aDevolver = CSng(LbADevolver.Text)
-            FormMain.seHaPagado = True
-            MsgBox("ahora se introduciría la venta en el registro")
+        Try
+            If CInt(TxBHaPagado.Text) < CInt(LbImporte.Text) And LbImporte.Text <> "" Then
+                MsgBox("Introduce un valor superior o igual al importe")
+            Else
+                FormMain.elClienteHaPagado = CSng(TxBHaPagado.Text)
+                FormMain.aDevolver = CSng(LbADevolver.Text)
+                FormMain.seHaPagado = True
+                'MsgBox("ahora se introduciría la venta en el registro")
 
-            Me.Close()
-        End If
+                Me.Close()
+            End If
+        Catch ex As Exception
+            MsgBox("Error durante el pago, asegúrese que la cifra introducida es correcta.", MsgBoxStyle.Information)
+        End Try
     End Sub
 End Class

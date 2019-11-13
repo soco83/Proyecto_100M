@@ -163,6 +163,7 @@
         FileClose()
 
     End Sub
+
     'metodo para registrar los errores en un fichero. Se pasa por parametro el mensaje de error.
     Public Sub registrarErrores(ByVal mError As String)
         Try
@@ -171,7 +172,8 @@
             PrintLine(3, mError, Now)
 
         Catch ex As Exception
-            MsgBox("Se produjo un fallo en la escritura del registro, por favor vuelva a intentarlo", 48, "Fallo escritura")
+            MsgBox("Se produjo un fallo en la escritura del registro, 
+            por favor vuelva a intentarlo", 48, "Fallo escritura")
         End Try
         FileClose()
 
@@ -185,7 +187,8 @@
 
             PrintLine(4, nombre, contrasenna, Now)
         Catch ex As Exception
-            MsgBox("Se produjo un fallo en la escritura del registro, por favor vuelva a intentarlo", 48, "Fallo escritura")
+            MsgBox("Se produjo un fallo en la escritura del registro, 
+            por favor vuelva a intentarlo", 48, "Fallo escritura")
         End Try
         FileClose()
 
