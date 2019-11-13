@@ -231,9 +231,9 @@ Partial Class FormMain
         Me.FLPcasa.Controls.Add(Me.m16)
         Me.FLPcasa.Controls.Add(Me.m17)
         Me.FLPcasa.Controls.Add(Me.m18)
-        Me.FLPcasa.Location = New System.Drawing.Point(613, 239)
+        Me.FLPcasa.Location = New System.Drawing.Point(613, 284)
         Me.FLPcasa.Name = "FLPcasa"
-        Me.FLPcasa.Size = New System.Drawing.Size(667, 399)
+        Me.FLPcasa.Size = New System.Drawing.Size(667, 354)
         Me.FLPcasa.TabIndex = 2
         '
         'm01
@@ -418,11 +418,11 @@ Partial Class FormMain
         '
         'TxBDatos
         '
-        Me.TxBDatos.Location = New System.Drawing.Point(629, 667)
+        Me.TxBDatos.Location = New System.Drawing.Point(639, 651)
         Me.TxBDatos.Multiline = True
         Me.TxBDatos.Name = "TxBDatos"
         Me.TxBDatos.ReadOnly = True
-        Me.TxBDatos.Size = New System.Drawing.Size(458, 50)
+        Me.TxBDatos.Size = New System.Drawing.Size(458, 66)
         Me.TxBDatos.TabIndex = 3
         Me.TxBDatos.Text = "- Haz click en un producto para ver sus datos -"
         '
@@ -472,9 +472,9 @@ Partial Class FormMain
         Me.FLPClasic.Controls.Add(Me.m57)
         Me.FLPClasic.Controls.Add(Me.m58)
         Me.FLPClasic.Controls.Add(Me.m59)
-        Me.FLPClasic.Location = New System.Drawing.Point(613, 239)
+        Me.FLPClasic.Location = New System.Drawing.Point(613, 284)
         Me.FLPClasic.Name = "FLPClasic"
-        Me.FLPClasic.Size = New System.Drawing.Size(667, 399)
+        Me.FLPClasic.Size = New System.Drawing.Size(667, 354)
         Me.FLPClasic.TabIndex = 10
         '
         'm19
@@ -922,9 +922,9 @@ Partial Class FormMain
         Me.FLPespecials.Controls.Add(Me.Button28)
         Me.FLPespecials.Controls.Add(Me.Button29)
         Me.FLPespecials.Controls.Add(Me.Button30)
-        Me.FLPespecials.Location = New System.Drawing.Point(613, 239)
+        Me.FLPespecials.Location = New System.Drawing.Point(613, 284)
         Me.FLPespecials.Name = "FLPespecials"
-        Me.FLPespecials.Size = New System.Drawing.Size(667, 399)
+        Me.FLPespecials.Size = New System.Drawing.Size(667, 354)
         Me.FLPespecials.TabIndex = 11
         '
         'Button1
@@ -1236,9 +1236,9 @@ Partial Class FormMain
         Me.FLPdulces.Controls.Add(Me.m92)
         Me.FLPdulces.Controls.Add(Me.m93)
         Me.FLPdulces.Controls.Add(Me.m94)
-        Me.FLPdulces.Location = New System.Drawing.Point(613, 239)
+        Me.FLPdulces.Location = New System.Drawing.Point(613, 284)
         Me.FLPdulces.Name = "FLPdulces"
-        Me.FLPdulces.Size = New System.Drawing.Size(667, 399)
+        Me.FLPdulces.Size = New System.Drawing.Size(667, 354)
         Me.FLPdulces.TabIndex = 12
         '
         'm90
@@ -1301,9 +1301,9 @@ Partial Class FormMain
         Me.FLPSuper.Controls.Add(Me.m98)
         Me.FLPSuper.Controls.Add(Me.m99)
         Me.FLPSuper.Controls.Add(Me.m100)
-        Me.FLPSuper.Location = New System.Drawing.Point(613, 239)
+        Me.FLPSuper.Location = New System.Drawing.Point(613, 284)
         Me.FLPSuper.Name = "FLPSuper"
-        Me.FLPSuper.Size = New System.Drawing.Size(667, 399)
+        Me.FLPSuper.Size = New System.Drawing.Size(667, 354)
         Me.FLPSuper.TabIndex = 13
         '
         'm95
@@ -1387,9 +1387,9 @@ Partial Class FormMain
         Me.FLPDrinks.Controls.Add(Me.Button45)
         Me.FLPDrinks.Controls.Add(Me.Button46)
         Me.FLPDrinks.Controls.Add(Me.Button47)
-        Me.FLPDrinks.Location = New System.Drawing.Point(613, 239)
+        Me.FLPDrinks.Location = New System.Drawing.Point(613, 284)
         Me.FLPDrinks.Name = "FLPDrinks"
-        Me.FLPDrinks.Size = New System.Drawing.Size(667, 399)
+        Me.FLPDrinks.Size = New System.Drawing.Size(667, 354)
         Me.FLPDrinks.TabIndex = 14
         '
         'Button31
@@ -1744,9 +1744,9 @@ Partial Class FormMain
         Me.FLPpicar.Controls.Add(Me.Button56)
         Me.FLPpicar.Controls.Add(Me.Button57)
         Me.FLPpicar.Controls.Add(Me.Button58)
-        Me.FLPpicar.Location = New System.Drawing.Point(613, 239)
+        Me.FLPpicar.Location = New System.Drawing.Point(613, 284)
         Me.FLPpicar.Name = "FLPpicar"
-        Me.FLPpicar.Size = New System.Drawing.Size(667, 399)
+        Me.FLPpicar.Size = New System.Drawing.Size(667, 354)
         Me.FLPpicar.TabIndex = 24
         '
         'Button48
@@ -1920,9 +1920,9 @@ Partial Class FormMain
         '
         'BtnAñadir
         '
-        Me.BtnAñadir.Location = New System.Drawing.Point(1103, 667)
+        Me.BtnAñadir.Location = New System.Drawing.Point(1103, 651)
         Me.BtnAñadir.Name = "BtnAñadir"
-        Me.BtnAñadir.Size = New System.Drawing.Size(190, 50)
+        Me.BtnAñadir.Size = New System.Drawing.Size(190, 66)
         Me.BtnAñadir.TabIndex = 31
         Me.BtnAñadir.Text = "Añadir producto al tiquet"
         Me.BtnAñadir.UseVisualStyleBackColor = True
@@ -2006,7 +2006,7 @@ Partial Class FormMain
         Me.FLPCategorias.Controls.Add(Me.BtnMenuPicar)
         Me.FLPCategorias.Location = New System.Drawing.Point(616, 44)
         Me.FLPCategorias.Name = "FLPCategorias"
-        Me.FLPCategorias.Size = New System.Drawing.Size(664, 187)
+        Me.FLPCategorias.Size = New System.Drawing.Size(664, 234)
         Me.FLPCategorias.TabIndex = 39
         '
         'BtnAñadir1producto
