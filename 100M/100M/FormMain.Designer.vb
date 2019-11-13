@@ -158,9 +158,9 @@ Partial Class FormMain
         Me.NuevoPToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStripSeparator2 = New System.Windows.Forms.ToolStripSeparator()
         Me.VerListaToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
-        Me.AjustesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.Cerrar_SesionToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.BtnMenuCasa = New System.Windows.Forms.Button()
+        Me.ImageList1 = New System.Windows.Forms.ImageList(Me.components)
         Me.BtnMenuClasicos = New System.Windows.Forms.Button()
         Me.BtnMenuEspeciales = New System.Windows.Forms.Button()
         Me.BtnMenuDulces = New System.Windows.Forms.Button()
@@ -195,7 +195,6 @@ Partial Class FormMain
         Me.LbTituloPrecio = New System.Windows.Forms.Label()
         Me.LbPrecioTotal = New System.Windows.Forms.Label()
         Me.PrintDocument1 = New System.Drawing.Printing.PrintDocument()
-        Me.ImageList1 = New System.Windows.Forms.ImageList(Me.components)
         Me.FLPCategorias = New System.Windows.Forms.FlowLayoutPanel()
         Me.BtnAñadir1producto = New System.Windows.Forms.Button()
         Me.Beliminar1Producto = New System.Windows.Forms.Button()
@@ -232,9 +231,9 @@ Partial Class FormMain
         Me.FLPcasa.Controls.Add(Me.m16)
         Me.FLPcasa.Controls.Add(Me.m17)
         Me.FLPcasa.Controls.Add(Me.m18)
-        Me.FLPcasa.Location = New System.Drawing.Point(613, 234)
+        Me.FLPcasa.Location = New System.Drawing.Point(613, 239)
         Me.FLPcasa.Name = "FLPcasa"
-        Me.FLPcasa.Size = New System.Drawing.Size(667, 404)
+        Me.FLPcasa.Size = New System.Drawing.Size(667, 399)
         Me.FLPcasa.TabIndex = 2
         '
         'm01
@@ -473,9 +472,9 @@ Partial Class FormMain
         Me.FLPClasic.Controls.Add(Me.m57)
         Me.FLPClasic.Controls.Add(Me.m58)
         Me.FLPClasic.Controls.Add(Me.m59)
-        Me.FLPClasic.Location = New System.Drawing.Point(613, 234)
+        Me.FLPClasic.Location = New System.Drawing.Point(613, 239)
         Me.FLPClasic.Name = "FLPClasic"
-        Me.FLPClasic.Size = New System.Drawing.Size(667, 404)
+        Me.FLPClasic.Size = New System.Drawing.Size(667, 399)
         Me.FLPClasic.TabIndex = 10
         '
         'm19
@@ -923,9 +922,9 @@ Partial Class FormMain
         Me.FLPespecials.Controls.Add(Me.Button28)
         Me.FLPespecials.Controls.Add(Me.Button29)
         Me.FLPespecials.Controls.Add(Me.Button30)
-        Me.FLPespecials.Location = New System.Drawing.Point(613, 234)
+        Me.FLPespecials.Location = New System.Drawing.Point(613, 239)
         Me.FLPespecials.Name = "FLPespecials"
-        Me.FLPespecials.Size = New System.Drawing.Size(667, 404)
+        Me.FLPespecials.Size = New System.Drawing.Size(667, 399)
         Me.FLPespecials.TabIndex = 11
         '
         'Button1
@@ -1237,9 +1236,9 @@ Partial Class FormMain
         Me.FLPdulces.Controls.Add(Me.m92)
         Me.FLPdulces.Controls.Add(Me.m93)
         Me.FLPdulces.Controls.Add(Me.m94)
-        Me.FLPdulces.Location = New System.Drawing.Point(613, 234)
+        Me.FLPdulces.Location = New System.Drawing.Point(613, 239)
         Me.FLPdulces.Name = "FLPdulces"
-        Me.FLPdulces.Size = New System.Drawing.Size(667, 404)
+        Me.FLPdulces.Size = New System.Drawing.Size(667, 399)
         Me.FLPdulces.TabIndex = 12
         '
         'm90
@@ -1302,9 +1301,9 @@ Partial Class FormMain
         Me.FLPSuper.Controls.Add(Me.m98)
         Me.FLPSuper.Controls.Add(Me.m99)
         Me.FLPSuper.Controls.Add(Me.m100)
-        Me.FLPSuper.Location = New System.Drawing.Point(613, 234)
+        Me.FLPSuper.Location = New System.Drawing.Point(613, 239)
         Me.FLPSuper.Name = "FLPSuper"
-        Me.FLPSuper.Size = New System.Drawing.Size(667, 404)
+        Me.FLPSuper.Size = New System.Drawing.Size(667, 399)
         Me.FLPSuper.TabIndex = 13
         '
         'm95
@@ -1388,9 +1387,9 @@ Partial Class FormMain
         Me.FLPDrinks.Controls.Add(Me.Button45)
         Me.FLPDrinks.Controls.Add(Me.Button46)
         Me.FLPDrinks.Controls.Add(Me.Button47)
-        Me.FLPDrinks.Location = New System.Drawing.Point(613, 234)
+        Me.FLPDrinks.Location = New System.Drawing.Point(613, 239)
         Me.FLPDrinks.Name = "FLPDrinks"
-        Me.FLPDrinks.Size = New System.Drawing.Size(667, 404)
+        Me.FLPDrinks.Size = New System.Drawing.Size(667, 399)
         Me.FLPDrinks.TabIndex = 14
         '
         'Button31
@@ -1566,7 +1565,7 @@ Partial Class FormMain
         'MSMain
         '
         Me.MSMain.Font = New System.Drawing.Font("Segoe UI", 16.5!)
-        Me.MSMain.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.CajaToolStripMenuItem, Me.UsuariosToolStripMenuItem, Me.ProductosToolStripMenuItem, Me.AjustesToolStripMenuItem, Me.Cerrar_SesionToolStripMenuItem})
+        Me.MSMain.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.CajaToolStripMenuItem, Me.UsuariosToolStripMenuItem, Me.ProductosToolStripMenuItem, Me.Cerrar_SesionToolStripMenuItem})
         Me.MSMain.Location = New System.Drawing.Point(0, 0)
         Me.MSMain.Name = "MSMain"
         Me.MSMain.Size = New System.Drawing.Size(1301, 38)
@@ -1627,12 +1626,6 @@ Partial Class FormMain
         Me.VerListaToolStripMenuItem1.Size = New System.Drawing.Size(162, 34)
         Me.VerListaToolStripMenuItem1.Text = "Ver lista"
         '
-        'AjustesToolStripMenuItem
-        '
-        Me.AjustesToolStripMenuItem.Name = "AjustesToolStripMenuItem"
-        Me.AjustesToolStripMenuItem.Size = New System.Drawing.Size(93, 34)
-        Me.AjustesToolStripMenuItem.Text = "Ajustes"
-        '
         'Cerrar_SesionToolStripMenuItem
         '
         Me.Cerrar_SesionToolStripMenuItem.Name = "Cerrar_SesionToolStripMenuItem"
@@ -1651,6 +1644,18 @@ Partial Class FormMain
         Me.BtnMenuCasa.TextAlign = System.Drawing.ContentAlignment.BottomCenter
         Me.BtnMenuCasa.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
         Me.BtnMenuCasa.UseVisualStyleBackColor = True
+        '
+        'ImageList1
+        '
+        Me.ImageList1.ImageStream = CType(resources.GetObject("ImageList1.ImageStream"), System.Windows.Forms.ImageListStreamer)
+        Me.ImageList1.TransparentColor = System.Drawing.Color.Transparent
+        Me.ImageList1.Images.SetKeyName(0, "de la casa.jpg")
+        Me.ImageList1.Images.SetKeyName(1, "clasicos.jpg")
+        Me.ImageList1.Images.SetKeyName(2, "especiales.jpg")
+        Me.ImageList1.Images.SetKeyName(3, "supermontys.jpg")
+        Me.ImageList1.Images.SetKeyName(4, "bebidas.jpg")
+        Me.ImageList1.Images.SetKeyName(5, "paraPicar.jpg")
+        Me.ImageList1.Images.SetKeyName(6, "dulces.jpg")
         '
         'BtnMenuClasicos
         '
@@ -1739,9 +1744,9 @@ Partial Class FormMain
         Me.FLPpicar.Controls.Add(Me.Button56)
         Me.FLPpicar.Controls.Add(Me.Button57)
         Me.FLPpicar.Controls.Add(Me.Button58)
-        Me.FLPpicar.Location = New System.Drawing.Point(613, 234)
+        Me.FLPpicar.Location = New System.Drawing.Point(613, 239)
         Me.FLPpicar.Name = "FLPpicar"
-        Me.FLPpicar.Size = New System.Drawing.Size(667, 404)
+        Me.FLPpicar.Size = New System.Drawing.Size(667, 399)
         Me.FLPpicar.TabIndex = 24
         '
         'Button48
@@ -1987,18 +1992,6 @@ Partial Class FormMain
         Me.LbPrecioTotal.Size = New System.Drawing.Size(0, 39)
         Me.LbPrecioTotal.TabIndex = 38
         '
-        'ImageList1
-        '
-        Me.ImageList1.ImageStream = CType(resources.GetObject("ImageList1.ImageStream"), System.Windows.Forms.ImageListStreamer)
-        Me.ImageList1.TransparentColor = System.Drawing.Color.Transparent
-        Me.ImageList1.Images.SetKeyName(0, "de la casa.jpg")
-        Me.ImageList1.Images.SetKeyName(1, "clasicos.jpg")
-        Me.ImageList1.Images.SetKeyName(2, "especiales.jpg")
-        Me.ImageList1.Images.SetKeyName(3, "supermontys.jpg")
-        Me.ImageList1.Images.SetKeyName(4, "bebidas.jpg")
-        Me.ImageList1.Images.SetKeyName(5, "paraPicar.jpg")
-        Me.ImageList1.Images.SetKeyName(6, "dulces.jpg")
-        '
         'FLPCategorias
         '
         Me.FLPCategorias.AutoScroll = True
@@ -2214,7 +2207,6 @@ Partial Class FormMain
     Friend WithEvents NuevoUToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ProductosToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents NuevoPToolStripMenuItem1 As ToolStripMenuItem
-    Friend WithEvents AjustesToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents Cerrar_SesionToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents BtnMenuCasa As Button
     Friend WithEvents BtnMenuClasicos As Button

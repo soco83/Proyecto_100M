@@ -31,7 +31,7 @@ Public Class FormMain
         FLPpicar.Visible = False
 
         TxBUsuarioConectado.Text = nombreUsuario
-        If Not nombreUsuario = file.leerUsuario(4).getNombre Then
+        If Not nombreUsuario = "admin" Then 'file.leerUsuario(4).getNombre Then
             UsuariosToolStripMenuItem.Visible = False
             ProductosToolStripMenuItem.Visible = False
         Else
@@ -305,7 +305,7 @@ Public Class FormMain
             tiquet = ""
             For a = 0 To LBTiquet.Items.Count - 1
                 '                      (que quieres imprimir,                                                                                   cómo lo quieres imprimir,                color, coordenada x en el papel, coordenada y)
-                ev.Graphics.DrawString(LBCantidad.Items.Item(a) & "   " & LBTiquet.Items.Item(a) & "                " & LBPrecio.Items.Item(a), New Font("Arial", 9, FontStyle.Regular), Brushes.Black, 120, y)
+                ev.Graphics.DrawString(LBCantidad.Items.Item(a) & "   " & LBTiquet.Items.Item(a).ToString.Trim("\n") & "                " & LBPrecio.Items.Item(a), New Font("Arial", 9, FontStyle.Regular), Brushes.Black, 120, y)
                 'salto de línea
                 y += 20
             Next

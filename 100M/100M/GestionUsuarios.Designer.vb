@@ -41,15 +41,14 @@ Partial Class GestionUsuarios
         Me.TxBDireccion = New System.Windows.Forms.TextBox()
         Me.TxBPassWord = New System.Windows.Forms.TextBox()
         Me.LbPassword = New System.Windows.Forms.Label()
-        Me.LbRol = New System.Windows.Forms.Label()
         Me.LBSeparador = New System.Windows.Forms.Label()
-        Me.txBCodigo = New System.Windows.Forms.TextBox()
+        Me.TxbCodigo = New System.Windows.Forms.TextBox()
         Me.SuspendLayout()
         '
         'LbNombre
         '
         Me.LbNombre.AutoSize = True
-        Me.LbNombre.Location = New System.Drawing.Point(14, 146)
+        Me.LbNombre.Location = New System.Drawing.Point(14, 47)
         Me.LbNombre.Name = "LbNombre"
         Me.LbNombre.Size = New System.Drawing.Size(99, 26)
         Me.LbNombre.TabIndex = 0
@@ -58,7 +57,7 @@ Partial Class GestionUsuarios
         'LbApe1
         '
         Me.LbApe1.AutoSize = True
-        Me.LbApe1.Location = New System.Drawing.Point(14, 184)
+        Me.LbApe1.Location = New System.Drawing.Point(14, 150)
         Me.LbApe1.Name = "LbApe1"
         Me.LbApe1.Size = New System.Drawing.Size(167, 26)
         Me.LbApe1.TabIndex = 1
@@ -67,7 +66,7 @@ Partial Class GestionUsuarios
         'LbApe2
         '
         Me.LbApe2.AutoSize = True
-        Me.LbApe2.Location = New System.Drawing.Point(14, 222)
+        Me.LbApe2.Location = New System.Drawing.Point(14, 188)
         Me.LbApe2.Name = "LbApe2"
         Me.LbApe2.Size = New System.Drawing.Size(180, 26)
         Me.LbApe2.TabIndex = 2
@@ -76,7 +75,7 @@ Partial Class GestionUsuarios
         'LbDNI
         '
         Me.LbDNI.AutoSize = True
-        Me.LbDNI.Location = New System.Drawing.Point(14, 260)
+        Me.LbDNI.Location = New System.Drawing.Point(14, 226)
         Me.LbDNI.Name = "LbDNI"
         Me.LbDNI.Size = New System.Drawing.Size(77, 26)
         Me.LbDNI.TabIndex = 3
@@ -85,7 +84,7 @@ Partial Class GestionUsuarios
         'LbEmail
         '
         Me.LbEmail.AutoSize = True
-        Me.LbEmail.Location = New System.Drawing.Point(14, 298)
+        Me.LbEmail.Location = New System.Drawing.Point(14, 264)
         Me.LbEmail.Name = "LbEmail"
         Me.LbEmail.Size = New System.Drawing.Size(189, 26)
         Me.LbEmail.TabIndex = 4
@@ -94,7 +93,7 @@ Partial Class GestionUsuarios
         'LbTel
         '
         Me.LbTel.AutoSize = True
-        Me.LbTel.Location = New System.Drawing.Point(14, 336)
+        Me.LbTel.Location = New System.Drawing.Point(14, 302)
         Me.LbTel.Name = "LbTel"
         Me.LbTel.Size = New System.Drawing.Size(95, 26)
         Me.LbTel.TabIndex = 5
@@ -112,42 +111,42 @@ Partial Class GestionUsuarios
         '
         'TxBEmail
         '
-        Me.TxBEmail.Location = New System.Drawing.Point(209, 295)
+        Me.TxBEmail.Location = New System.Drawing.Point(209, 261)
         Me.TxBEmail.Name = "TxBEmail"
         Me.TxBEmail.Size = New System.Drawing.Size(351, 32)
         Me.TxBEmail.TabIndex = 7
         '
         'TxBDNI
         '
-        Me.TxBDNI.Location = New System.Drawing.Point(209, 257)
+        Me.TxBDNI.Location = New System.Drawing.Point(209, 223)
         Me.TxBDNI.Name = "TxBDNI"
         Me.TxBDNI.Size = New System.Drawing.Size(351, 32)
         Me.TxBDNI.TabIndex = 6
         '
         'TxBApe2
         '
-        Me.TxBApe2.Location = New System.Drawing.Point(209, 219)
+        Me.TxBApe2.Location = New System.Drawing.Point(209, 185)
         Me.TxBApe2.Name = "TxBApe2"
         Me.TxBApe2.Size = New System.Drawing.Size(351, 32)
         Me.TxBApe2.TabIndex = 5
         '
         'TxBTel
         '
-        Me.TxBTel.Location = New System.Drawing.Point(209, 333)
+        Me.TxBTel.Location = New System.Drawing.Point(209, 299)
         Me.TxBTel.Name = "TxBTel"
         Me.TxBTel.Size = New System.Drawing.Size(351, 32)
         Me.TxBTel.TabIndex = 8
         '
         'TxBNombre
         '
-        Me.TxBNombre.Location = New System.Drawing.Point(209, 143)
+        Me.TxBNombre.Location = New System.Drawing.Point(209, 44)
         Me.TxBNombre.Name = "TxBNombre"
         Me.TxBNombre.Size = New System.Drawing.Size(351, 32)
         Me.TxBNombre.TabIndex = 3
         '
         'TxBApe1
         '
-        Me.TxBApe1.Location = New System.Drawing.Point(209, 181)
+        Me.TxBApe1.Location = New System.Drawing.Point(209, 147)
         Me.TxBApe1.Name = "TxBApe1"
         Me.TxBApe1.Size = New System.Drawing.Size(351, 32)
         Me.TxBApe1.TabIndex = 4
@@ -173,7 +172,7 @@ Partial Class GestionUsuarios
         'LbDireccion
         '
         Me.LbDireccion.AutoSize = True
-        Me.LbDireccion.Location = New System.Drawing.Point(14, 374)
+        Me.LbDireccion.Location = New System.Drawing.Point(14, 340)
         Me.LbDireccion.Name = "LbDireccion"
         Me.LbDireccion.Size = New System.Drawing.Size(103, 26)
         Me.LbDireccion.TabIndex = 15
@@ -181,7 +180,7 @@ Partial Class GestionUsuarios
         '
         'TxBDireccion
         '
-        Me.TxBDireccion.Location = New System.Drawing.Point(209, 371)
+        Me.TxBDireccion.Location = New System.Drawing.Point(209, 337)
         Me.TxBDireccion.Name = "TxBDireccion"
         Me.TxBDireccion.Size = New System.Drawing.Size(351, 32)
         Me.TxBDireccion.TabIndex = 9
@@ -202,15 +201,6 @@ Partial Class GestionUsuarios
         Me.LbPassword.TabIndex = 19
         Me.LbPassword.Text = "Constraseña*"
         '
-        'LbRol
-        '
-        Me.LbRol.AutoSize = True
-        Me.LbRol.Location = New System.Drawing.Point(14, 50)
-        Me.LbRol.Name = "LbRol"
-        Me.LbRol.Size = New System.Drawing.Size(90, 26)
-        Me.LbRol.TabIndex = 21
-        Me.LbRol.Text = "Código*"
-        '
         'LBSeparador
         '
         Me.LBSeparador.AutoSize = True
@@ -221,21 +211,22 @@ Partial Class GestionUsuarios
         Me.LBSeparador.TabIndex = 23
         Me.LBSeparador.Text = "___________________________________________________________________"
         '
-        'txBCodigo
+        'TxbCodigo
         '
-        Me.txBCodigo.Location = New System.Drawing.Point(209, 44)
-        Me.txBCodigo.Name = "txBCodigo"
-        Me.txBCodigo.Size = New System.Drawing.Size(351, 32)
-        Me.txBCodigo.TabIndex = 24
+        Me.TxbCodigo.Location = New System.Drawing.Point(325, 416)
+        Me.TxbCodigo.Name = "TxbCodigo"
+        Me.TxbCodigo.Size = New System.Drawing.Size(235, 32)
+        Me.TxbCodigo.TabIndex = 24
+        Me.TxbCodigo.Text = "métase aquí el código"
+        Me.TxbCodigo.Visible = False
         '
         'GestionUsuarios
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(13.0!, 26.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(572, 508)
-        Me.Controls.Add(Me.txBCodigo)
+        Me.ClientSize = New System.Drawing.Size(578, 508)
+        Me.Controls.Add(Me.TxbCodigo)
         Me.Controls.Add(Me.LBSeparador)
-        Me.Controls.Add(Me.LbRol)
         Me.Controls.Add(Me.TxBPassWord)
         Me.Controls.Add(Me.LbPassword)
         Me.Controls.Add(Me.TxBDireccion)
@@ -284,7 +275,6 @@ Partial Class GestionUsuarios
     Friend WithEvents TxBDireccion As TextBox
     Friend WithEvents TxBPassWord As TextBox
     Friend WithEvents LbPassword As Label
-    Friend WithEvents LbRol As Label
     Friend WithEvents LBSeparador As Label
-    Friend WithEvents txBCodigo As TextBox
+    Friend WithEvents TxbCodigo As TextBox
 End Class

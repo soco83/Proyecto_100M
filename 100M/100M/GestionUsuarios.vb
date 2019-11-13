@@ -18,7 +18,7 @@ Public Class GestionUsuarios
             LbTitulo.Text = "Editar usuario"
             Dim user As New Usuario()
             user = file.leerUsuario(codigo)
-            txBCodigo.Text = user.getCodigo
+            TxBCodigo.Text = user.getCodigo
             TxBApe1.Text = user.getApe1
             TxBApe2.Text = user.getApe2
             TxBNombre.Text = user.getNombre
@@ -31,7 +31,7 @@ Public Class GestionUsuarios
     End Sub
 
     Private Sub BtnAceptar_Click(sender As Object, e As EventArgs) Handles BtnAceptar.Click
-        If TxBNombre.Text = "" Or TxBApe1.Text = "" Or TxBDNI.Text = "" Or TxBPassWord.Text = "" Or txBCodigo.Text = "" Then
+        If TxBNombre.Text = "" Or TxBApe1.Text = "" Or TxBDNI.Text = "" Or TxBPassWord.Text = "" Or TxbCodigo.Text = "" Then
             MsgBox("Los campos de nombre, primer apellido, D.N.I., contraseña y rol son obligatorios.", MsgBoxStyle.Information)
         Else
 
