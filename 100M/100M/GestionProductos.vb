@@ -33,7 +33,11 @@ Public Class GestionProductos
         ElseIf openType = 2 Then
             'editar usuario seleccionado
             LbTitulo.Text = "Editar producto"
-
+            Dim productos As Producto
+            productos = file.leerProducto(codigo + 1)
+            TxBCodigo.Text = productos.getCodigo
+            TxBNombre.Text = productos.getNombre
+            TxBPrecio.Text = productos.getPrecio
         End If
     End Sub
 End Class

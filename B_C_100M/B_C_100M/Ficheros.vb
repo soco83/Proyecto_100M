@@ -170,6 +170,7 @@
 
     'Metodo para leer un registro de tipo producto. se pasa por parametro el codigo para buscar el registro.
     Public Function leerProducto(ByVal codigo As Integer) As Producto
+        FileClose(2)
         Try
             FileOpen(2, "productos", OpenMode.Random, OpenAccess.Read,, Len(product))
             FileGet(2, product, codigo)
@@ -178,6 +179,7 @@
         End Try
 
         Dim prod As New Producto(product.codigo.Trim(" "), product.nombre.Trim(" "), product.precio)
+        FileClose(2)
         Return prod
     End Function
 
@@ -201,7 +203,7 @@
     'metodo para listar todos los productos que haya en el fichero.
     Public Function listarProductos() As List(Of Producto)
         Dim c As Integer = 1
-
+        FileClose(2)
         Dim list As New List(Of Producto)
         Try
 
