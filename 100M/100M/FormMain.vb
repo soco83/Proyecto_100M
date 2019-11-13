@@ -2,7 +2,7 @@
 Public Class FormMain
     Public nombreUsuario As String
     Dim precio, total As Single
-
+    Dim file As New Ficheros
     Private Sub Cerrar_SesionToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles Cerrar_SesionToolStripMenuItem.Click
         Me.Close()
         Inicio.Show()
@@ -23,7 +23,7 @@ Public Class FormMain
         FLPpicar.Visible = False
 
         TxBUsuarioConectado.Text = nombreUsuario
-        If Not nombreUsuario = "admin" Then
+        If Not nombreUsuario = file.leerUsuario(4).getNombre Then
             UsuariosToolStripMenuItem.Visible = False
             ProductosToolStripMenuItem.Visible = False
         Else
@@ -110,7 +110,7 @@ Public Class FormMain
     Private Sub BtnAñadir_Click(sender As Object, e As EventArgs) Handles BtnAñadir.Click
         Dim TEXT_MAL As String = "- Haz click en un producto para ver sus datos -"
 
-        Dim prod As New Producto(TxBDatos.Text, precio)
+        Dim prod As New Producto(1, TxBDatos.Text, precio)
 
         If Not TxBDatos.Text = TEXT_MAL Then
             'se comprueba que en el tiquet no esté ya el producto.

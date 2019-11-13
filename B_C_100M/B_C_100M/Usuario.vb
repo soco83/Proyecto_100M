@@ -15,6 +15,9 @@
         Me.tel = tel
     End Sub
 
+    Public Sub New()
+
+    End Sub
 
     Public Function getCodigo()
         Return Me.codigo

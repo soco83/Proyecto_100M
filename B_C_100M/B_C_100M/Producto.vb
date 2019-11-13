@@ -8,7 +8,7 @@
     Dim codigo, nombre As String
     Dim cantidad As Integer
     Dim precio As Single
-    Dim precioTotalUnitario As Integer
+    Dim precioTotalUnitario As Single
 
 
     'este es el constructor de la clase el cual solo se pasa el nombre y la cantidad.

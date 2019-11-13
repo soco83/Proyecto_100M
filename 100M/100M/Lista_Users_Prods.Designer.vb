@@ -23,7 +23,7 @@ Partial Class Lista_Users_Prods
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.LbTitulo = New System.Windows.Forms.Label()
-        Me.ListBox1 = New System.Windows.Forms.ListBox()
+        Me.LBVista = New System.Windows.Forms.ListBox()
         Me.BtnEditar = New System.Windows.Forms.Button()
         Me.BtnBorrar = New System.Windows.Forms.Button()
         Me.BtnVolver = New System.Windows.Forms.Button()
@@ -38,14 +38,14 @@ Partial Class Lista_Users_Prods
         Me.LbTitulo.TabIndex = 0
         Me.LbTitulo.Text = "Lista de "
         '
-        'ListBox1
+        'LBVista
         '
-        Me.ListBox1.FormattingEnabled = True
-        Me.ListBox1.ItemHeight = 26
-        Me.ListBox1.Location = New System.Drawing.Point(12, 53)
-        Me.ListBox1.Name = "ListBox1"
-        Me.ListBox1.Size = New System.Drawing.Size(390, 342)
-        Me.ListBox1.TabIndex = 1
+        Me.LBVista.FormattingEnabled = True
+        Me.LBVista.ItemHeight = 26
+        Me.LBVista.Location = New System.Drawing.Point(12, 53)
+        Me.LBVista.Name = "LBVista"
+        Me.LBVista.Size = New System.Drawing.Size(390, 342)
+        Me.LBVista.TabIndex = 1
         '
         'BtnEditar
         '
@@ -82,7 +82,7 @@ Partial Class Lista_Users_Prods
         Me.Controls.Add(Me.BtnVolver)
         Me.Controls.Add(Me.BtnBorrar)
         Me.Controls.Add(Me.BtnEditar)
-        Me.Controls.Add(Me.ListBox1)
+        Me.Controls.Add(Me.LBVista)
         Me.Controls.Add(Me.LbTitulo)
         Me.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.5!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Margin = New System.Windows.Forms.Padding(7, 6, 7, 6)
@@ -95,7 +95,7 @@ Partial Class Lista_Users_Prods
     End Sub
 
     Friend WithEvents LbTitulo As Label
-    Friend WithEvents ListBox1 As ListBox
+    Friend WithEvents LBVista As ListBox
     Friend WithEvents BtnEditar As Button
     Friend WithEvents BtnBorrar As Button
     Friend WithEvents BtnVolver As Button

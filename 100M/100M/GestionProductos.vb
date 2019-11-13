@@ -1,7 +1,7 @@
 ﻿Imports B_C_100M
 
 Public Class GestionProductos
-    Public openType As Integer
+    Public openType, codigo As Integer
     Public file As New Ficheros
     Private Sub BtnAceptar_Click(sender As Object, e As EventArgs) Handles BtnAceptar.Click
         If TxBCodigo.Text = "" Or TxBNombre.Text = "" Or TxBPrecio.Text = "" Then
@@ -33,6 +33,7 @@ Public Class GestionProductos
         ElseIf openType = 2 Then
             'editar usuario seleccionado
             LbTitulo.Text = "Editar producto"
+
         End If
     End Sub
 End Class

@@ -23,7 +23,7 @@
 
     End Structure
     'variable que se  usa para referenciar a la estructura de usuarios.
-    Dim users As usuarios
+    Public users As usuarios
 
     'Metodo para registrar al usuario pasando por parametro un objeto de tipo usuario. 
     'este metodo se puede utilizar para modificar un registro.
@@ -46,21 +46,23 @@
         Catch ex As Exception
             MsgBox(Err.Description & ", por favor vuelva a intentarlo", 48, "Fallo escritura")
         End Try
-        FileClose()
+        FileClose(1)
     End Sub
 
     'metodo para la lectura de un registro de tipo usuario. se pasa por parametro el codigo para buscar en el fichero.
     'retorna un objeto de tipo usuario para poder trabajar con él.
     Public Function leerUsuario(ByVal codigo As Integer) As Usuario
+
         Try
             FileOpen(1, "usuarios", OpenMode.Random, OpenAccess.Read,, Len(users))
             FileGet(1, users, codigo)
 
         Catch ex As Exception
-            MsgBox("Se produjo un fallo en la lectura del registro, por favor vuelva a intentarlo", 48, "Fallo lectura")
+            MsgBox(Err.Description & ", por favor vuelva a intentarlo", 48, "Fallo lectura")
         End Try
-        Dim user As New Usuario(users.codigo.Trim(" "), users.contrasenna.Trim(" "), users.nombre.Trim(" "), users.apellido1.Trim(" "), users.apellido2.Trim(" "), users.dni.Trim(" "), users.email(" "), users.direccion.Trim(" "), users.telefono(" "))
-        FileClose()
+        FileClose(1)
+        Dim user As New Usuario(users.codigo.Trim(" "), users.contrasenna.Trim(" "), users.nombre.Trim(" "), users.apellido1.Trim(" "), users.apellido2.Trim(" "), users.dni.Trim(" "), users.email.Trim(" "), users.direccion.Trim(" "), users.telefono.Trim(" "))
+
         Return user
     End Function
 
@@ -89,16 +91,43 @@
             MsgBox(Err.Description & ", por favor vuelva a intentarlo", 48, "Fallo Lectura")
         End Try
 
-        FileClose()
+        FileClose(1)
         Return verif
 
+
+    End Function
+    'metodo para listar los usuarios que devuelve una List de todos ellos, si se ha borrado alguno se obvia ese registro para que no se muestre.
+    Public Function listarUsuario() As List(Of Usuario)
+        Dim c As Integer = 1
+        Dim list As New List(Of Usuario)
+        Try
+            FileOpen(1, "usuarios", OpenMode.Random, OpenAccess.Read,, Len(users))
+            While Not EOF(1)
+                FileGet(1, users, c)
+                If users.codigo.Trim(" ") <> "" Then
+                    Dim user As New Usuario(users.codigo.Trim(" "), users.contrasenna.Trim(" "), users.nombre.Trim(" "), users.apellido1.Trim(" "), users.apellido2.Trim(" "), users.dni.Trim(" "), users.email.Trim(" "), users.direccion.Trim(" "), users.telefono.Trim(" "))
+                    list.Add(user)
+                    c = c + 1
+                End If
+
+            End While
+
+
+        Catch ex As Exception
+            MsgBox(Err.Description & ", por favor vuelva a intentarlo", 48, "Fallo Lectura")
+        End Try
+
+
+        FileClose(1)
+        Return list
 
     End Function
 
 
     'Metodo para borrar un registro de tipo usuario. se pasa por parametro el codigo para buscar en el fichero.
 
-    Public Sub borrarUsusario(ByVal codigo As Integer)
+    Public Sub borrarUsuario(ByVal codigo As Integer)
+
         Try
             FileOpen(1, "usuarios", OpenMode.Random, OpenAccess.Write,, Len(users))
             users.codigo = ""
@@ -109,12 +138,12 @@
             users.dni = ""
             users.direccion = ""
             users.email = ""
-            FilePut(1, users, codigo)
+            FilePut(1, users, codigo + 1)
             MsgBox("registro borrado correctamente", 64, "Información")
         Catch ex As Exception
-            MsgBox("Se produjo un fallo al borrar el registro, por favor vuelva a intentarlo", 48, "Fallos al borrar")
+            MsgBox(Err.Description & ", por favor vuelva a intentarlo", 48, "Fallos al borrar")
         End Try
-        FileClose()
+        FileClose(1)
 
     End Sub
     'Metodo para Guardar un registro de tipo producto. Se pasa por parametro un objeto de tipo producto
@@ -133,7 +162,7 @@
         Catch ex As Exception
             MsgBox("Se produjo un fallo en la escritura del registro, por favor vuelva a intentarlo.", 48, "Fallo escritura")
         End Try
-        FileClose()
+        FileClose(2)
 
     End Sub
 
@@ -145,24 +174,54 @@
         Catch ex As Exception
             MsgBox("Se produjo un fallo en la lectura del registro, por favor vuelva a intentarlo", 48, "Fallo lectura")
         End Try
+
         Dim prod As New Producto(product.codigo.Trim(" "), product.nombre.Trim(" "), product.precio)
         Return prod
     End Function
 
     'Metodo para borrar un registro de tipo producto. se pasa por parametro el codigo para buscar el registro. 
     Public Sub borrarProducto(ByVal codigo As Integer)
+        FileClose(2)
         Try
-            FileOpen(2, "productos", OpenMode.Random, OpenAccess.Read,, Len(product))
+            FileOpen(2, "productos", OpenMode.Random, OpenAccess.Write,, Len(product))
             product.codigo = ""
             product.nombre = ""
             product.precio = 0
+            FilePut(2, product, codigo + 1)
             MsgBox("registro borrado correctamente", 64, "Información")
         Catch ex As Exception
             MsgBox("Se produjo un fallo al borrar el registro, por favor vuelva a intentarlo", 48, "Fallos al borrar")
         End Try
-        FileClose()
+        FileClose(2)
 
     End Sub
+
+    'metodo para listar todos los productos que haya en el fichero.
+    Public Function listarProductos() As List(Of Producto)
+        Dim c As Integer = 1
+
+        Dim list As New List(Of Producto)
+        Try
+
+            FileOpen(2, "productos", OpenMode.Random, OpenAccess.Read,, Len(product))
+            While Not EOF(2)
+                FileGet(2, product, c)
+                If product.codigo.Trim(" ") <> "" Then
+                    Dim productoLista As New Producto(product.codigo.Trim(" "), product.nombre.Trim(" "), product.precio)
+                    list.Add(productoLista)
+                    c = c + 1
+                End If
+
+            End While
+
+        Catch ex As Exception
+            MsgBox(Err.Description & ", por favor vuelva a intentarlo", 48, "Fallo Lectura")
+        End Try
+
+        FileClose(2)
+        Return list
+    End Function
+
     'metodo para registrar los errores en un fichero. Se pasa por parametro el mensaje de error.
     Public Sub registrarErrores(ByVal mError As String)
         Try
@@ -173,7 +232,7 @@
         Catch ex As Exception
             MsgBox("Se produjo un fallo en la escritura del registro, por favor vuelva a intentarlo", 48, "Fallo escritura")
         End Try
-        FileClose()
+        FileClose(3)
 
     End Sub
 
@@ -187,7 +246,7 @@
         Catch ex As Exception
             MsgBox("Se produjo un fallo en la escritura del registro, por favor vuelva a intentarlo", 48, "Fallo escritura")
         End Try
-        FileClose()
+        FileClose(4)
 
     End Sub
 
