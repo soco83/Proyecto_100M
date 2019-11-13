@@ -20,7 +20,7 @@ Public Class Inicio
     End Sub
 
     Private Sub BtnSalir_Click(sender As Object, e As EventArgs) Handles BtnSalir.Click
-        Dim a As Integer = MsgBox("¿Seguro que desea salir?", 292)
+        Dim a As Integer = MsgBox("¿Seguro que desea salir?.", 292, "Confirmación de salida")
         If a = MsgBoxResult.Yes Then
             Try
                 Application.Exit()

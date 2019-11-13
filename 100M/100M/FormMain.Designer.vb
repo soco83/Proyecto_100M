@@ -184,7 +184,7 @@ Partial Class FormMain
         Me.LBTiquet = New System.Windows.Forms.ListBox()
         Me.LBTotal = New System.Windows.Forms.Label()
         Me.BtnImprimir = New System.Windows.Forms.Button()
-        Me.Button60 = New System.Windows.Forms.Button()
+        Me.BtnPagar = New System.Windows.Forms.Button()
         Me.BtnAñadir = New System.Windows.Forms.Button()
         Me.LBCantidad = New System.Windows.Forms.ListBox()
         Me.BtnBorrarLinea = New System.Windows.Forms.Button()
@@ -193,6 +193,7 @@ Partial Class FormMain
         Me.LBPrecio = New System.Windows.Forms.ListBox()
         Me.LbTituloPrecio = New System.Windows.Forms.Label()
         Me.LbPrecioTotal = New System.Windows.Forms.Label()
+        Me.PrintDocument1 = New System.Drawing.Printing.PrintDocument()
         Me.FLPcasa.SuspendLayout()
         Me.FLPClasic.SuspendLayout()
         Me.FLPespecials.SuspendLayout()
@@ -396,6 +397,7 @@ Partial Class FormMain
         Me.TxBDatos.Location = New System.Drawing.Point(626, 528)
         Me.TxBDatos.Multiline = True
         Me.TxBDatos.Name = "TxBDatos"
+        Me.TxBDatos.ReadOnly = True
         Me.TxBDatos.Size = New System.Drawing.Size(461, 189)
         Me.TxBDatos.TabIndex = 3
         Me.TxBDatos.Text = "- Haz click en un producto para ver sus datos -"
@@ -1738,14 +1740,14 @@ Partial Class FormMain
         Me.BtnImprimir.Text = "Imprimir tiquet"
         Me.BtnImprimir.UseVisualStyleBackColor = True
         '
-        'Button60
+        'BtnPagar
         '
-        Me.Button60.Location = New System.Drawing.Point(206, 651)
-        Me.Button60.Name = "Button60"
-        Me.Button60.Size = New System.Drawing.Size(165, 66)
-        Me.Button60.TabIndex = 30
-        Me.Button60.Text = "Pago en efectivo"
-        Me.Button60.UseVisualStyleBackColor = True
+        Me.BtnPagar.Location = New System.Drawing.Point(206, 651)
+        Me.BtnPagar.Name = "BtnPagar"
+        Me.BtnPagar.Size = New System.Drawing.Size(165, 66)
+        Me.BtnPagar.TabIndex = 30
+        Me.BtnPagar.Text = "Pago en efectivo"
+        Me.BtnPagar.UseVisualStyleBackColor = True
         '
         'BtnAñadir
         '
@@ -1768,7 +1770,7 @@ Partial Class FormMain
         '
         'BtnBorrarLinea
         '
-        Me.BtnBorrarLinea.Location = New System.Drawing.Point(390, 651)
+        Me.BtnBorrarLinea.Location = New System.Drawing.Point(386, 651)
         Me.BtnBorrarLinea.Name = "BtnBorrarLinea"
         Me.BtnBorrarLinea.Size = New System.Drawing.Size(165, 66)
         Me.BtnBorrarLinea.TabIndex = 33
@@ -1834,7 +1836,7 @@ Partial Class FormMain
         Me.Controls.Add(Me.BtnBorrarLinea)
         Me.Controls.Add(Me.LBCantidad)
         Me.Controls.Add(Me.BtnAñadir)
-        Me.Controls.Add(Me.Button60)
+        Me.Controls.Add(Me.BtnPagar)
         Me.Controls.Add(Me.BtnImprimir)
         Me.Controls.Add(Me.LBTotal)
         Me.Controls.Add(Me.LBTiquet)
@@ -2034,7 +2036,7 @@ Partial Class FormMain
     Friend WithEvents LBTiquet As ListBox
     Friend WithEvents LBTotal As Label
     Friend WithEvents BtnImprimir As Button
-    Friend WithEvents Button60 As Button
+    Friend WithEvents BtnPagar As Button
     Friend WithEvents BtnAñadir As Button
     Friend WithEvents LBCantidad As ListBox
     Friend WithEvents BtnBorrarLinea As Button
@@ -2044,4 +2046,5 @@ Partial Class FormMain
     Friend WithEvents LbTituloPrecio As Label
     Friend WithEvents LbPrecioTotal As Label
     Friend WithEvents ToolStripSeparator2 As ToolStripSeparator
+    Friend WithEvents PrintDocument1 As Printing.PrintDocument
 End Class

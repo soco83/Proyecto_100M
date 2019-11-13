@@ -3,6 +3,8 @@ Imports System.Drawing.Printing
 Public Class FormMain
     Public nombreUsuario As String
     Dim precio, total As Single
+    Public elClienteHaPagado, aDevolver As Single
+    Public seHaPagado As Boolean = False
 
     Dim file As New Ficheros
 
