@@ -346,7 +346,9 @@ Public Class FormMain
 
         End Try
     End Sub
-
+    Private Sub FormMain_FormClosing(sender As Object, e As FormClosingEventArgs) Handles MyBase.FormClosing
+        Inicio.Show()
+    End Sub
     'Private Sub BtnBorrarLinea_Click(sender As Object, e As EventArgs) Handles BtnBorrarLinea.Click
     '    Try
     '        LBCantidad.Items.RemoveAt(LBTiquet.Items.IndexOf(LBTiquet.SelectedItem))
