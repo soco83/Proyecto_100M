@@ -90,10 +90,18 @@ Public Class FormMain
         TxBDatos.Text = productos.getNombre & "   " & productos.getPrecio & "€"
     End Sub
 
+
+    Private Sub m01_MouseDoubleClick(sender As Object, e As MouseEventArgs) Handles m01.MouseDoubleClick, m18.MouseDoubleClick, m17.MouseDoubleClick, m16.MouseDoubleClick, m15.MouseDoubleClick, m14.MouseDoubleClick, m13.MouseDoubleClick, m12.MouseDoubleClick, m11.MouseDoubleClick, m10.MouseDoubleClick, m09.MouseDoubleClick, m08.MouseDoubleClick, m07.MouseDoubleClick, m06.MouseDoubleClick, m05.MouseDoubleClick, m04.MouseDoubleClick, m03.MouseDoubleClick, m02.MouseDoubleClickk
+        Dim botonActual As Button
+        botonActual = sender
+        productos = file.leerProducto(botonActual.Tag)
+        venta.annadirProducto(productos)
+
+    End Sub
     'método que añade lo que haya en el TextBox de datos al tiquet
     Private Sub BtnAñadir_Click(sender As Object, e As EventArgs) Handles BtnAñadir.Click
 
-        venta.annadirProducto(productos)
+
         'sacarLista(venta.getLista)
 
         'Dim TEXT_MAL As String = "- Haz click en un producto para ver sus datos -"
@@ -349,6 +357,8 @@ Public Class FormMain
     Private Sub FormMain_FormClosing(sender As Object, e As FormClosingEventArgs) Handles MyBase.FormClosing
         Inicio.Show()
     End Sub
+
+
     'Private Sub BtnBorrarLinea_Click(sender As Object, e As EventArgs) Handles BtnBorrarLinea.Click
     '    Try
     '        LBCantidad.Items.RemoveAt(LBTiquet.Items.IndexOf(LBTiquet.SelectedItem))
