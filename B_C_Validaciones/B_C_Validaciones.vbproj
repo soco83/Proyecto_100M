@@ -4,35 +4,31 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{5759142C-6F1E-4941-BAC6-24ED2FC70FE3}</ProjectGuid>
-    <OutputType>WinExe</OutputType>
-    <StartupObject>_100M.My.MyApplication</StartupObject>
-    <RootNamespace>_100M</RootNamespace>
-    <AssemblyName>100M</AssemblyName>
+    <ProjectGuid>{83A79A8F-3938-47B1-831A-8D3EE5DA0612}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>B_C_Validaciones</RootNamespace>
+    <AssemblyName>B_C_Validaciones</AssemblyName>
     <FileAlignment>512</FileAlignment>
-    <MyType>WindowsForms</MyType>
-    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
-    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
-    <TargetFrameworkProfile />
+    <MyType>Windows</MyType>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <Deterministic>true</Deterministic>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <DefineDebug>true</DefineDebug>
     <DefineTrace>true</DefineTrace>
     <OutputPath>bin\Debug\</OutputPath>
-    <DocumentationFile>100M.xml</DocumentationFile>
+    <DocumentationFile>B_C_Validaciones.xml</DocumentationFile>
     <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <DefineDebug>false</DefineDebug>
     <DefineTrace>true</DefineTrace>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
-    <DocumentationFile>100M.xml</DocumentationFile>
+    <DocumentationFile>B_C_Validaciones.xml</DocumentationFile>
     <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
   </PropertyGroup>
   <PropertyGroup>
@@ -48,17 +44,8 @@
     <OptionInfer>On</OptionInfer>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="B_C_100M">
-      <HintPath>..\..\B_C_100M\B_C_100M\bin\Debug\B_C_100M.dll</HintPath>
-    </Reference>
-    <Reference Include="B_C_Validaciones">
-      <HintPath>..\..\B_C_Validaciones\bin\Debug\B_C_Validaciones.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
-    <Reference Include="System.Deployment" />
-    <Reference Include="System.Drawing" />
-    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -71,45 +58,13 @@
     <Import Include="System.Collections" />
     <Import Include="System.Collections.Generic" />
     <Import Include="System.Data" />
-    <Import Include="System.Drawing" />
     <Import Include="System.Diagnostics" />
-    <Import Include="System.Windows.Forms" />
     <Import Include="System.Linq" />
     <Import Include="System.Xml.Linq" />
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="FormMain.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormMain.Designer.vb">
-      <DependentUpon>FormMain.vb</DependentUpon>
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="GestionProductos.Designer.vb">
-      <DependentUpon>GestionProductos.vb</DependentUpon>
-    </Compile>
-    <Compile Include="GestionProductos.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="GestionUsuarios.Designer.vb">
-      <DependentUpon>GestionUsuarios.vb</DependentUpon>
-    </Compile>
-    <Compile Include="GestionUsuarios.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Inicio.Designer.vb">
-      <DependentUpon>Inicio.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Inicio.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Lista_Users_Prods.Designer.vb">
-      <DependentUpon>Lista_Users_Prods.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Lista_Users_Prods.vb">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="Class1.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -125,37 +80,13 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <Compile Include="Pago.Designer.vb">
-      <DependentUpon>Pago.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Pago.vb">
-      <SubType>Form</SubType>
-    </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="FormMain.resx">
-      <DependentUpon>FormMain.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="GestionProductos.resx">
-      <DependentUpon>GestionProductos.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="GestionUsuarios.resx">
-      <DependentUpon>GestionUsuarios.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Inicio.resx">
-      <DependentUpon>Inicio.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Lista_Users_Prods.resx">
-      <DependentUpon>Lista_Users_Prods.vb</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Pago.resx">
-      <DependentUpon>Pago.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
@@ -168,11 +99,6 @@
       <CustomToolNamespace>My</CustomToolNamespace>
       <LastGenOutput>Settings.Designer.vb</LastGenOutput>
     </None>
-    <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup />
-  <ItemGroup>
-    <None Include="Resources\de la casa.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>
