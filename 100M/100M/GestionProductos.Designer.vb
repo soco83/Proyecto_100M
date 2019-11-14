@@ -26,12 +26,12 @@ Partial Class GestionProductos
         Me.LbRol = New System.Windows.Forms.Label()
         Me.LbTitulo = New System.Windows.Forms.Label()
         Me.BtnAceptar = New System.Windows.Forms.Button()
-        Me.TxBPrecio = New System.Windows.Forms.TextBox()
         Me.TxBNombre = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.LbPrecio = New System.Windows.Forms.Label()
         Me.LbNombre = New System.Windows.Forms.Label()
         Me.TxBCodigo = New System.Windows.Forms.TextBox()
+        Me.TxBPrecio = New System.Windows.Forms.TextBox()
         Me.SuspendLayout()
         '
         'LbRol
@@ -61,16 +61,10 @@ Partial Class GestionProductos
         Me.BtnAceptar.Text = "Aceptar"
         Me.BtnAceptar.UseVisualStyleBackColor = True
         '
-        'TxBPrecio
-        '
-        Me.TxBPrecio.Location = New System.Drawing.Point(209, 120)
-        Me.TxBPrecio.Name = "TxBPrecio"
-        Me.TxBPrecio.Size = New System.Drawing.Size(193, 32)
-        Me.TxBPrecio.TabIndex = 31
-        '
         'TxBNombre
         '
         Me.TxBNombre.Location = New System.Drawing.Point(209, 82)
+        Me.TxBNombre.MaxLength = 30
         Me.TxBNombre.Name = "TxBNombre"
         Me.TxBNombre.Size = New System.Drawing.Size(193, 32)
         Me.TxBNombre.TabIndex = 30
@@ -110,16 +104,24 @@ Partial Class GestionProductos
         Me.TxBCodigo.Size = New System.Drawing.Size(193, 32)
         Me.TxBCodigo.TabIndex = 47
         '
+        'TxBPrecio
+        '
+        Me.TxBPrecio.Location = New System.Drawing.Point(209, 123)
+        Me.TxBPrecio.MaxLength = 7
+        Me.TxBPrecio.Name = "TxBPrecio"
+        Me.TxBPrecio.Size = New System.Drawing.Size(193, 32)
+        Me.TxBPrecio.TabIndex = 31
+        '
         'GestionProductos
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(13.0!, 26.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(414, 266)
+        Me.Controls.Add(Me.TxBPrecio)
         Me.Controls.Add(Me.TxBCodigo)
         Me.Controls.Add(Me.LbRol)
         Me.Controls.Add(Me.LbTitulo)
         Me.Controls.Add(Me.BtnAceptar)
-        Me.Controls.Add(Me.TxBPrecio)
         Me.Controls.Add(Me.TxBNombre)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.LbPrecio)
@@ -137,10 +139,10 @@ Partial Class GestionProductos
     Friend WithEvents LbRol As Label
     Friend WithEvents LbTitulo As Label
     Friend WithEvents BtnAceptar As Button
-    Friend WithEvents TxBPrecio As TextBox
     Friend WithEvents TxBNombre As TextBox
     Friend WithEvents Label1 As Label
     Friend WithEvents LbPrecio As Label
     Friend WithEvents LbNombre As Label
     Friend WithEvents TxBCodigo As TextBox
+    Friend WithEvents TxBPrecio As TextBox
 End Class

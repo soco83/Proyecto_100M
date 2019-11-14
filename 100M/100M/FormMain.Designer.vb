@@ -155,7 +155,6 @@ Partial Class FormMain
         Me.ToolStripSeparator1 = New System.Windows.Forms.ToolStripSeparator()
         Me.VerListaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ProductosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.NuevoPToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStripSeparator2 = New System.Windows.Forms.ToolStripSeparator()
         Me.VerListaToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
         Me.Cerrar_SesionToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -189,8 +188,6 @@ Partial Class FormMain
         Me.LbPrecioTotal = New System.Windows.Forms.Label()
         Me.PrintDocument1 = New System.Drawing.Printing.PrintDocument()
         Me.FLPCategorias = New System.Windows.Forms.FlowLayoutPanel()
-        Me.BtnAñadir1producto = New System.Windows.Forms.Button()
-        Me.Beliminar1Producto = New System.Windows.Forms.Button()
         Me.BtnMenuCasa = New System.Windows.Forms.Button()
         Me.BtnMenuClasicos = New System.Windows.Forms.Button()
         Me.BtnMenuEspeciales = New System.Windows.Forms.Button()
@@ -198,6 +195,8 @@ Partial Class FormMain
         Me.BtnMenuSuper = New System.Windows.Forms.Button()
         Me.BtnMenuDrinks = New System.Windows.Forms.Button()
         Me.BtnMenuPicar = New System.Windows.Forms.Button()
+        Me.BtnAñadir1producto = New System.Windows.Forms.Button()
+        Me.Beliminar1Producto = New System.Windows.Forms.Button()
         Me.FLPcasa.SuspendLayout()
         Me.FLPClasic.SuspendLayout()
         Me.FLPespecials.SuspendLayout()
@@ -1604,26 +1603,20 @@ Partial Class FormMain
         '
         'ProductosToolStripMenuItem
         '
-        Me.ProductosToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.NuevoPToolStripMenuItem1, Me.ToolStripSeparator2, Me.VerListaToolStripMenuItem1})
+        Me.ProductosToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripSeparator2, Me.VerListaToolStripMenuItem1})
         Me.ProductosToolStripMenuItem.Name = "ProductosToolStripMenuItem"
         Me.ProductosToolStripMenuItem.Size = New System.Drawing.Size(122, 34)
         Me.ProductosToolStripMenuItem.Text = "Productos"
         '
-        'NuevoPToolStripMenuItem1
-        '
-        Me.NuevoPToolStripMenuItem1.Name = "NuevoPToolStripMenuItem1"
-        Me.NuevoPToolStripMenuItem1.Size = New System.Drawing.Size(162, 34)
-        Me.NuevoPToolStripMenuItem1.Text = "Nuevo"
-        '
         'ToolStripSeparator2
         '
         Me.ToolStripSeparator2.Name = "ToolStripSeparator2"
-        Me.ToolStripSeparator2.Size = New System.Drawing.Size(159, 6)
+        Me.ToolStripSeparator2.Size = New System.Drawing.Size(177, 6)
         '
         'VerListaToolStripMenuItem1
         '
         Me.VerListaToolStripMenuItem1.Name = "VerListaToolStripMenuItem1"
-        Me.VerListaToolStripMenuItem1.Size = New System.Drawing.Size(162, 34)
+        Me.VerListaToolStripMenuItem1.Size = New System.Drawing.Size(180, 34)
         Me.VerListaToolStripMenuItem1.Text = "Ver lista"
         '
         'Cerrar_SesionToolStripMenuItem
@@ -1922,24 +1915,6 @@ Partial Class FormMain
         Me.FLPCategorias.Size = New System.Drawing.Size(664, 234)
         Me.FLPCategorias.TabIndex = 39
         '
-        'BtnAñadir1producto
-        '
-        Me.BtnAñadir1producto.Location = New System.Drawing.Point(488, 309)
-        Me.BtnAñadir1producto.Name = "BtnAñadir1producto"
-        Me.BtnAñadir1producto.Size = New System.Drawing.Size(105, 66)
-        Me.BtnAñadir1producto.TabIndex = 40
-        Me.BtnAñadir1producto.Text = "+ 1"
-        Me.BtnAñadir1producto.UseVisualStyleBackColor = True
-        '
-        'Beliminar1Producto
-        '
-        Me.Beliminar1Producto.Location = New System.Drawing.Point(488, 451)
-        Me.Beliminar1Producto.Name = "Beliminar1Producto"
-        Me.Beliminar1Producto.Size = New System.Drawing.Size(105, 66)
-        Me.Beliminar1Producto.TabIndex = 41
-        Me.Beliminar1Producto.Text = "- 1"
-        Me.Beliminar1Producto.UseVisualStyleBackColor = True
-        '
         'BtnMenuCasa
         '
         Me.BtnMenuCasa.ImageIndex = 0
@@ -2024,6 +1999,24 @@ Partial Class FormMain
         Me.BtnMenuPicar.Text = "Para picar"
         Me.BtnMenuPicar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
         Me.BtnMenuPicar.UseVisualStyleBackColor = True
+        '
+        'BtnAñadir1producto
+        '
+        Me.BtnAñadir1producto.Location = New System.Drawing.Point(488, 309)
+        Me.BtnAñadir1producto.Name = "BtnAñadir1producto"
+        Me.BtnAñadir1producto.Size = New System.Drawing.Size(105, 66)
+        Me.BtnAñadir1producto.TabIndex = 40
+        Me.BtnAñadir1producto.Text = "+ 1"
+        Me.BtnAñadir1producto.UseVisualStyleBackColor = True
+        '
+        'Beliminar1Producto
+        '
+        Me.Beliminar1Producto.Location = New System.Drawing.Point(488, 451)
+        Me.Beliminar1Producto.Name = "Beliminar1Producto"
+        Me.Beliminar1Producto.Size = New System.Drawing.Size(105, 66)
+        Me.Beliminar1Producto.TabIndex = 41
+        Me.Beliminar1Producto.Text = "- 1"
+        Me.Beliminar1Producto.UseVisualStyleBackColor = True
         '
         'FormMain
         '
@@ -2205,7 +2198,6 @@ Partial Class FormMain
     Friend WithEvents UsuariosToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents NuevoUToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ProductosToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents NuevoPToolStripMenuItem1 As ToolStripMenuItem
     Friend WithEvents Cerrar_SesionToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents BtnMenuCasa As Button
     Friend WithEvents BtnMenuClasicos As Button

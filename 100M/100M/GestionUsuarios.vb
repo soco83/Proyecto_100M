@@ -43,7 +43,9 @@ Public Class GestionUsuarios
                 TxBEmail.Text = user.getEmail
                 TxBTel.Text = user.getTel
             Catch ex As Exception
-                Exit Sub
+                Me.Close()
+                Lista_Users_Prods.openType = 1
+                Lista_Users_Prods.Show()
             End Try
         End If
     End Sub
@@ -104,28 +106,32 @@ Public Class GestionUsuarios
     Private Sub BtnAceptar_Click(sender As Object, e As EventArgs) Handles BtnAceptar.Click
         Dim validacion As Boolean = val.validarNombre(TxBApe1.Text) And val.validarNombre(TxBApe1.Text) And val.validarDni(TxBDNI.Text)
         If Not val.validarMail(TxBEmail.Text) And TxBEmail.Text <> "" Then
-            MsgBox("E-mail inválido, por favor vuelva a escribirlo.", 64, "Campo erroneo")
+            MsgBox("E-mail inválido, por favor vuelva a escribirlo ", 64, "Campo erroneo")
             Exit Sub
         End If
 
         If Not val.validarNum(TxBTel.Text) And TxBTel.Text <> "" Then
-            MsgBox("Telefono inválido, por favor vuelva a escribirlo.", 64, "Campo erroneo")
+            MsgBox("telefono inválido, por favor vuelva a escribirlo", 64, "Campo erroneo")
             Exit Sub
         End If
         If Not val.validarNombre(TxBApe2.Text) And TxBApe2.Text <> "" Then
-            MsgBox("Apellido invalido, por favor vuelva a escribirlo.", 64, "Campo erroneo")
+            MsgBox("Apellido invalido, por favor vuelva a escribirlo", 64, "Campo erroneo")
         End If
 
         If TxBNombre.Text = "" Or TxBApe1.Text = "" Or TxBDNI.Text = "" Or TxBPassWord.Text = "" Or TxbCodigo.Text = "" Then
-            MsgBox("Los campos de nombre, primer apellido, D.N.I., contraseña y rol son obligatorios.", MsgBoxStyle.Information, "Rellene los campos obligatorios")
+            MsgBox("Los campos de nombre, primer apellido, D.N.I., contraseña y rol son obligatorios.", MsgBoxStyle.Information)
         ElseIf Not validacion Then
-            MsgBox("Los campos no son correctos por favor vuelva a introducirlos.", 64, "Campos incorrectos")
+            MsgBox("Los campos no son correctos, por favor vuelva a introducirlos", 64, "Campos incorrectos")
         Else
 
             Dim file As New Ficheros
             'se crea el usuario
             Dim user As New Usuario(TxbCodigo.Text, TxBPassWord.Text, TxBNombre.Text, TxBApe1.Text, TxBApe2.Text, TxBDNI.Text, TxBTel.Text, TxBEmail.Text, TxBDireccion.Text)
             file.guardarUsuario(user)
+            Me.Close()
+            Lista_Users_Prods.openType = 1
+            Lista_Users_Prods.Show()
+
 
         End If
     End Sub
