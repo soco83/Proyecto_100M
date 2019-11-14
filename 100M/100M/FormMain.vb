@@ -40,7 +40,7 @@ Public Class FormMain
     'métodos que controlan lo que hacen los botones de cada grupo
     'se crea un objeto de la clase Button y se iguala al objeto sender:
     '   esto se hace para saber cuál de los botones dentro del grupo se ha presionado
-    'sabiendo eso ya se puede diferenciar, y no hay que programar 100+ métodos. xd
+    'sabiendo eso ya se puede diferenciar, y no hay que programar 100+ métodos.
 
     ' ESTOS BOTONES SOLO INTRODUCEN LOS DATOS DE LOS PRODUCTOS QUE REPRESENTAN EN EL TEXBOX DE ABAJO
     Private Sub BtnCasa_Click(sender As Object, e As EventArgs) Handles m18.Click, m17.Click, m16.Click, m15.Click, m14.Click, m13.Click, m12.Click, m11.Click, m10.Click, m09.Click, m08.Click, m07.Click, m06.Click, m05.Click, m04.Click, m03.Click, m02.Click, m01.Click
@@ -309,7 +309,7 @@ Public Class FormMain
             tiquet = ""
             For a = 0 To LBTiquet.Items.Count - 1
                 '                      (que quieres imprimir,                                                                                   cómo lo quieres imprimir,                color, coordenada x en el papel, coordenada y)
-                ev.Graphics.DrawString(LBCantidad.Items.Item(a) & "   " & LBTiquet.Items.Item(a).ToString.Trim("\n") & "                " & LBPrecio.Items.Item(a), New Font("Arial", 9, FontStyle.Regular), Brushes.Black, 120, y)
+                ev.Graphics.DrawString(LBCantidad.Items.Item(a) & "   " & quitarSaltosLinea(LBTiquet.Items.Item(a).ToString, " ") & "                " & LBPrecio.Items.Item(a), New Font("Arial", 9, FontStyle.Regular), Brushes.Black, 120, y)
                 'salto de línea
                 y += 20
             Next
@@ -370,4 +370,7 @@ Public Class FormMain
             MsgBox("Selecciona un producto a eliminar del tiquet.", MsgBoxStyle.Information)
         End Try
     End Sub
+    Private Function quitarSaltosLinea(ByVal texto As String, caracterReemplazar As String) As String
+        quitarSaltosLinea = Replace(Replace(texto, Chr(10), caracterReemplazar), Chr(13), caracterReemplazar)
+    End Function
 End Class
