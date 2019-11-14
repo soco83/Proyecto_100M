@@ -1,5 +1,5 @@
 ﻿Imports B_C_100M
-
+Imports B_C_Validaciones
 Public Class GestionProductos
     Public openType, codigo As Integer
     Public file As New Ficheros
@@ -7,10 +7,10 @@ Public Class GestionProductos
         If TxBCodigo.Text = "" Or TxBNombre.Text = "" Or TxBPrecio.Text = "" Then
             MsgBox("Los campos de categoría, nombre y precio son obligatorios. Por favor rellénelos.", MsgBoxStyle.Information)
         Else
-            'se crea el producto
+
             Dim prod As New Producto(TxBCodigo.Text, TxBNombre.Text, CSng(TxBPrecio.Text))
             file.guardarProducto(prod)
-            'se mete el nuevo producto en el fichero de los productos
+
             'Me.Close()
         End If
     End Sub

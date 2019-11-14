@@ -18,7 +18,7 @@
         <VBFixedString(30)> Dim apellido2 As String
         <VBFixedString(9)> Dim dni As String
         <VBFixedString(9)> Dim telefono As String
-        <VBFixedString(25)> Dim email As String
+        <VBFixedString(30)> Dim email As String
         <VBFixedString(30)> Dim direccion As String
 
     End Structure
@@ -45,7 +45,8 @@
             FilePut(1, users, c)
             MsgBox("Registro guardado correctamente.", 64, "Información")
         Catch ex As Exception
-            MsgBox(Err.Description & ", por favor vuelva a intentarlo", 48, "Fallo escritura")
+            MsgBox("Fallo en al guardar el registro, por favor vuelva a intentarlo", 48, "Fallo escritura")
+            registrarErrores(Err.Description)
         End Try
         FileClose(1)
     End Sub
@@ -59,7 +60,8 @@
             FileGet(1, users, codigo)
 
         Catch ex As Exception
-            MsgBox(Err.Description & ", por favor vuelva a intentarlo", 48, "Fallo lectura")
+            MsgBox("Fallo en la lectura, por favor vuelva a intentarlo", 48, "Fallo lectura")
+            registrarErrores(Err.Description)
         End Try
         FileClose(1)
         Dim user As New Usuario(users.codigo.Trim(" "), users.contrasenna.Trim(" "), users.nombre.Trim(" "), users.apellido1.Trim(" "), users.apellido2.Trim(" "), users.dni.Trim(" "), users.email.Trim(" "), users.direccion.Trim(" "), users.telefono.Trim(" "))
@@ -89,7 +91,8 @@
             End While
 
         Catch ex As Exception
-            MsgBox(Err.Description & ", por favor vuelva a intentarlo", 48, "Fallo Lectura")
+            MsgBox("Fallo en la lectura, por favor vuelva a intentarlo", 48, "Fallo Lectura")
+            registrarErrores(Err.Description)
         End Try
 
         FileClose(1)
@@ -117,7 +120,8 @@
 
 
         Catch ex As Exception
-            MsgBox(Err.Description & ", por favor vuelva a intentarlo", 48, "Fallo Lectura")
+            MsgBox("Fallo en la lectura, por favor vuelva a intentarlo", 48, "Fallo Lectura")
+            registrarErrores(Err.Description)
         End Try
 
 
@@ -148,7 +152,8 @@
             FilePut(1, users, codigo)
             MsgBox("registro borrado correctamente", 64, "Información")
         Catch ex As Exception
-            MsgBox(Err.Description & ", por favor vuelva a intentarlo", 48, "Fallos al borrar")
+            MsgBox("Fallo al borrar el registro, por favor vuelva a intentarlo", 48, "Fallos al borrar")
+            registrarErrores(Err.Description)
         End Try
         FileClose(1)
 
@@ -168,6 +173,7 @@
             'MsgBox("Registro guardado correctamente.", 64, "Información")
         Catch ex As Exception
             MsgBox("Se produjo un fallo en la escritura del registro, por favor vuelva a intentarlo.", 48, "Fallo escritura")
+            registrarErrores(Err.Description)
         End Try
         FileClose(2)
 
@@ -181,6 +187,7 @@
             FileGet(2, product, codigo)
         Catch ex As Exception
             MsgBox("Se produjo un fallo en la lectura del registro, por favor vuelva a intentarlo", 48, "Fallo lectura")
+            registrarErrores(Err.Description)
         End Try
 
         Dim prod As New Producto(product.codigo.Trim(" "), product.nombre.Trim(" "), product.precio)
@@ -192,7 +199,7 @@
     Public Sub borrarProducto(ByVal codigo As Integer)
         FileClose(2)
         Try
-            FileOpen(2, "productos", OpenMode.Random, OpenAccess.Write,, Len(product))
+            FileOpen(2, "ficheros\productos", OpenMode.Random, OpenAccess.Write,, Len(product))
             product.codigo = ""
             product.nombre = ""
             product.precio = 0
@@ -200,12 +207,14 @@
             MsgBox("registro borrado correctamente", 64, "Información")
         Catch ex As Exception
             MsgBox("Se produjo un fallo al borrar el registro, por favor vuelva a intentarlo", 48, "Fallos al borrar")
+            registrarErrores(Err.Description)
         End Try
         FileClose(2)
 
     End Sub
 
-    'metodo para listar todos los productos que haya en el fichero.
+    'metodo para listar todos los productos que haya en el fichero. 
+    'devuelve el la lista con todos los productos
     Public Function listarProductos() As List(Of Producto)
         Dim c As Integer = 1
         FileClose(2)
@@ -224,7 +233,7 @@
             End While
 
         Catch ex As Exception
-            MsgBox(Err.Description & ", por favor vuelva a intentarlo", 48, "Fallo Lectura")
+            MsgBox("Fallo en la lectura, por favor vuelva a intentarlo", 48, "Fallo Lectura")
         End Try
 
         FileClose(2)
@@ -234,7 +243,7 @@
     'metodo para registrar los errores en un fichero. Se pasa por parametro el mensaje de error.
     Public Sub registrarErrores(ByVal mError As String)
         Try
-            FileOpen(3, "errores", OpenMode.Append, OpenAccess.Read,,)
+            FileOpen(3, "ficheros\errores", OpenMode.Append, OpenAccess.Read,,)
 
             PrintLine(3, mError, Now)
 
@@ -249,7 +258,7 @@
     'Se pasa por parametro el nombre y la contraseña del usuario que accede.
     Public Sub registrarAcesso(ByVal nombre As String, ByVal contrasenna As String)
         Try
-            FileOpen(4, "fich_accesos", OpenMode.Append, OpenAccess.Write,,)
+            FileOpen(4, "ficheros\fich_accesos", OpenMode.Append, OpenAccess.Write,,)
 
             PrintLine(4, nombre, contrasenna, Now)
         Catch ex As Exception

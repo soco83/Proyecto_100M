@@ -1,4 +1,5 @@
 ﻿Imports B_C_100M
+Imports B_C_Validaciones
 Public Class GestionUsuarios
     Public opentype, codigo As Integer
     Dim file As New Ficheros
@@ -30,6 +31,11 @@ Public Class GestionUsuarios
         End If
     End Sub
 
+    Private Sub TxBNombre_TextChanged(sender As Object, e As EventArgs) Handles TxBNombre.TextChanged
+
+
+    End Sub
+
     Private Sub BtnAceptar_Click(sender As Object, e As EventArgs) Handles BtnAceptar.Click
         If TxBNombre.Text = "" Or TxBApe1.Text = "" Or TxBDNI.Text = "" Or TxBPassWord.Text = "" Or TxbCodigo.Text = "" Then
             MsgBox("Los campos de nombre, primer apellido, D.N.I., contraseña y rol son obligatorios.", MsgBoxStyle.Information)
@@ -37,7 +43,7 @@ Public Class GestionUsuarios
 
             Dim file As New Ficheros
             'se crea el usuario
-            Dim user As New Usuario(txBCodigo.Text, TxBPassWord.Text, TxBNombre.Text, TxBApe1.Text, TxBApe2.Text, TxBDNI.Text, TxBTel.Text, TxBEmail.Text, TxBDireccion.Text)
+            Dim user As New Usuario(TxbCodigo.Text, TxBPassWord.Text, TxBNombre.Text, TxBApe1.Text, TxBApe2.Text, TxBDNI.Text, TxBTel.Text, TxBEmail.Text, TxBDireccion.Text)
             file.guardarUsuario(user)
 
         End If

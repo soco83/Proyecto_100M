@@ -112,44 +112,50 @@ Partial Class GestionUsuarios
         'TxBEmail
         '
         Me.TxBEmail.Location = New System.Drawing.Point(209, 261)
+        Me.TxBEmail.MaxLength = 30
         Me.TxBEmail.Name = "TxBEmail"
         Me.TxBEmail.Size = New System.Drawing.Size(351, 32)
-        Me.TxBEmail.TabIndex = 7
+        Me.TxBEmail.TabIndex = 6
         '
         'TxBDNI
         '
         Me.TxBDNI.Location = New System.Drawing.Point(209, 223)
+        Me.TxBDNI.MaxLength = 9
         Me.TxBDNI.Name = "TxBDNI"
         Me.TxBDNI.Size = New System.Drawing.Size(351, 32)
-        Me.TxBDNI.TabIndex = 6
+        Me.TxBDNI.TabIndex = 5
         '
         'TxBApe2
         '
         Me.TxBApe2.Location = New System.Drawing.Point(209, 185)
+        Me.TxBApe2.MaxLength = 30
         Me.TxBApe2.Name = "TxBApe2"
         Me.TxBApe2.Size = New System.Drawing.Size(351, 32)
-        Me.TxBApe2.TabIndex = 5
+        Me.TxBApe2.TabIndex = 4
         '
         'TxBTel
         '
         Me.TxBTel.Location = New System.Drawing.Point(209, 299)
+        Me.TxBTel.MaxLength = 9
         Me.TxBTel.Name = "TxBTel"
         Me.TxBTel.Size = New System.Drawing.Size(351, 32)
-        Me.TxBTel.TabIndex = 8
+        Me.TxBTel.TabIndex = 7
         '
         'TxBNombre
         '
         Me.TxBNombre.Location = New System.Drawing.Point(209, 44)
+        Me.TxBNombre.MaxLength = 20
         Me.TxBNombre.Name = "TxBNombre"
         Me.TxBNombre.Size = New System.Drawing.Size(351, 32)
-        Me.TxBNombre.TabIndex = 3
+        Me.TxBNombre.TabIndex = 1
         '
         'TxBApe1
         '
         Me.TxBApe1.Location = New System.Drawing.Point(209, 147)
+        Me.TxBApe1.MaxLength = 30
         Me.TxBApe1.Name = "TxBApe1"
         Me.TxBApe1.Size = New System.Drawing.Size(351, 32)
-        Me.TxBApe1.TabIndex = 4
+        Me.TxBApe1.TabIndex = 3
         '
         'BtnAceptar
         '
@@ -181,13 +187,15 @@ Partial Class GestionUsuarios
         'TxBDireccion
         '
         Me.TxBDireccion.Location = New System.Drawing.Point(209, 337)
+        Me.TxBDireccion.MaxLength = 30
         Me.TxBDireccion.Name = "TxBDireccion"
         Me.TxBDireccion.Size = New System.Drawing.Size(351, 32)
-        Me.TxBDireccion.TabIndex = 9
+        Me.TxBDireccion.TabIndex = 8
         '
         'TxBPassWord
         '
         Me.TxBPassWord.Location = New System.Drawing.Point(209, 82)
+        Me.TxBPassWord.MaxLength = 20
         Me.TxBPassWord.Name = "TxBPassWord"
         Me.TxBPassWord.Size = New System.Drawing.Size(351, 32)
         Me.TxBPassWord.TabIndex = 2
