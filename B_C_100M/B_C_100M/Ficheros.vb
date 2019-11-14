@@ -100,7 +100,7 @@
             End While
 
         Catch ex As Exception
-            MsgBox("Fallo en la lectura, por favor vuelva a intentarlo", 48, "Fallo Lectura")
+            MsgBox("Fallo en la lectura, por favor vuelva a intentarlo.", 48, "Fallo Lectura")
             registrarErrores(Err.Description)
         End Try
 
@@ -129,7 +129,7 @@
 
 
         Catch ex As Exception
-            MsgBox("Fallo en la lectura, por favor vuelva a intentarlo", 48, "Fallo Lectura")
+            MsgBox("Fallo en la lectura, por favor vuelva a intentarlo.", 48, "Fallo Lectura")
             registrarErrores(Err.Description)
         End Try
 
@@ -146,7 +146,7 @@
 
         Try
             If codigo = 1 Then
-                MsgBox("no se puede borrar al administrador.", 64, "Fallo al borrar")
+                MsgBox("No se puede borrar al administrador.", 64, "Fallo al borrar")
                 Exit Sub
             End If
             FileOpen(1, "ficheros\usuarios", OpenMode.Random, OpenAccess.Write,, Len(users))
@@ -159,9 +159,9 @@
             users.direccion = ""
             users.email = ""
             FilePut(1, users, codigo)
-            MsgBox("registro borrado correctamente", 64, "Información")
+            MsgBox("Registro borrado correctamente.", 64, "Información")
         Catch ex As Exception
-            MsgBox("Fallo al borrar el registro, por favor vuelva a intentarlo", 48, "Fallos al borrar")
+            MsgBox("Fallo al borrar el registro, por favor vuelva a intentarlo.", 48, "Fallos al borrar")
             registrarErrores(Err.Description)
         End Try
         FileClose(1)
@@ -213,7 +213,7 @@
             product.nombre = ""
             product.precio = 0
             FilePut(2, product, codigo)
-            MsgBox("registro borrado correctamente", 64, "Información")
+            MsgBox("Registro borrado correctamente.", 64, "Información")
         Catch ex As Exception
             MsgBox("Se produjo un fallo al borrar el registro, por favor vuelva a intentarlo", 48, "Fallos al borrar")
             registrarErrores(Err.Description)

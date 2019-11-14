@@ -44,7 +44,9 @@ Partial Class Pago
         Me.LbADevolver = New System.Windows.Forms.Label()
         Me.BtnAceptar = New System.Windows.Forms.Button()
         Me.TxBHaPagado = New System.Windows.Forms.TextBox()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.FlowLayoutPanel1.SuspendLayout()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'FlowLayoutPanel1
@@ -245,11 +247,22 @@ Partial Class Pago
         Me.TxBHaPagado.Size = New System.Drawing.Size(100, 32)
         Me.TxBHaPagado.TabIndex = 8
         '
+        'PictureBox1
+        '
+        Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
+        Me.PictureBox1.Location = New System.Drawing.Point(18, 251)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(217, 186)
+        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox1.TabIndex = 9
+        Me.PictureBox1.TabStop = False
+        '
         'Pago
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(13.0!, 26.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(267, 211)
+        Me.ClientSize = New System.Drawing.Size(267, 204)
+        Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.TxBHaPagado)
         Me.Controls.Add(Me.BtnAceptar)
         Me.Controls.Add(Me.LbADevolver)
@@ -265,6 +278,7 @@ Partial Class Pago
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Pago"
         Me.FlowLayoutPanel1.ResumeLayout(False)
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -291,4 +305,5 @@ Partial Class Pago
     Friend WithEvents LbADevolver As Label
     Friend WithEvents BtnAceptar As Button
     Friend WithEvents TxBHaPagado As TextBox
+    Friend WithEvents PictureBox1 As PictureBox
 End Class

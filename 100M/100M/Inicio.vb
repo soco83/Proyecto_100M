@@ -11,7 +11,7 @@ Public Class Inicio
             FormMain.Show()
             Me.Hide()
         Else
-            MsgBox("Nombre contraseña incorrectos, por favor vuelva a intentarlo.", 64, "Fallo de inicio de sesión")
+            MsgBox("Nombre y/o contraseña incorrectos, por favor vuelva a intentarlo.", 64, "Fallo de inicio de sesión")
             TxBNombre.Clear()
             TxBPassword.Clear()
             TxBNombre.Focus()
@@ -25,7 +25,7 @@ Public Class Inicio
             Try
                 Application.Exit()
             Catch ex As Exception
-                MsgBox("No se ha podido salir, intentelo de nuevo.", MsgBoxStyle.Critical)
+                MsgBox("No se ha podido salir, intentelo de nuevo.", MsgBoxStyle.Critical, "ERROR al salir")
             End Try
         End If
     End Sub

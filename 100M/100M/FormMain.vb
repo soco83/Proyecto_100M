@@ -130,7 +130,7 @@ Public Class FormMain
             venta.annadirProducto(productos)
             sacarLista(venta.getLista)
         Catch ex As Exception
-            MsgBox("Seleccione un producto primero", 64, "Fallo al insertar producto")
+            MsgBox("Seleccione un producto primero.", 64, "Fallo al insertar producto")
         End Try
 
 
@@ -142,7 +142,7 @@ Public Class FormMain
             venta.modificarPrecioTotal()
             sacarLista(venta.getLista)
         Catch ex As Exception
-            MsgBox("Selecciona un producto a eliminar del tiquet.", MsgBoxStyle.Information)
+            MsgBox("Selecciona un producto a eliminar del tiquet.", MsgBoxStyle.Information, "Seleccione un producto")
         End Try
     End Sub
     Private Sub BtnAñadir1producto_Click(sender As Object, e As EventArgs) Handles BtnAñadir1producto.Click
@@ -153,7 +153,7 @@ Public Class FormMain
             sacarLista(venta.getLista)
             LBTiquet.SetSelected(a, True)
         Catch ex As Exception
-            MsgBox(Err.Description & "selecciona un producto para añadir.", 64, "Producto no seleccionado")
+            MsgBox("Selecciona un producto para añadir.", 64, "Producto no seleccionado")
         End Try
 
     End Sub
@@ -171,7 +171,7 @@ Public Class FormMain
             sacarLista(venta.getLista)
             LBTiquet.SetSelected(a, True)
         Catch ex As Exception
-            MsgBox("selecciona un producto para borrar.", 64, "Producto no seleccionado")
+            MsgBox("Selecciona un producto para borrar.", 64, "Producto no seleccionado")
         End Try
     End Sub
 
@@ -296,10 +296,10 @@ Public Class FormMain
                 AddHandler PrintDocument1.PrintPage, AddressOf imprimirTiquet
                 PrintDocument1.Print()
             Catch ex As Exception
-                MsgBox("Error durante la impresión del tiquet. Compruebe que la impresora está conectada al ordenador, está enchufada, tiene papel y tinta...", MsgBoxStyle.Exclamation)
+                MsgBox("Error durante la impresión del tiquet. Compruebe que la impresora está conectada al ordenador, está enchufada, tiene papel y tinta...", MsgBoxStyle.Exclamation, "Error durante la impresión")
             End Try
         Else
-            MsgBox("Todavía no se ha pagado, diríjase a la ventana de pago.", MsgBoxStyle.Information)
+            MsgBox("Todavía no se ha pagado, diríjase a la ventana de pago.", MsgBoxStyle.Information, "Todavía no se ha pagado")
         End If
     End Sub
     Public Sub imprimirTiquet(ByVal sender As Object, ByVal ev As PrintPageEventArgs)
