@@ -18,14 +18,14 @@
       </Struct>
     </NestedTypes>
     <TypeIdentifier>
-      <HashCode>IAEAAAAAAgAAAAAAAACAAAAAAAAAAAAAAIAAEABDBAE=</HashCode>
+      <HashCode>JAEAAAAAQgABAAAAAACAAAAAAAAAAAAAAIAAEABDBAA=</HashCode>
       <FileName>Ficheros.vb</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="B_C_100M.Producto">
     <Position X="7.75" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AQABAAAAAAAQAACAAAABgAAAAIAAEAEAAAAAAAABEAA=</HashCode>
+      <HashCode>AQABAAAAAAAQAACAAAABgAAAAIAAEAkAAAAAAAAREAA=</HashCode>
       <FileName>Producto.vb</FileName>
     </TypeIdentifier>
   </Class>
@@ -42,24 +42,24 @@
   <Class Name="B_C_100M.venta">
     <Position X="6" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>ABAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAIAAEEAAAAA=</HashCode>
+      <HashCode>ABAAABAAAEAABAAAAAAAACAgAAAAAAAAAIAAAGAIQAA=</HashCode>
       <FileName>venta.vb</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="B_C_100M.My.MySettings" Collapsed="true">
-    <Position X="9.5" Y="0.5" Width="1.5" />
+    <Position X="4.25" Y="5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAEAAAAAAAABAAAAAAAAAAAAAAA=</HashCode>
     </TypeIdentifier>
   </Class>
   <Module Name="B_C_100M.My.Resources.Resources" Collapsed="true">
-    <Position X="9.5" Y="2.25" Width="1.5" />
+    <Position X="7.75" Y="5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAABEAAAAQAAAAAAAAAAAAAAAIA=</HashCode>
     </TypeIdentifier>
   </Module>
   <Module Name="B_C_100M.My.MySettingsProperty" Collapsed="true">
-    <Position X="9.5" Y="1.5" Width="1.5" />
+    <Position X="6" Y="5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAA=</HashCode>
     </TypeIdentifier>
