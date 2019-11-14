@@ -121,4 +121,7 @@
   <data name="de la casa" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\de la casa.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="100M_inicio" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\100M_inicio.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
 </root>

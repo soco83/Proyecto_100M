@@ -159,14 +159,7 @@ Partial Class FormMain
         Me.ToolStripSeparator2 = New System.Windows.Forms.ToolStripSeparator()
         Me.VerListaToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
         Me.Cerrar_SesionToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.BtnMenuCasa = New System.Windows.Forms.Button()
         Me.ImageList1 = New System.Windows.Forms.ImageList(Me.components)
-        Me.BtnMenuClasicos = New System.Windows.Forms.Button()
-        Me.BtnMenuEspeciales = New System.Windows.Forms.Button()
-        Me.BtnMenuDulces = New System.Windows.Forms.Button()
-        Me.BtnMenuSuper = New System.Windows.Forms.Button()
-        Me.BtnMenuDrinks = New System.Windows.Forms.Button()
-        Me.BtnMenuPicar = New System.Windows.Forms.Button()
         Me.FLPpicar = New System.Windows.Forms.FlowLayoutPanel()
         Me.Button48 = New System.Windows.Forms.Button()
         Me.Button49 = New System.Windows.Forms.Button()
@@ -198,6 +191,13 @@ Partial Class FormMain
         Me.FLPCategorias = New System.Windows.Forms.FlowLayoutPanel()
         Me.BtnAñadir1producto = New System.Windows.Forms.Button()
         Me.Beliminar1Producto = New System.Windows.Forms.Button()
+        Me.BtnMenuCasa = New System.Windows.Forms.Button()
+        Me.BtnMenuClasicos = New System.Windows.Forms.Button()
+        Me.BtnMenuEspeciales = New System.Windows.Forms.Button()
+        Me.BtnMenuDulces = New System.Windows.Forms.Button()
+        Me.BtnMenuSuper = New System.Windows.Forms.Button()
+        Me.BtnMenuDrinks = New System.Windows.Forms.Button()
+        Me.BtnMenuPicar = New System.Windows.Forms.Button()
         Me.FLPcasa.SuspendLayout()
         Me.FLPClasic.SuspendLayout()
         Me.FLPespecials.SuspendLayout()
@@ -1632,19 +1632,6 @@ Partial Class FormMain
         Me.Cerrar_SesionToolStripMenuItem.Size = New System.Drawing.Size(152, 34)
         Me.Cerrar_SesionToolStripMenuItem.Text = "Cerrar sesión"
         '
-        'BtnMenuCasa
-        '
-        Me.BtnMenuCasa.ImageIndex = 0
-        Me.BtnMenuCasa.ImageList = Me.ImageList1
-        Me.BtnMenuCasa.Location = New System.Drawing.Point(3, 3)
-        Me.BtnMenuCasa.Name = "BtnMenuCasa"
-        Me.BtnMenuCasa.Size = New System.Drawing.Size(157, 107)
-        Me.BtnMenuCasa.TabIndex = 17
-        Me.BtnMenuCasa.Text = "De la casa"
-        Me.BtnMenuCasa.TextAlign = System.Drawing.ContentAlignment.BottomCenter
-        Me.BtnMenuCasa.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
-        Me.BtnMenuCasa.UseVisualStyleBackColor = True
-        '
         'ImageList1
         '
         Me.ImageList1.ImageStream = CType(resources.GetObject("ImageList1.ImageStream"), System.Windows.Forms.ImageListStreamer)
@@ -1656,78 +1643,6 @@ Partial Class FormMain
         Me.ImageList1.Images.SetKeyName(4, "bebidas.jpg")
         Me.ImageList1.Images.SetKeyName(5, "paraPicar.jpg")
         Me.ImageList1.Images.SetKeyName(6, "dulces.jpg")
-        '
-        'BtnMenuClasicos
-        '
-        Me.BtnMenuClasicos.ImageIndex = 1
-        Me.BtnMenuClasicos.ImageList = Me.ImageList1
-        Me.BtnMenuClasicos.Location = New System.Drawing.Point(166, 3)
-        Me.BtnMenuClasicos.Name = "BtnMenuClasicos"
-        Me.BtnMenuClasicos.Size = New System.Drawing.Size(157, 107)
-        Me.BtnMenuClasicos.TabIndex = 18
-        Me.BtnMenuClasicos.Text = "Clasic"
-        Me.BtnMenuClasicos.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
-        Me.BtnMenuClasicos.UseVisualStyleBackColor = True
-        '
-        'BtnMenuEspeciales
-        '
-        Me.BtnMenuEspeciales.ImageIndex = 2
-        Me.BtnMenuEspeciales.ImageList = Me.ImageList1
-        Me.BtnMenuEspeciales.Location = New System.Drawing.Point(329, 3)
-        Me.BtnMenuEspeciales.Name = "BtnMenuEspeciales"
-        Me.BtnMenuEspeciales.Size = New System.Drawing.Size(157, 107)
-        Me.BtnMenuEspeciales.TabIndex = 19
-        Me.BtnMenuEspeciales.Text = "Especiales"
-        Me.BtnMenuEspeciales.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
-        Me.BtnMenuEspeciales.UseVisualStyleBackColor = True
-        '
-        'BtnMenuDulces
-        '
-        Me.BtnMenuDulces.ImageIndex = 6
-        Me.BtnMenuDulces.ImageList = Me.ImageList1
-        Me.BtnMenuDulces.Location = New System.Drawing.Point(492, 3)
-        Me.BtnMenuDulces.Name = "BtnMenuDulces"
-        Me.BtnMenuDulces.Size = New System.Drawing.Size(143, 107)
-        Me.BtnMenuDulces.TabIndex = 20
-        Me.BtnMenuDulces.Text = "Dulce"
-        Me.BtnMenuDulces.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
-        Me.BtnMenuDulces.UseVisualStyleBackColor = True
-        '
-        'BtnMenuSuper
-        '
-        Me.BtnMenuSuper.ImageIndex = 3
-        Me.BtnMenuSuper.ImageList = Me.ImageList1
-        Me.BtnMenuSuper.Location = New System.Drawing.Point(3, 116)
-        Me.BtnMenuSuper.Name = "BtnMenuSuper"
-        Me.BtnMenuSuper.Size = New System.Drawing.Size(157, 107)
-        Me.BtnMenuSuper.TabIndex = 21
-        Me.BtnMenuSuper.Text = "SuperMontys"
-        Me.BtnMenuSuper.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
-        Me.BtnMenuSuper.UseVisualStyleBackColor = True
-        '
-        'BtnMenuDrinks
-        '
-        Me.BtnMenuDrinks.ImageIndex = 4
-        Me.BtnMenuDrinks.ImageList = Me.ImageList1
-        Me.BtnMenuDrinks.Location = New System.Drawing.Point(166, 116)
-        Me.BtnMenuDrinks.Name = "BtnMenuDrinks"
-        Me.BtnMenuDrinks.Size = New System.Drawing.Size(157, 107)
-        Me.BtnMenuDrinks.TabIndex = 22
-        Me.BtnMenuDrinks.Text = "Bebida"
-        Me.BtnMenuDrinks.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
-        Me.BtnMenuDrinks.UseVisualStyleBackColor = True
-        '
-        'BtnMenuPicar
-        '
-        Me.BtnMenuPicar.ImageIndex = 5
-        Me.BtnMenuPicar.ImageList = Me.ImageList1
-        Me.BtnMenuPicar.Location = New System.Drawing.Point(329, 116)
-        Me.BtnMenuPicar.Name = "BtnMenuPicar"
-        Me.BtnMenuPicar.Size = New System.Drawing.Size(157, 107)
-        Me.BtnMenuPicar.TabIndex = 23
-        Me.BtnMenuPicar.Text = "Para picar"
-        Me.BtnMenuPicar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
-        Me.BtnMenuPicar.UseVisualStyleBackColor = True
         '
         'FLPpicar
         '
@@ -2025,6 +1940,91 @@ Partial Class FormMain
         Me.Beliminar1Producto.Text = "- 1"
         Me.Beliminar1Producto.UseVisualStyleBackColor = True
         '
+        'BtnMenuCasa
+        '
+        Me.BtnMenuCasa.ImageIndex = 0
+        Me.BtnMenuCasa.ImageList = Me.ImageList1
+        Me.BtnMenuCasa.Location = New System.Drawing.Point(3, 3)
+        Me.BtnMenuCasa.Name = "BtnMenuCasa"
+        Me.BtnMenuCasa.Size = New System.Drawing.Size(157, 107)
+        Me.BtnMenuCasa.TabIndex = 17
+        Me.BtnMenuCasa.Text = "De la casa"
+        Me.BtnMenuCasa.TextAlign = System.Drawing.ContentAlignment.BottomCenter
+        Me.BtnMenuCasa.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
+        Me.BtnMenuCasa.UseVisualStyleBackColor = True
+        '
+        'BtnMenuClasicos
+        '
+        Me.BtnMenuClasicos.ImageIndex = 1
+        Me.BtnMenuClasicos.ImageList = Me.ImageList1
+        Me.BtnMenuClasicos.Location = New System.Drawing.Point(166, 3)
+        Me.BtnMenuClasicos.Name = "BtnMenuClasicos"
+        Me.BtnMenuClasicos.Size = New System.Drawing.Size(157, 107)
+        Me.BtnMenuClasicos.TabIndex = 18
+        Me.BtnMenuClasicos.Text = "Clasic"
+        Me.BtnMenuClasicos.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
+        Me.BtnMenuClasicos.UseVisualStyleBackColor = True
+        '
+        'BtnMenuEspeciales
+        '
+        Me.BtnMenuEspeciales.ImageIndex = 2
+        Me.BtnMenuEspeciales.ImageList = Me.ImageList1
+        Me.BtnMenuEspeciales.Location = New System.Drawing.Point(329, 3)
+        Me.BtnMenuEspeciales.Name = "BtnMenuEspeciales"
+        Me.BtnMenuEspeciales.Size = New System.Drawing.Size(157, 107)
+        Me.BtnMenuEspeciales.TabIndex = 19
+        Me.BtnMenuEspeciales.Text = "Especiales"
+        Me.BtnMenuEspeciales.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
+        Me.BtnMenuEspeciales.UseVisualStyleBackColor = True
+        '
+        'BtnMenuDulces
+        '
+        Me.BtnMenuDulces.ImageIndex = 6
+        Me.BtnMenuDulces.ImageList = Me.ImageList1
+        Me.BtnMenuDulces.Location = New System.Drawing.Point(492, 3)
+        Me.BtnMenuDulces.Name = "BtnMenuDulces"
+        Me.BtnMenuDulces.Size = New System.Drawing.Size(143, 107)
+        Me.BtnMenuDulces.TabIndex = 20
+        Me.BtnMenuDulces.Text = "Dulce"
+        Me.BtnMenuDulces.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
+        Me.BtnMenuDulces.UseVisualStyleBackColor = True
+        '
+        'BtnMenuSuper
+        '
+        Me.BtnMenuSuper.ImageIndex = 3
+        Me.BtnMenuSuper.ImageList = Me.ImageList1
+        Me.BtnMenuSuper.Location = New System.Drawing.Point(3, 116)
+        Me.BtnMenuSuper.Name = "BtnMenuSuper"
+        Me.BtnMenuSuper.Size = New System.Drawing.Size(157, 107)
+        Me.BtnMenuSuper.TabIndex = 21
+        Me.BtnMenuSuper.Text = "SuperMontys"
+        Me.BtnMenuSuper.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
+        Me.BtnMenuSuper.UseVisualStyleBackColor = True
+        '
+        'BtnMenuDrinks
+        '
+        Me.BtnMenuDrinks.ImageIndex = 4
+        Me.BtnMenuDrinks.ImageList = Me.ImageList1
+        Me.BtnMenuDrinks.Location = New System.Drawing.Point(166, 116)
+        Me.BtnMenuDrinks.Name = "BtnMenuDrinks"
+        Me.BtnMenuDrinks.Size = New System.Drawing.Size(157, 107)
+        Me.BtnMenuDrinks.TabIndex = 22
+        Me.BtnMenuDrinks.Text = "Bebida"
+        Me.BtnMenuDrinks.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
+        Me.BtnMenuDrinks.UseVisualStyleBackColor = True
+        '
+        'BtnMenuPicar
+        '
+        Me.BtnMenuPicar.ImageIndex = 5
+        Me.BtnMenuPicar.ImageList = Me.ImageList1
+        Me.BtnMenuPicar.Location = New System.Drawing.Point(329, 116)
+        Me.BtnMenuPicar.Name = "BtnMenuPicar"
+        Me.BtnMenuPicar.Size = New System.Drawing.Size(157, 107)
+        Me.BtnMenuPicar.TabIndex = 23
+        Me.BtnMenuPicar.Text = "Para picar"
+        Me.BtnMenuPicar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
+        Me.BtnMenuPicar.UseVisualStyleBackColor = True
+        '
         'FormMain
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(13.0!, 26.0!)
@@ -2057,6 +2057,7 @@ Partial Class FormMain
         Me.Controls.Add(Me.TxBDatos)
         Me.Controls.Add(Me.FLPcasa)
         Me.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.5!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Margin = New System.Windows.Forms.Padding(7, 6, 7, 6)
         Me.Name = "FormMain"
         Me.Text = "Pantalla Principal"

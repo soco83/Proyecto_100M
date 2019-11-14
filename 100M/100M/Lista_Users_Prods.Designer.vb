@@ -22,6 +22,7 @@ Partial Class Lista_Users_Prods
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Lista_Users_Prods))
         Me.LbTitulo = New System.Windows.Forms.Label()
         Me.LBVista = New System.Windows.Forms.ListBox()
         Me.BtnEditar = New System.Windows.Forms.Button()
@@ -85,6 +86,7 @@ Partial Class Lista_Users_Prods
         Me.Controls.Add(Me.LBVista)
         Me.Controls.Add(Me.LbTitulo)
         Me.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.5!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Margin = New System.Windows.Forms.Padding(7, 6, 7, 6)
         Me.Name = "Lista_Users_Prods"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen

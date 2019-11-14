@@ -22,6 +22,7 @@ Partial Class GestionProductos
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(GestionProductos))
         Me.LbRol = New System.Windows.Forms.Label()
         Me.LbTitulo = New System.Windows.Forms.Label()
         Me.BtnAceptar = New System.Windows.Forms.Button()
@@ -124,6 +125,7 @@ Partial Class GestionProductos
         Me.Controls.Add(Me.LbPrecio)
         Me.Controls.Add(Me.LbNombre)
         Me.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.5!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Margin = New System.Windows.Forms.Padding(7, 6, 7, 6)
         Me.Name = "GestionProductos"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
