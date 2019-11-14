@@ -30,17 +30,21 @@ Public Class GestionUsuarios
             LDNI.Hide()
             LCorreo.Hide()
             LTel.Hide()
-            Dim user As New Usuario()
-            user = file.leerUsuario(codigo + 1)
-            TxbCodigo.Text = user.getCodigo
-            TxBApe1.Text = user.getApe1
-            TxBApe2.Text = user.getApe2
-            TxBNombre.Text = user.getNombre
-            TxBPassWord.Text = user.getPassword
-            TxBDNI.Text = user.getDNI
-            TxBDireccion.Text = user.getDireccion
-            TxBEmail.Text = user.getEmail
-            TxBTel.Text = user.getTel
+            Try
+                Dim user As New Usuario()
+                user = file.leerUsuario(codigo + 1)
+                TxbCodigo.Text = user.getCodigo
+                TxBApe1.Text = user.getApe1
+                TxBApe2.Text = user.getApe2
+                TxBNombre.Text = user.getNombre
+                TxBPassWord.Text = user.getPassword
+                TxBDNI.Text = user.getDNI
+                TxBDireccion.Text = user.getDireccion
+                TxBEmail.Text = user.getEmail
+                TxBTel.Text = user.getTel
+            Catch ex As Exception
+                Exit Sub
+            End Try
         End If
     End Sub
 

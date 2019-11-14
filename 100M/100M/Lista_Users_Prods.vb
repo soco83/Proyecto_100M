@@ -19,7 +19,7 @@ Public Class Lista_Users_Prods
             Case 2
                 'se ha llegado aquí para ver PRODUCTOS
                 LbTitulo.Text += " productos"
-
+                BtnBorrar.Visible = False
                 listaProduct = file.listarProductos
                 For Each listaP In listaProduct
                     LBVista.Items.Add(listaP.getCodigo & " " & listaP.getNombre & " " & listaP.getPrecio)
