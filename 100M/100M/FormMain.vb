@@ -31,7 +31,7 @@ Public Class FormMain
         FLPpicar.Visible = False
 
         TxBUsuarioConectado.Text = nombreUsuario
-        If Not nombreUsuario = file.leerUsuario(4).getNombre Then
+        If Not nombreUsuario = file.leerUsuario(1).getNombre Then
             UsuariosToolStripMenuItem.Visible = False
             ProductosToolStripMenuItem.Visible = False
         Else
@@ -158,12 +158,13 @@ Public Class FormMain
     End Sub
     Private Sub Beliminar1Producto_Click(sender As Object, e As EventArgs) Handles Beliminar1Producto.Click
         Dim a As Integer = LBTiquet.SelectedIndex
-        If venta.getLista.Item(a).getCantidad = 1 Then
-            venta.getLista.RemoveAt(a)
-            sacarLista(venta.getLista)
-            Exit Sub
-        End If
+
         Try
+            If venta.getLista.Item(a).getCantidad = 1 Then
+                venta.getLista.RemoveAt(a)
+                sacarLista(venta.getLista)
+                Exit Sub
+            End If
             venta.borrar1(LBTiquet.SelectedItem)
             sacarLista(venta.getLista)
             LBTiquet.SetSelected(a, True)

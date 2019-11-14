@@ -29,10 +29,11 @@
     'este metodo se puede utilizar para modificar un registro.
     Public Sub guardarUsuario(ByVal user As Usuario)
         'c será la variable que guardará el codigo del usuario para poder sacar el usuario que se pide.
-        Dim c As Integer = Val(user.getCodigo)
+
         Try
-            FileOpen(1, "usuarios", OpenMode.Random, OpenAccess.Write,, Len(users))
-            users.codigo = user.getCodigo
+            FileOpen(1, "ficheros\usuarios", OpenMode.Random, OpenAccess.Write,, Len(users))
+            Dim c As Integer = FileLen(1) / Len(users) + 1
+            users.codigo = c
             users.nombre = user.getNombre
             users.contrasenna = user.getPassword
             users.apellido1 = user.getApe1
@@ -54,7 +55,7 @@
     Public Function leerUsuario(ByVal codigo As Integer) As Usuario
 
         Try
-            FileOpen(1, "usuarios", OpenMode.Random, OpenAccess.Read,, Len(users))
+            FileOpen(1, "ficheros\usuarios", OpenMode.Random, OpenAccess.Read,, Len(users))
             FileGet(1, users, codigo)
 
         Catch ex As Exception
@@ -73,7 +74,7 @@
         Dim verif As Boolean
         Dim c As Integer = 1
         Try
-            FileOpen(1, "usuarios", OpenMode.Random, OpenAccess.Read,, Len(users))
+            FileOpen(1, "ficheros\usuarios", OpenMode.Random, OpenAccess.Read,, Len(users))
             While Not EOF(1)
                 FileGet(1, users, c)
                 If users.nombre.Trim(" ") = nombre And users.contrasenna.Trim(" ") = contrasenna Then
@@ -101,7 +102,7 @@
         Dim c As Integer = 1
         Dim list As New List(Of Usuario)
         Try
-            FileOpen(1, "usuarios", OpenMode.Random, OpenAccess.Read,, Len(users))
+            FileOpen(1, "ficheros\usuarios", OpenMode.Random, OpenAccess.Read,, Len(users))
             While Not EOF(1)
                 FileGet(1, users, c)
                 If Not String.IsNullOrWhiteSpace(users.codigo) Then
@@ -131,7 +132,11 @@
     Public Sub borrarUsuario(ByVal codigo As Integer)
 
         Try
-            FileOpen(1, "usuarios", OpenMode.Random, OpenAccess.Write,, Len(users))
+            If codigo = 1 Then
+                MsgBox("no se puede borrar al administrador.", 64, "Fallo al borrar")
+                Exit Sub
+            End If
+            FileOpen(1, "ficheros\usuarios", OpenMode.Random, OpenAccess.Write,, Len(users))
             users.codigo = ""
             users.nombre = ""
             users.contrasenna = ""
@@ -152,7 +157,7 @@
     Public Sub guardarProducto(ByVal producto As Producto)
         Dim c As Integer = producto.getCodigo
         Try
-            FileOpen(2, "productos", OpenMode.Random, OpenAccess.Write,, Len(product))
+            FileOpen(2, "ficheros\productos", OpenMode.Random, OpenAccess.Write,, Len(product))
 
             product.codigo = producto.getCodigo
             product.nombre = producto.getNombre
@@ -160,7 +165,7 @@
 
             FilePut(2, product, c)
 
-            MsgBox("Registro guardado correctamente.", 64, "Información")
+            'MsgBox("Registro guardado correctamente.", 64, "Información")
         Catch ex As Exception
             MsgBox("Se produjo un fallo en la escritura del registro, por favor vuelva a intentarlo.", 48, "Fallo escritura")
         End Try
@@ -172,7 +177,7 @@
     Public Function leerProducto(ByVal codigo As Integer) As Producto
         FileClose(2)
         Try
-            FileOpen(2, "productos", OpenMode.Random, OpenAccess.Read,, Len(product))
+            FileOpen(2, "ficheros\productos", OpenMode.Random, OpenAccess.Read,, Len(product))
             FileGet(2, product, codigo)
         Catch ex As Exception
             MsgBox("Se produjo un fallo en la lectura del registro, por favor vuelva a intentarlo", 48, "Fallo lectura")
@@ -207,7 +212,7 @@
         Dim list As New List(Of Producto)
         Try
 
-            FileOpen(2, "productos", OpenMode.Random, OpenAccess.Read,, Len(product))
+            FileOpen(2, "ficheros\productos", OpenMode.Random, OpenAccess.Read,, Len(product))
             While Not EOF(2)
                 FileGet(2, product, c)
                 If product.codigo.Trim(" ") <> "" Then

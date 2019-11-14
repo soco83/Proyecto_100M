@@ -1558,7 +1558,7 @@ Partial Class FormMain
         Me.Button47.Name = "Button47"
         Me.Button47.Size = New System.Drawing.Size(139, 65)
         Me.Button47.TabIndex = 16
-        Me.Button47.Tag = "118"
+        Me.Button47.Tag = "117"
         Me.Button47.Text = "Vaso Paulaner"
         Me.Button47.UseVisualStyleBackColor = True
         '
@@ -1755,7 +1755,7 @@ Partial Class FormMain
         Me.Button48.Name = "Button48"
         Me.Button48.Size = New System.Drawing.Size(139, 65)
         Me.Button48.TabIndex = 0
-        Me.Button48.Tag = "119"
+        Me.Button48.Tag = "118"
         Me.Button48.Text = "Aceitunas"
         Me.Button48.UseVisualStyleBackColor = True
         '
@@ -1765,7 +1765,7 @@ Partial Class FormMain
         Me.Button49.Name = "Button49"
         Me.Button49.Size = New System.Drawing.Size(139, 65)
         Me.Button49.TabIndex = 1
-        Me.Button49.Tag = "120"
+        Me.Button49.Tag = "119"
         Me.Button49.Text = "Chips"
         Me.Button49.UseVisualStyleBackColor = True
         '
@@ -1775,7 +1775,7 @@ Partial Class FormMain
         Me.Button50.Name = "Button50"
         Me.Button50.Size = New System.Drawing.Size(139, 65)
         Me.Button50.TabIndex = 2
-        Me.Button50.Tag = "121"
+        Me.Button50.Tag = "120"
         Me.Button50.Text = "Nachos guacamole"
         Me.Button50.UseVisualStyleBackColor = True
         '
@@ -1785,7 +1785,7 @@ Partial Class FormMain
         Me.Button51.Name = "Button51"
         Me.Button51.Size = New System.Drawing.Size(139, 65)
         Me.Button51.TabIndex = 3
-        Me.Button51.Tag = "122"
+        Me.Button51.Tag = "121"
         Me.Button51.Text = "Nachos queso"
         Me.Button51.UseVisualStyleBackColor = True
         '
@@ -1795,7 +1795,7 @@ Partial Class FormMain
         Me.Button52.Name = "Button52"
         Me.Button52.Size = New System.Drawing.Size(139, 65)
         Me.Button52.TabIndex = 4
-        Me.Button52.Tag = "123"
+        Me.Button52.Tag = "122"
         Me.Button52.Text = "Patatas mayo."
         Me.Button52.UseVisualStyleBackColor = True
         '
@@ -1805,7 +1805,7 @@ Partial Class FormMain
         Me.Button53.Name = "Button53"
         Me.Button53.Size = New System.Drawing.Size(139, 65)
         Me.Button53.TabIndex = 5
-        Me.Button53.Tag = "124"
+        Me.Button53.Tag = "123"
         Me.Button53.Text = "Patatas queso"
         Me.Button53.UseVisualStyleBackColor = True
         '
@@ -1836,7 +1836,7 @@ Partial Class FormMain
         Me.Button56.Name = "Button56"
         Me.Button56.Size = New System.Drawing.Size(139, 65)
         Me.Button56.TabIndex = 8
-        Me.Button56.Tag = "127"
+        Me.Button56.Tag = "126"
         Me.Button56.Text = "Palomitas queso"
         Me.Button56.UseVisualStyleBackColor = True
         '
@@ -1846,7 +1846,7 @@ Partial Class FormMain
         Me.Button57.Name = "Button57"
         Me.Button57.Size = New System.Drawing.Size(139, 65)
         Me.Button57.TabIndex = 9
-        Me.Button57.Tag = "128"
+        Me.Button57.Tag = "127"
         Me.Button57.Text = "Salchichas"
         Me.Button57.UseVisualStyleBackColor = True
         '
@@ -1856,7 +1856,7 @@ Partial Class FormMain
         Me.Button58.Name = "Button58"
         Me.Button58.Size = New System.Drawing.Size(139, 65)
         Me.Button58.TabIndex = 10
-        Me.Button58.Tag = "129"
+        Me.Button58.Tag = "128"
         Me.Button58.Text = "Alitas de pollo"
         Me.Button58.UseVisualStyleBackColor = True
         '

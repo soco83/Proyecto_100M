@@ -11,7 +11,7 @@ Public Class GestionProductos
             Dim prod As New Producto(TxBCodigo.Text, TxBNombre.Text, CSng(TxBPrecio.Text))
             file.guardarProducto(prod)
             'se mete el nuevo producto en el fichero de los productos
-            Me.Close()
+            'Me.Close()
         End If
     End Sub
 
