@@ -1,4 +1,5 @@
-﻿Public Class Validar
+﻿Imports System.Text.RegularExpressions
+Public Class Validar
     Dim a, i, j As Integer
     Dim c, x As Char
 
@@ -79,60 +80,12 @@
         Return letra
     End Function
     Public Function validarMail(ByVal mail As String) As Boolean
-        Dim valido As Boolean = True
-        Dim dom As Integer = 30
-        Dim ext As Integer = 40
-        Dim nopunto As Boolean = True
-        Dim noarroba As Boolean = True
-        Dim s As String = "ºª\!|@·#$%&¬/()=?'¿¡€`^[*+]¨´{ç}Ç,;:-_<>"
-        Dim s2 As String = "ºª\!|@·#$%&¬/()=?'¿¡€`^[*+]¨´{ç}Ç,;:-_<>."
-        If mail.Contains(".") And mail.Contains("@") Then
-            valido = True
-        Else
-            valido = False
-        End If
+        ' retorna true o false 
 
-        For a = 1 To mail.Length
-            c = GetChar(mail, a)
-            If c = "@" And noarroba = True Then
-                dom = a
-                noarroba = False
-            End If
-            If a > dom Then
-                For i = 1 To s.Length
-                    If c = GetChar(s, i) Then
-                        valido = False
-                    End If
-                Next
-                'Se permiten números en el dominio
-                If c = "." And nopunto = True Then
-                    ext = a
-                    nopunto = False
-                End If
-                If a > ext Then
-                    For i = 1 To s2.Length
-                        If c = GetChar(s2, i) Then
-                            valido = False
-                        End If
-                    Next
-                    If IsNumeric(c) Then
-                        valido = False
-                    End If
-                End If
-            End If
-        Next
-        If dom > ext Then
-            valido = False
-        End If
-
-        If mail.Length = ext Then
-            valido = False
-        End If
-        If Not mail.Substring(dom).Contains(".") Then
-            valido = False
-        End If
-        Return valido
+        Return Regex.IsMatch(mail,
+                "^([\w-]+\.)*?[\w-]+@[\w-]+\.([\w-]+\.)*?[\w]+$")
     End Function
+
     Public Function validarNombre(ByVal nom As String) As Boolean
         Dim valido As Boolean = True
         Dim s As String = "ºª\!|@·#$%&¬/()=?'¿¡€`^[*+]¨´{ç}Ç,;.:-_<>"
@@ -335,10 +288,10 @@
         For i = 1 To descr.Length
             c = GetChar(descr, i)
             For j = 1 To s.Length
-                    If c = GetChar(s, j) Then
-                        valido = False
-                    End If
-                Next
+                If c = GetChar(s, j) Then
+                    valido = False
+                End If
+            Next
 
 
         Next
