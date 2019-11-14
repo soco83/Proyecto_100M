@@ -69,7 +69,11 @@
             registrarErrores(Err.Description)
         End Try
         FileClose(1)
-        Dim user As New Usuario(users.codigo.Trim(" "), users.contrasenna.Trim(" "), users.nombre.Trim(" "), users.apellido1.Trim(" "), users.apellido2.Trim(" "), users.dni.Trim(" "), users.email.Trim(" "), users.direccion.Trim(" "), users.telefono.Trim(" "))
+        Try
+            Dim user As New Usuario(users.codigo.Trim(" "), users.contrasenna.Trim(" "), users.nombre.Trim(" "), users.apellido1.Trim(" "), users.apellido2.Trim(" "), users.dni.Trim(" "), users.email.Trim(" "), users.direccion.Trim(" "), users.telefono.Trim(" "))
+        Catch ex As Exception
+            MsgBox("Porfavor, selecciona un usuario a editar.", 64, "Seleccion un usuario")
+        End Try
 
         Return user
     End Function

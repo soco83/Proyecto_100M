@@ -309,7 +309,7 @@ Public Class FormMain
 
             'se imprime la imagen del principio
             ev.Graphics.DrawImage(Image.FromFile(foto), 120, y, 318, 159)
-            y += 120
+            y += 160
 
             'se imprime la cabecera de información del local
             Dim cabecera As String
@@ -343,7 +343,7 @@ Public Class FormMain
             y += 20
 
             'se imprime el total del tiquet
-            Dim euros As String = "             TOTAL: " & total & "€" & vbCrLf & "              IVA INCLUIDO"
+            Dim euros As String = "             TOTAL: " & venta.getPrecioTotal & "€" & vbCrLf & "              IVA INCLUIDO"
             ev.Graphics.DrawString(euros, New Font("Arial", 9, FontStyle.Regular), Brushes.Black, 120, y)
             y += 40
 
@@ -354,10 +354,10 @@ Public Class FormMain
             'se imprime el apartado de impuestos del tiquet
             Dim impuestos As String
             Dim baseImponible, iva As Single
-            iva = total * 0.1
-            baseImponible = total - iva
+            iva = venta.getPrecioTotal * 0.1
+            baseImponible = venta.getPrecioTotal - iva
             impuestos = "Base Imp       %IVA        IVA" & vbCrLf &
-                        "     " & baseImponible & "          10         " & iva & vbCrLf &
+                        "       " & baseImponible & "           10          " & iva & vbCrLf &
                         "              Forma de pago:" & vbCrLf &
                         " EFECTIVO:" & elClienteHaPagado & vbCrLf &
                         " ENTREGA: " & elClienteHaPagado & vbCrLf &

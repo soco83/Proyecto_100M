@@ -27,17 +27,23 @@ Public Class GestionProductos
     End Sub
 
     Private Sub GestionProductos_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        LbRol.Visible = False
+        TxBCodigo.Visible = False
         If openType = 1 Then
             'crear un nuevo usuario
             LbTitulo.Text = "Nuevo producto"
         ElseIf openType = 2 Then
             'editar usuario seleccionado
             LbTitulo.Text = "Editar producto"
-            Dim productos As Producto
-            productos = file.leerProducto(codigo + 1)
-            TxBCodigo.Text = productos.getCodigo
-            TxBNombre.Text = productos.getNombre
-            TxBPrecio.Text = productos.getPrecio
+            Try
+                Dim productos As Producto
+                productos = file.leerProducto(codigo + 1)
+                TxBCodigo.Text = productos.getCodigo
+                TxBNombre.Text = productos.getNombre
+                TxBPrecio.Text = productos.getPrecio
+            Catch ex As Exception
+                Exit Sub
+            End Try
         End If
     End Sub
 End Class
