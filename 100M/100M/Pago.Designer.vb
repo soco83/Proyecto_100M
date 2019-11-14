@@ -22,6 +22,7 @@ Partial Class Pago
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Pago))
         Me.FlowLayoutPanel1 = New System.Windows.Forms.FlowLayoutPanel()
         Me.Btn5 = New System.Windows.Forms.Button()
         Me.Btn10 = New System.Windows.Forms.Button()
@@ -258,6 +259,7 @@ Partial Class Pago
         Me.Controls.Add(Me.Lb1)
         Me.Controls.Add(Me.FlowLayoutPanel1)
         Me.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.5!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Margin = New System.Windows.Forms.Padding(7, 6, 7, 6)
         Me.Name = "Pago"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen

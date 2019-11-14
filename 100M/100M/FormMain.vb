@@ -277,7 +277,12 @@ Public Class FormMain
     End Sub
 
     Private Sub CajaToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles CajaToolStripMenuItem.Click
-
+        If seHaPagado = True Then
+            CerrarCaja.recaudacion = CSng(LbPrecioTotal.Text)
+            CerrarCaja.Show()
+        Else
+            MsgBox("Todavía no se ha realizado ninguna venta.", MsgBoxStyle.Information, "Ninguna venta todavía")
+        End If
     End Sub
 
     Private Sub BtnPagar_Click(sender As Object, e As EventArgs) Handles BtnPagar.Click
@@ -328,7 +333,6 @@ Public Class FormMain
             Dim tiquet As String
             tiquet = ""
             For a = 0 To LBTiquet.Items.Count - 1
-                '                      (que quieres imprimir,                                                                                   cómo lo quieres imprimir,                color, coordenada x en el papel, coordenada y)
                 ev.Graphics.DrawString(LBCantidad.Items.Item(a) & "   " & LBTiquet.Items.Item(a) & "                " & LBPrecio.Items.Item(a), New Font("Arial", 9, FontStyle.Regular), Brushes.Black, 120, y)
                 'salto de línea
                 y += 20
