@@ -85,7 +85,9 @@ Public Class Validar
         Return Regex.IsMatch(mail,
                 "^([\w-]+\.)*?[\w-]+@[\w-]+\.([\w-]+\.)*?[\w]+$")
     End Function
-
+    Public Function validarDecimal(ByVal decimales As String) As Boolean
+        Return Regex.IsMatch(decimales, "^(\d{1}\.)?(\d+\.?)+(,\d{2})?$")
+    End Function
     Public Function validarNombre(ByVal nom As String) As Boolean
         Dim valido As Boolean = True
         Dim s As String = "ºª\!|@·#$%&¬/()=?'¿¡€`^[*+]¨´{ç}Ç,;.:-_<>"

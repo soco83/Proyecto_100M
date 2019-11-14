@@ -3,7 +3,13 @@ Imports B_C_Validaciones
 Public Class GestionProductos
     Public openType, codigo As Integer
     Public file As New Ficheros
+    Dim val As New Validar
     Private Sub BtnAceptar_Click(sender As Object, e As EventArgs) Handles BtnAceptar.Click
+        If Not val.validarDecimal(TxBPrecio.Text) Then
+            MsgBox("el precio no es correcto, por favor vuelva a introducirlo.", 64, "precio incorrecto")
+            Exit Sub
+        End If
+
         If TxBCodigo.Text = "" Or TxBNombre.Text = "" Or TxBPrecio.Text = "" Then
             MsgBox("Los campos de categoría, nombre y precio son obligatorios. Por favor rellénelos.", MsgBoxStyle.Information)
         Else
@@ -11,7 +17,9 @@ Public Class GestionProductos
             Dim prod As New Producto(TxBCodigo.Text, TxBNombre.Text, CSng(TxBPrecio.Text))
             file.guardarProducto(prod)
 
-            'Me.Close()
+            Me.Close()
+            Lista_Users_Prods.openType = 2
+            Lista_Users_Prods.Show()
         End If
     End Sub
 
@@ -42,7 +50,9 @@ Public Class GestionProductos
                 TxBNombre.Text = productos.getNombre
                 TxBPrecio.Text = productos.getPrecio
             Catch ex As Exception
-                Exit Sub
+                Me.Close()
+                Lista_Users_Prods.openType = 2
+                Lista_Users_Prods.Show()
             End Try
         End If
     End Sub

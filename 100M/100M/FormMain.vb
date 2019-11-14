@@ -179,9 +179,9 @@ Public Class FormMain
         LBPrecio.Items.Clear()
         LBTiquet.Items.Clear()
         LBCantidad.Items.Clear()
-        LbPrecioTotal.Text = venta.getPrecioTotal
+        LbPrecioTotal.Text = FormatNumber(venta.getPrecioTotal, 2)
         For Each list In lista
-            LBPrecio.Items.Add(list.getPrecioTotalUnitario)
+            LBPrecio.Items.Add(FormatNumber(list.getPrecioTotalUnitario, 2))
             LBTiquet.Items.Add(list.getNombre)
             LBCantidad.Items.Add(list.getCantidad)
 
@@ -265,7 +265,7 @@ Public Class FormMain
         Lista_Users_Prods.Show()
     End Sub
 
-    Private Sub NuevoPToolStripMenuItem1_Click(sender As Object, e As EventArgs) Handles NuevoPToolStripMenuItem1.Click
+    Private Sub NuevoPToolStripMenuItem1_Click(sender As Object, e As EventArgs)
         'llama al form donde se crean productos nuevos
         GestionProductos.openType = 1
         GestionProductos.Show()

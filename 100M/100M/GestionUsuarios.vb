@@ -43,7 +43,9 @@ Public Class GestionUsuarios
                 TxBEmail.Text = user.getEmail
                 TxBTel.Text = user.getTel
             Catch ex As Exception
-                Exit Sub
+                Me.Close()
+                Lista_Users_Prods.openType = 1
+                Lista_Users_Prods.Show()
             End Try
         End If
     End Sub
@@ -126,7 +128,9 @@ Public Class GestionUsuarios
             'se crea el usuario
             Dim user As New Usuario(TxbCodigo.Text, TxBPassWord.Text, TxBNombre.Text, TxBApe1.Text, TxBApe2.Text, TxBDNI.Text, TxBTel.Text, TxBEmail.Text, TxBDireccion.Text)
             file.guardarUsuario(user)
-
+            Me.Close()
+            Lista_Users_Prods.openType = 1
+            Lista_Users_Prods.Show()
 
 
         End If

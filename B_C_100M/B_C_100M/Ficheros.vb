@@ -71,11 +71,12 @@
         FileClose(1)
         Try
             Dim user As New Usuario(users.codigo.Trim(" "), users.contrasenna.Trim(" "), users.nombre.Trim(" "), users.apellido1.Trim(" "), users.apellido2.Trim(" "), users.dni.Trim(" "), users.email.Trim(" "), users.direccion.Trim(" "), users.telefono.Trim(" "))
+            Return user
         Catch ex As Exception
             MsgBox("Porfavor, selecciona un usuario a editar.", 64, "Seleccion un usuario")
         End Try
 
-        Return user
+
     End Function
 
 
@@ -179,7 +180,7 @@
 
             FilePut(2, product, c)
 
-            'MsgBox("Registro guardado correctamente.", 64, "Información")
+            MsgBox("Registro guardado correctamente.", 64, "Información")
         Catch ex As Exception
             MsgBox("Se produjo un fallo en la escritura del registro, por favor vuelva a intentarlo.", 48, "Fallo escritura")
             registrarErrores(Err.Description)
