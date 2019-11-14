@@ -12,7 +12,7 @@
 
 
     'este es el constructor de la clase el cual solo se pasa el nombre y la cantidad.
-    Public Sub New(ByVal codigo As String, ByVal nombre As String, ByVal precio As Single) ', ByVal precio As Single)
+    Public Sub New(ByVal codigo As String, ByVal nombre As String, ByVal precio As Single)
         Me.codigo = codigo
         Me.nombre = nombre
         Me.precio = precio
@@ -51,7 +51,7 @@
     Public Function getPrecioTotalUnitario() As Single
         Return precioTotalUnitario
     End Function
-
+    'metodos para cambiar los atributos de la clase
     Public Sub setPrecio(ByVal precio As Single)
         Me.Precio = precio
     End Sub

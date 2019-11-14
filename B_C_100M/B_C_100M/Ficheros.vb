@@ -29,10 +29,15 @@
     'este metodo se puede utilizar para modificar un registro.
     Public Sub guardarUsuario(ByVal user As Usuario)
         'c será la variable que guardará el codigo del usuario para poder sacar el usuario que se pide.
-
+        Dim c As Integer
         Try
             FileOpen(1, "ficheros\usuarios", OpenMode.Random, OpenAccess.Write,, Len(users))
-            Dim c As Integer = FileLen(1) / Len(users) + 1
+            If user.getCodigo = "" Then
+                c = CInt(FileLen(1) / Len(users) + 1)
+            Else
+                c = Val(user.getCodigo)
+            End If
+
             users.codigo = c
             users.nombre = user.getNombre
             users.contrasenna = user.getPassword
@@ -42,10 +47,10 @@
             users.direccion = user.getDireccion
             users.email = user.getEmail
 
-            FilePut(1, users, c)
+            FilePut(1, users, 2)
             MsgBox("Registro guardado correctamente.", 64, "Información")
         Catch ex As Exception
-            MsgBox("Fallo en al guardar el registro, por favor vuelva a intentarlo", 48, "Fallo escritura")
+            MsgBox(Err.Description & "Fallo en al guardar el registro, por favor vuelva a intentarlo", 48, "Fallo escritura")
             registrarErrores(Err.Description)
         End Try
         FileClose(1)
@@ -234,6 +239,7 @@
 
         Catch ex As Exception
             MsgBox("Fallo en la lectura, por favor vuelva a intentarlo", 48, "Fallo Lectura")
+            registrarErrores(Err.Description)
         End Try
 
         FileClose(2)
@@ -249,6 +255,7 @@
 
         Catch ex As Exception
             MsgBox("Se produjo un fallo en la escritura del registro, por favor vuelva a intentarlo", 48, "Fallo escritura")
+
         End Try
         FileClose(3)
 
@@ -263,6 +270,7 @@
             PrintLine(4, nombre, contrasenna, Now)
         Catch ex As Exception
             MsgBox("Se produjo un fallo en la escritura del registro, por favor vuelva a intentarlo", 48, "Fallo escritura")
+            registrarErrores(Err.Description)
         End Try
         FileClose(4)
 

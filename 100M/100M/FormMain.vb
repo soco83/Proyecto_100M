@@ -139,6 +139,7 @@ Public Class FormMain
     Private Sub BtnBorrarLinea_Click(sender As Object, e As EventArgs) Handles BtnBorrarLinea.Click
         Try
             venta.getLista.RemoveAt(LBTiquet.SelectedIndex)
+            venta.modificarPrecioTotal()
             sacarLista(venta.getLista)
         Catch ex As Exception
             MsgBox("Selecciona un producto a eliminar del tiquet.", MsgBoxStyle.Information)
@@ -161,6 +162,7 @@ Public Class FormMain
 
         Try
             If venta.getLista.Item(a).getCantidad = 1 Then
+                venta.borrar1(LBTiquet.SelectedItem)
                 venta.getLista.RemoveAt(a)
                 sacarLista(venta.getLista)
                 Exit Sub

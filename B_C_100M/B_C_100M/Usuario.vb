@@ -1,8 +1,8 @@
 ﻿Public Class Usuario
-    Dim codigo, password, nombre, ape1, ape2, dni, email, direccion As String
-    Dim tel As String
+    Dim codigo, password, nombre, ape1, ape2, dni, email, direccion, tel As String
 
 
+    'constructores de la clase 
     Public Sub New(ByVal codigo As String, ByVal password As String, ByVal nombre As String, ByVal ape1 As String, ByVal ape2 As String, ByVal dni As String, ByVal email As String, ByVal direccion As String, ByVal tel As String)
         Me.codigo = codigo
         Me.password = password

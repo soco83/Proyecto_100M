@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class GestionUsuarios
     Inherits System.Windows.Forms.Form
 
     'Form reemplaza a Dispose para limpiar la lista de componentes.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,7 +20,7 @@ Partial Class GestionUsuarios
     'NOTA: el Diseñador de Windows Forms necesita el siguiente procedimiento
     'Se puede modificar usando el Diseñador de Windows Forms.  
     'No lo modifique con el editor de código.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.LbNombre = New System.Windows.Forms.Label()
         Me.LbApe1 = New System.Windows.Forms.Label()
@@ -43,6 +43,12 @@ Partial Class GestionUsuarios
         Me.LbPassword = New System.Windows.Forms.Label()
         Me.LBSeparador = New System.Windows.Forms.Label()
         Me.TxbCodigo = New System.Windows.Forms.TextBox()
+        Me.LNombre = New System.Windows.Forms.Label()
+        Me.LApe1 = New System.Windows.Forms.Label()
+        Me.LApe2 = New System.Windows.Forms.Label()
+        Me.LDNI = New System.Windows.Forms.Label()
+        Me.LCorreo = New System.Windows.Forms.Label()
+        Me.LTel = New System.Windows.Forms.Label()
         Me.SuspendLayout()
         '
         'LbNombre
@@ -114,7 +120,7 @@ Partial Class GestionUsuarios
         Me.TxBEmail.Location = New System.Drawing.Point(209, 261)
         Me.TxBEmail.MaxLength = 30
         Me.TxBEmail.Name = "TxBEmail"
-        Me.TxBEmail.Size = New System.Drawing.Size(351, 32)
+        Me.TxBEmail.Size = New System.Drawing.Size(307, 32)
         Me.TxBEmail.TabIndex = 6
         '
         'TxBDNI
@@ -122,7 +128,7 @@ Partial Class GestionUsuarios
         Me.TxBDNI.Location = New System.Drawing.Point(209, 223)
         Me.TxBDNI.MaxLength = 9
         Me.TxBDNI.Name = "TxBDNI"
-        Me.TxBDNI.Size = New System.Drawing.Size(351, 32)
+        Me.TxBDNI.Size = New System.Drawing.Size(307, 32)
         Me.TxBDNI.TabIndex = 5
         '
         'TxBApe2
@@ -130,7 +136,7 @@ Partial Class GestionUsuarios
         Me.TxBApe2.Location = New System.Drawing.Point(209, 185)
         Me.TxBApe2.MaxLength = 30
         Me.TxBApe2.Name = "TxBApe2"
-        Me.TxBApe2.Size = New System.Drawing.Size(351, 32)
+        Me.TxBApe2.Size = New System.Drawing.Size(307, 32)
         Me.TxBApe2.TabIndex = 4
         '
         'TxBTel
@@ -138,7 +144,7 @@ Partial Class GestionUsuarios
         Me.TxBTel.Location = New System.Drawing.Point(209, 299)
         Me.TxBTel.MaxLength = 9
         Me.TxBTel.Name = "TxBTel"
-        Me.TxBTel.Size = New System.Drawing.Size(351, 32)
+        Me.TxBTel.Size = New System.Drawing.Size(307, 32)
         Me.TxBTel.TabIndex = 7
         '
         'TxBNombre
@@ -146,7 +152,7 @@ Partial Class GestionUsuarios
         Me.TxBNombre.Location = New System.Drawing.Point(209, 44)
         Me.TxBNombre.MaxLength = 20
         Me.TxBNombre.Name = "TxBNombre"
-        Me.TxBNombre.Size = New System.Drawing.Size(351, 32)
+        Me.TxBNombre.Size = New System.Drawing.Size(307, 32)
         Me.TxBNombre.TabIndex = 1
         '
         'TxBApe1
@@ -154,7 +160,7 @@ Partial Class GestionUsuarios
         Me.TxBApe1.Location = New System.Drawing.Point(209, 147)
         Me.TxBApe1.MaxLength = 30
         Me.TxBApe1.Name = "TxBApe1"
-        Me.TxBApe1.Size = New System.Drawing.Size(351, 32)
+        Me.TxBApe1.Size = New System.Drawing.Size(307, 32)
         Me.TxBApe1.TabIndex = 3
         '
         'BtnAceptar
@@ -189,7 +195,7 @@ Partial Class GestionUsuarios
         Me.TxBDireccion.Location = New System.Drawing.Point(209, 337)
         Me.TxBDireccion.MaxLength = 30
         Me.TxBDireccion.Name = "TxBDireccion"
-        Me.TxBDireccion.Size = New System.Drawing.Size(351, 32)
+        Me.TxBDireccion.Size = New System.Drawing.Size(307, 32)
         Me.TxBDireccion.TabIndex = 8
         '
         'TxBPassWord
@@ -197,7 +203,7 @@ Partial Class GestionUsuarios
         Me.TxBPassWord.Location = New System.Drawing.Point(209, 82)
         Me.TxBPassWord.MaxLength = 20
         Me.TxBPassWord.Name = "TxBPassWord"
-        Me.TxBPassWord.Size = New System.Drawing.Size(351, 32)
+        Me.TxBPassWord.Size = New System.Drawing.Size(307, 32)
         Me.TxBPassWord.TabIndex = 2
         '
         'LbPassword
@@ -228,11 +234,77 @@ Partial Class GestionUsuarios
         Me.TxbCodigo.Text = "métase aquí el código"
         Me.TxbCodigo.Visible = False
         '
+        'LNombre
+        '
+        Me.LNombre.AutoSize = True
+        Me.LNombre.ForeColor = System.Drawing.Color.Red
+        Me.LNombre.Location = New System.Drawing.Point(522, 44)
+        Me.LNombre.Name = "LNombre"
+        Me.LNombre.Size = New System.Drawing.Size(21, 26)
+        Me.LNombre.TabIndex = 26
+        Me.LNombre.Text = "*"
+        '
+        'LApe1
+        '
+        Me.LApe1.AutoSize = True
+        Me.LApe1.ForeColor = System.Drawing.Color.Red
+        Me.LApe1.Location = New System.Drawing.Point(522, 150)
+        Me.LApe1.Name = "LApe1"
+        Me.LApe1.Size = New System.Drawing.Size(21, 26)
+        Me.LApe1.TabIndex = 27
+        Me.LApe1.Text = "*"
+        '
+        'LApe2
+        '
+        Me.LApe2.AutoSize = True
+        Me.LApe2.ForeColor = System.Drawing.Color.Red
+        Me.LApe2.Location = New System.Drawing.Point(522, 185)
+        Me.LApe2.Name = "LApe2"
+        Me.LApe2.Size = New System.Drawing.Size(21, 26)
+        Me.LApe2.TabIndex = 28
+        Me.LApe2.Text = "*"
+        '
+        'LDNI
+        '
+        Me.LDNI.AutoSize = True
+        Me.LDNI.ForeColor = System.Drawing.Color.Red
+        Me.LDNI.Location = New System.Drawing.Point(522, 229)
+        Me.LDNI.Name = "LDNI"
+        Me.LDNI.Size = New System.Drawing.Size(21, 26)
+        Me.LDNI.TabIndex = 29
+        Me.LDNI.Text = "*"
+        '
+        'LCorreo
+        '
+        Me.LCorreo.AutoSize = True
+        Me.LCorreo.ForeColor = System.Drawing.Color.Red
+        Me.LCorreo.Location = New System.Drawing.Point(522, 264)
+        Me.LCorreo.Name = "LCorreo"
+        Me.LCorreo.Size = New System.Drawing.Size(21, 26)
+        Me.LCorreo.TabIndex = 30
+        Me.LCorreo.Text = "*"
+        '
+        'LTel
+        '
+        Me.LTel.AutoSize = True
+        Me.LTel.ForeColor = System.Drawing.Color.Red
+        Me.LTel.Location = New System.Drawing.Point(522, 302)
+        Me.LTel.Name = "LTel"
+        Me.LTel.Size = New System.Drawing.Size(21, 26)
+        Me.LTel.TabIndex = 31
+        Me.LTel.Text = "*"
+        '
         'GestionUsuarios
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(13.0!, 26.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(578, 508)
+        Me.Controls.Add(Me.LTel)
+        Me.Controls.Add(Me.LCorreo)
+        Me.Controls.Add(Me.LDNI)
+        Me.Controls.Add(Me.LApe2)
+        Me.Controls.Add(Me.LApe1)
+        Me.Controls.Add(Me.LNombre)
         Me.Controls.Add(Me.TxbCodigo)
         Me.Controls.Add(Me.LBSeparador)
         Me.Controls.Add(Me.TxBPassWord)
@@ -285,4 +357,10 @@ Partial Class GestionUsuarios
     Friend WithEvents LbPassword As Label
     Friend WithEvents LBSeparador As Label
     Friend WithEvents TxbCodigo As TextBox
+    Friend WithEvents LNombre As Label
+    Friend WithEvents LApe1 As Label
+    Friend WithEvents LApe2 As Label
+    Friend WithEvents LDNI As Label
+    Friend WithEvents LCorreo As Label
+    Friend WithEvents LTel As Label
 End Class

@@ -61,7 +61,7 @@
     End Sub
 
 
-    Private Sub modificarPrecioTotal()
+    Public Sub modificarPrecioTotal()
         Dim i As Integer
         precioTotal = 0
         For i = 0 To listaProductos.Count - 1
