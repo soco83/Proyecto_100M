@@ -29,6 +29,26 @@
         End If
         Me.modificarPrecioTotal()
     End Sub
+    Public Sub anadir1(ByVal nombre As String)
+        For Each list In listaProductos
+            If list.getNombre = nombre Then
+                list.setCantidad(list.getCantidad + 1)
+                list.setPrecioUnitario(list.getPrecioTotalUnitario + list.getPrecio)
+                modificarPrecioTotal()
+
+            End If
+        Next
+    End Sub
+    Public Sub borrar1(ByVal nombre As String)
+        For Each list In listaProductos
+            If list.getNombre = nombre Then
+                list.setCantidad(list.getCantidad - 1)
+                list.setPrecioUnitario(list.getPrecioTotalUnitario - list.getPrecio)
+                modificarPrecioTotal()
+            End If
+        Next
+    End Sub
+
 
     Public Sub borrarLinea(ByVal codigo As Integer)
         Dim i As Integer
@@ -53,8 +73,13 @@
     Public Function getLista() As List(Of Producto)
         Return listaProductos
     End Function
+    Public Function getPrecioTotal() As Single
+        Return precioTotal
+    End Function
 
-
+    Public Sub setLista(ByVal lista As List(Of Producto))
+        Me.listaProductos = lista
+    End Sub
     Public Sub annadirCantidadFija(ByVal codigo As Integer, ByVal cantidad As Integer)
 
     End Sub

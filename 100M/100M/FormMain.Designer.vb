@@ -1929,7 +1929,6 @@ Partial Class FormMain
         '
         'LBCantidad
         '
-        Me.LBCantidad.Enabled = False
         Me.LBCantidad.FormattingEnabled = True
         Me.LBCantidad.ItemHeight = 26
         Me.LBCantidad.Location = New System.Drawing.Point(12, 131)
@@ -1966,7 +1965,6 @@ Partial Class FormMain
         '
         'LBPrecio
         '
-        Me.LBPrecio.Enabled = False
         Me.LBPrecio.FormattingEnabled = True
         Me.LBPrecio.ItemHeight = 26
         Me.LBPrecio.Location = New System.Drawing.Point(366, 131)
