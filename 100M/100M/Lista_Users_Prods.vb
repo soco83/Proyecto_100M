@@ -34,10 +34,12 @@ Public Class Lista_Users_Prods
                 GestionUsuarios.opentype = 2
                 GestionUsuarios.codigo = LBVista.SelectedIndex
                 GestionUsuarios.Show()
+                Me.Close()
             Case 2
                 GestionProductos.openType = 2
                 GestionProductos.codigo = LBVista.SelectedIndex
                 GestionProductos.Show()
+                Me.Close()
         End Select
     End Sub
 

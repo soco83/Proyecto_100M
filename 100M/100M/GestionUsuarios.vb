@@ -115,13 +115,15 @@ Public Class GestionUsuarios
         If TxBNombre.Text = "" Or TxBApe1.Text = "" Or TxBDNI.Text = "" Or TxBPassWord.Text = "" Or TxbCodigo.Text = "" Then
             MsgBox("Los campos de nombre, primer apellido, D.N.I., contraseña y rol son obligatorios.", MsgBoxStyle.Information)
         ElseIf Not validacion Then
-            MsgBox("Los campos no son correctos por favor vuelva a introducirlos", 64, "Campos incorrectos")
+            MsgBox("Los campos no son correctos, por favor vuelva a introducirlos", 64, "Campos incorrectos")
         Else
 
             Dim file As New Ficheros
             'se crea el usuario
             Dim user As New Usuario(TxbCodigo.Text, TxBPassWord.Text, TxBNombre.Text, TxBApe1.Text, TxBApe2.Text, TxBDNI.Text, TxBTel.Text, TxBEmail.Text, TxBDireccion.Text)
             file.guardarUsuario(user)
+
+
 
         End If
     End Sub
