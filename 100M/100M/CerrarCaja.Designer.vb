@@ -75,6 +75,7 @@ Partial Class CerrarCaja
         Me.AutoScaleDimensions = New System.Drawing.SizeF(13.0!, 26.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(288, 189)
+        Me.ControlBox = False
         Me.Controls.Add(Me.BtnCerrar)
         Me.Controls.Add(Me.LbRecaudacion)
         Me.Controls.Add(Me.Lbeuros)

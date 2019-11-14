@@ -50,6 +50,7 @@ Partial Class GestionUsuarios
         Me.LDNI = New System.Windows.Forms.Label()
         Me.LCorreo = New System.Windows.Forms.Label()
         Me.LTel = New System.Windows.Forms.Label()
+        Me.Bvovler = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'LbNombre
@@ -295,11 +296,22 @@ Partial Class GestionUsuarios
         Me.LTel.TabIndex = 31
         Me.LTel.Text = "*"
         '
+        'Bvovler
+        '
+        Me.Bvovler.Location = New System.Drawing.Point(385, 416)
+        Me.Bvovler.Name = "Bvovler"
+        Me.Bvovler.Size = New System.Drawing.Size(98, 39)
+        Me.Bvovler.TabIndex = 32
+        Me.Bvovler.Text = "Volver"
+        Me.Bvovler.UseVisualStyleBackColor = True
+        '
         'GestionUsuarios
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(13.0!, 26.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(578, 508)
+        Me.ControlBox = False
+        Me.Controls.Add(Me.Bvovler)
         Me.Controls.Add(Me.LTel)
         Me.Controls.Add(Me.LCorreo)
         Me.Controls.Add(Me.LDNI)
@@ -365,4 +377,5 @@ Partial Class GestionUsuarios
     Friend WithEvents LDNI As Label
     Friend WithEvents LCorreo As Label
     Friend WithEvents LTel As Label
+    Friend WithEvents Bvovler As Button
 End Class

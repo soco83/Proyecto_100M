@@ -210,6 +210,7 @@ Partial Class FormMain
         '
         'FLPcasa
         '
+        Me.FLPcasa.AutoScroll = True
         Me.FLPcasa.BackColor = System.Drawing.SystemColors.ControlDark
         Me.FLPcasa.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.FLPcasa.Controls.Add(Me.m01)
@@ -1228,6 +1229,7 @@ Partial Class FormMain
         '
         'FLPdulces
         '
+        Me.FLPdulces.AutoScroll = True
         Me.FLPdulces.BackColor = System.Drawing.SystemColors.ControlDark
         Me.FLPdulces.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.FLPdulces.Controls.Add(Me.m90)
@@ -1611,12 +1613,12 @@ Partial Class FormMain
         'ToolStripSeparator2
         '
         Me.ToolStripSeparator2.Name = "ToolStripSeparator2"
-        Me.ToolStripSeparator2.Size = New System.Drawing.Size(177, 6)
+        Me.ToolStripSeparator2.Size = New System.Drawing.Size(159, 6)
         '
         'VerListaToolStripMenuItem1
         '
         Me.VerListaToolStripMenuItem1.Name = "VerListaToolStripMenuItem1"
-        Me.VerListaToolStripMenuItem1.Size = New System.Drawing.Size(180, 34)
+        Me.VerListaToolStripMenuItem1.Size = New System.Drawing.Size(162, 34)
         Me.VerListaToolStripMenuItem1.Text = "Ver lista"
         '
         'Cerrar_SesionToolStripMenuItem
@@ -2023,6 +2025,7 @@ Partial Class FormMain
         Me.AutoScaleDimensions = New System.Drawing.SizeF(13.0!, 26.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1301, 729)
+        Me.ControlBox = False
         Me.Controls.Add(Me.Beliminar1Producto)
         Me.Controls.Add(Me.BtnAñadir1producto)
         Me.Controls.Add(Me.FLPCategorias)

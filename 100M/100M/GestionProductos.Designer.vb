@@ -117,6 +117,7 @@ Partial Class GestionProductos
         Me.AutoScaleDimensions = New System.Drawing.SizeF(13.0!, 26.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(414, 266)
+        Me.ControlBox = False
         Me.Controls.Add(Me.TxBPrecio)
         Me.Controls.Add(Me.TxBCodigo)
         Me.Controls.Add(Me.LbRol)

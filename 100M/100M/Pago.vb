@@ -31,4 +31,9 @@
             MsgBox("Error durante el pago, asegúrese que la cifra introducida es correcta.", MsgBoxStyle.Information)
         End Try
     End Sub
+
+    Private Sub BVolver_Click(sender As Object, e As EventArgs) Handles BVolver.Click
+        Me.Dispose()
+
+    End Sub
 End Class

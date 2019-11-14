@@ -7,13 +7,14 @@
     'se pasa por parametro un objeto de tipo producto.
     Public Sub annadirProducto(ByVal producto As Producto)
         Dim i As Integer
+        'se xomprueba que la lista este vacia, si es el caso se introduce sin mas el producto.
         If listaProductos.Count = 0 Then
             producto.setCantidad(1)
             producto.setPrecioUnitario(producto.getPrecio)
             listaProductos.Add(producto)
             modificarPrecioTotal()
         Else
-
+            'sino se recorre la lista para ver si el producto esta ya en la lista para modificar su cantidad y su precio.
             For Each list In listaProductos
                 If list.getNombre = producto.getNombre Then
                     list.setCantidad(list.getCantidad + 1)
@@ -22,6 +23,7 @@
                     Exit Sub
                 End If
             Next
+            'sino esta en la lista se añade  a la lista.
             producto.setCantidad(1)
             producto.setPrecioUnitario(producto.getPrecio)
             listaProductos.Add(producto)
@@ -29,6 +31,7 @@
         End If
         Me.modificarPrecioTotal()
     End Sub
+    'metodo para añadir 1 a la cantidad del producto que este seleccionado en la lista
     Public Sub anadir1(ByVal nombre As String)
         For Each list In listaProductos
             If list.getNombre = nombre Then
@@ -80,8 +83,6 @@
     Public Sub setLista(ByVal lista As List(Of Producto))
         Me.listaProductos = lista
     End Sub
-    Public Sub annadirCantidadFija(ByVal codigo As Integer, ByVal cantidad As Integer)
 
-    End Sub
 
 End Class

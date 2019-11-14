@@ -44,6 +44,7 @@ Partial Class Pago
         Me.LbADevolver = New System.Windows.Forms.Label()
         Me.BtnAceptar = New System.Windows.Forms.Button()
         Me.TxBHaPagado = New System.Windows.Forms.TextBox()
+        Me.BVolver = New System.Windows.Forms.Button()
         Me.FlowLayoutPanel1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -231,7 +232,7 @@ Partial Class Pago
         '
         'BtnAceptar
         '
-        Me.BtnAceptar.Location = New System.Drawing.Point(66, 133)
+        Me.BtnAceptar.Location = New System.Drawing.Point(28, 142)
         Me.BtnAceptar.Name = "BtnAceptar"
         Me.BtnAceptar.Size = New System.Drawing.Size(130, 57)
         Me.BtnAceptar.TabIndex = 7
@@ -245,11 +246,21 @@ Partial Class Pago
         Me.TxBHaPagado.Size = New System.Drawing.Size(100, 32)
         Me.TxBHaPagado.TabIndex = 8
         '
+        'BVolver
+        '
+        Me.BVolver.Location = New System.Drawing.Point(184, 142)
+        Me.BVolver.Name = "BVolver"
+        Me.BVolver.Size = New System.Drawing.Size(125, 57)
+        Me.BVolver.TabIndex = 9
+        Me.BVolver.Text = "Volver"
+        Me.BVolver.UseVisualStyleBackColor = True
+        '
         'Pago
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(13.0!, 26.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(267, 211)
+        Me.ClientSize = New System.Drawing.Size(338, 211)
+        Me.Controls.Add(Me.BVolver)
         Me.Controls.Add(Me.TxBHaPagado)
         Me.Controls.Add(Me.BtnAceptar)
         Me.Controls.Add(Me.LbADevolver)
@@ -291,4 +302,5 @@ Partial Class Pago
     Friend WithEvents LbADevolver As Label
     Friend WithEvents BtnAceptar As Button
     Friend WithEvents TxBHaPagado As TextBox
+    Friend WithEvents BVolver As Button
 End Class

@@ -103,6 +103,11 @@ Public Class GestionUsuarios
         End If
     End Sub
 
+    Private Sub Bvovler_Click(sender As Object, e As EventArgs) Handles Bvovler.Click
+        Me.Close()
+
+    End Sub
+
     Private Sub BtnAceptar_Click(sender As Object, e As EventArgs) Handles BtnAceptar.Click
         Dim validacion As Boolean = val.validarNombre(TxBApe1.Text) And val.validarNombre(TxBApe1.Text) And val.validarDni(TxBDNI.Text)
         If Not val.validarMail(TxBEmail.Text) And TxBEmail.Text <> "" Then

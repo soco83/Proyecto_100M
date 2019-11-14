@@ -52,13 +52,7 @@ Public Class Validar
                     valido = False
                 End If
             End If
-            'If a = dni.Length And valido = True Then
-            'aux = dni.Remove(dni.Length - 1)
 
-            'If UCase(c) <> letraNif(aux) Then
-            'valido = False
-            'End If
-            'End If
 
 
 

@@ -153,7 +153,7 @@ Public Class FormMain
             sacarLista(venta.getLista)
             LBTiquet.SetSelected(a, True)
         Catch ex As Exception
-            MsgBox(Err.Description & "selecciona un producto para añadir.", 64, "Producto no seleccionado")
+            MsgBox("selecciona un producto para añadir.", 64, "Producto no seleccionado")
         End Try
 
     End Sub
@@ -257,12 +257,12 @@ Public Class FormMain
     Private Sub NuevoUToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles NuevoUToolStripMenuItem.Click
         'llama al form donde se crean usuarios nuevos
         GestionUsuarios.opentype = 1
-        GestionUsuarios.Show()
+        GestionUsuarios.ShowDialog()
     End Sub
     Private Sub VerListaToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles VerListaToolStripMenuItem.Click
         'llama al form donde se visualiza la lista de usuarios
         Lista_Users_Prods.openType = 1
-        Lista_Users_Prods.Show()
+        Lista_Users_Prods.ShowDialog()
     End Sub
 
     Private Sub NuevoPToolStripMenuItem1_Click(sender As Object, e As EventArgs)
@@ -273,21 +273,31 @@ Public Class FormMain
     Private Sub VerListaToolStripMenuItem1_Click(sender As Object, e As EventArgs) Handles VerListaToolStripMenuItem1.Click
         'llama al form donde se visualiza la lista de productos
         Lista_Users_Prods.openType = 2
-        Lista_Users_Prods.Show()
+        Lista_Users_Prods.ShowDialog()
     End Sub
 
     Private Sub CajaToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles CajaToolStripMenuItem.Click
         If seHaPagado = True Then
             CerrarCaja.recaudacion = CSng(LbPrecioTotal.Text)
-            CerrarCaja.Show()
+            CerrarCaja.ShowDialog()
         Else
             MsgBox("Todavía no se ha realizado ninguna venta.", MsgBoxStyle.Information, "Ninguna venta todavía")
         End If
     End Sub
 
     Private Sub BtnPagar_Click(sender As Object, e As EventArgs) Handles BtnPagar.Click
-        Pago.importe = LbPrecioTotal.Text
-        Pago.Show()
+        Try
+            If LbPrecioTotal.Text = 0.00 Then
+                MsgBox("La Lista esta vacia, por favor seleccione un producto para realizar el cobro", 64, "lista vacia")
+                Exit Sub
+            End If
+            Pago.importe = LbPrecioTotal.Text
+            Pago.ShowDialog()
+        Catch ex As Exception
+            MsgBox("La Lista esta vacia, por favor seleccione un producto para realizar el cobro", 64, "lista vacia")
+            Exit Sub
+        End Try
+
     End Sub
 
     Private Sub BtnImprimir_Click(sender As Object, e As EventArgs) Handles BtnImprimir.Click
@@ -302,6 +312,9 @@ Public Class FormMain
             MsgBox("Todavía no se ha pagado, diríjase a la ventana de pago.", MsgBoxStyle.Information)
         End If
     End Sub
+
+
+
     Public Sub imprimirTiquet(ByVal sender As Object, ByVal ev As PrintPageEventArgs)
         Dim foto As String = "C:\Users\Óscar\OneDrive\Pictures\Saved Pictures\Desarrollo de interfaces (DAM2)\100M_inicio.png"
         Try

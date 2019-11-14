@@ -34,12 +34,12 @@ Public Class Lista_Users_Prods
                 GestionUsuarios.opentype = 2
                 GestionUsuarios.codigo = LBVista.SelectedIndex
                 GestionUsuarios.Show()
-                Me.Close()
+                Me.Dispose()
             Case 2
                 GestionProductos.openType = 2
                 GestionProductos.codigo = LBVista.SelectedIndex
                 GestionProductos.Show()
-                Me.Close()
+                Me.Dispose()
         End Select
     End Sub
 
@@ -49,9 +49,9 @@ Public Class Lista_Users_Prods
         If a = MsgBoxResult.Yes Then
             Select Case openType
                 Case 1
-                    If Not LBVista.SelectedIndex = 0 Then
-                        file.borrarUsuario(LBVista.SelectedIndex + 1)
-                    End If
+
+                    file.borrarUsuario(LBVista.SelectedIndex + 1)
+
                     listaUser.Clear()
                     LBVista.Items.Clear()
                     listaUser = file.listarUsuario
@@ -73,6 +73,6 @@ Public Class Lista_Users_Prods
     End Sub
 
     Private Sub BtnVolver_Click(sender As Object, e As EventArgs) Handles BtnVolver.Click
-        Me.Close()
+        Me.Dispose()
     End Sub
 End Class

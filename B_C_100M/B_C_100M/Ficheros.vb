@@ -74,6 +74,7 @@
             Return user
         Catch ex As Exception
             MsgBox("Porfavor, selecciona un usuario a editar.", 64, "Seleccion un usuario")
+            registrarErrores(Err.Description)
         End Try
 
 
