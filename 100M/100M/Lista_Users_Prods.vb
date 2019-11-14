@@ -45,7 +45,7 @@ Public Class Lista_Users_Prods
 
     Private Sub BtnBorrar_Click(sender As Object, e As EventArgs) Handles BtnBorrar.Click
         'borra el producto seleccionado, requiere confirmación
-        Dim a As Integer = MsgBox("¿Seguro que desea Borrar el registro?", 292)
+        Dim a As Integer = MsgBox("¿Seguro que desea Borrar el registro?", 292, "Confirmación")
         If a = MsgBoxResult.Yes Then
             Select Case openType
                 Case 1
