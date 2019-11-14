@@ -48,6 +48,9 @@
         Return Me.precio
     End Function
 
+    Public Function getPrecioTotalUnitario() As Single
+        Return precioTotalUnitario
+    End Function
 
     Public Sub setPrecio(ByVal precio As Single)
         Me.Precio = precio
@@ -55,5 +58,9 @@
 
     Public Sub setCantidad(ByVal cantidad As Integer)
         Me.cantidad = cantidad
+    End Sub
+
+    Public Sub setPrecioUnitario(ByVal precio As Single)
+        Me.precioTotalUnitario = precio
     End Sub
 End Class
